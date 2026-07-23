@@ -1,0 +1,139 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Exam {
+  id            String   @id @default(cuid())
+  name          String   @unique
+  aliases       String[] // termos alternativos usados pelo cliente ("glicemia", "acucar no sangue")
+  price         Decimal  @db.Decimal(10, 2)
+  preparation   String? // texto com orientacoes de preparo (jejum, restricoes, etc.)
+  fastingHours  Int? // horas de jejum, se aplicavel
+  sampleType    String? // ex: sangue, urina, fezes
+  turnaroundDays Int?    // prazo estimado para resultado
+  active        Boolean  @default(true)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  budgetItems   BudgetItem[]
+}
+
+model BusinessHours {
+  id        String @id @default(cuid())
+  dayOfWeek Int    // 0 = domingo ... 6 = sabado
+  opensAt   String // "07:00"
+  closesAt  String // "18:00"
+  closed    Boolean @default(false)
+}
+
+model Contact {
+  id            String   @id @default(cuid())
+  phone         String   @unique // numero do WhatsApp em formato E.164
+  name          String?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  conversations Conversation[]
+  budgets       Budget[]
+  appointments  Appointment[]
+}
+
+model Conversation {
+  id         String   @id @default(cuid())
+  contactId  String
+  contact    Contact  @relation(fields: [contactId], references: [id])
+  status     ConversationStatus @default(OPEN)
+  lastMessageAt DateTime @default(now())
+  createdAt  DateTime @default(now())
+
+  messages   Message[]
+}
+
+enum ConversationStatus {
+  OPEN
+  WAITING_HUMAN
+  CLOSED
+}
+
+model Message {
+  id             String   @id @default(cuid())
+  conversationId String
+  conversation   Conversation @relation(fields: [conversationId], references: [id])
+  direction      MessageDirection
+  role           String  // "user" | "assistant" | "system"
+  content        String  @db.Text
+  mediaUrl       String?
+  mediaType      String? // image, document(pdf), audio...
+  createdAt      DateTime @default(now())
+}
+
+enum MessageDirection {
+  INBOUND
+  OUTBOUND
+}
+
+model Budget {
+  id          String   @id @default(cuid())
+  contactId   String
+  contact     Contact  @relation(fields: [contactId], references: [id])
+  status      BudgetStatus @default(OPEN)
+  totalPrice  Decimal  @db.Decimal(10, 2) @default(0)
+  sourceType  BudgetSourceType @default(TEXT) // como o pedido chegou
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  items       BudgetItem[]
+  followUps   FollowUp[]
+}
+
+enum BudgetStatus {
+  OPEN          // orcamento gerado, aguardando decisao do cliente
+  CONVERTED     // cliente fechou/agendou
+  ABANDONED     // cliente desistiu ou nao respondeu apos follow-ups
+}
+
+enum BudgetSourceType {
+  TEXT
+  IMAGE
+  PDF
+}
+
+model BudgetItem {
+  id        String  @id @default(cuid())
+  budgetId  String
+  budget    Budget  @relation(fields: [budgetId], references: [id])
+  examId    String
+  exam      Exam    @relation(fields: [examId], references: [id])
+  price     Decimal @db.Decimal(10, 2)
+}
+
+model Appointment {
+  id          String   @id @default(cuid())
+  contactId   String
+  contact     Contact  @relation(fields: [contactId], references: [id])
+  scheduledAt DateTime
+  status      AppointmentStatus @default(SCHEDULED)
+  notes       String?
+  createdAt   DateTime @default(now())
+}
+
+enum AppointmentStatus {
+  SCHEDULED
+  CONFIRMED
+  CANCELLED
+  COMPLETED
+  NO_SHOW
+}
+
+model FollowUp {
+  id         String   @id @default(cuid())
+  budgetId   String
+  budget     Budget   @relation(fields: [budgetId], references: [id])
+  attempt    Int      @default(1)
+  sentAt     DateTime @default(now())
+}

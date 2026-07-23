@@ -1,0 +1,29 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: smartlabia
+      POSTGRES_PASSWORD: smartlabia
+      POSTGRES_DB: smartlabia
+    volumes:
+      - smartlabia_db_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  app:
+    build: .
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      DATABASE_URL: postgresql://smartlabia:smartlabia@db:5432/smartlabia
+    depends_on:
+      - db
+    ports:
+      - "3000:3000"
+
+volumes:
+  smartlabia_db_data:

@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SmartLabIA — Painel (demonstração)</title>
+<style>
+  :root {
+    --bg: #f4f6f8;
+    --panel: #ffffff;
+    --text: #1b2430;
+    --text-muted: #64748b;
+    --border: #e2e8f0;
+    --brand: #16a34a;
+    --brand-dark: #15803d;
+    --brand-soft: #dcfce7;
+    --sidebar-bg: #0f2419;
+    --sidebar-text: #d1fae5;
+    --sidebar-active: #16a34a;
+    --bubble-in: #ffffff;
+    --bubble-out: #dcf8c6;
+    --danger: #dc2626;
+    --warn: #d97706;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0b1120;
+      --panel: #111827;
+      --text: #e5e7eb;
+      --text-muted: #94a3b8;
+      --border: #1f2937;
+      --brand: #22c55e;
+      --brand-dark: #16a34a;
+      --brand-soft: #14532d;
+      --sidebar-bg: #06120c;
+      --sidebar-text: #bbf7d0;
+      --sidebar-active: #22c55e;
+      --bubble-in: #1f2937;
+      --bubble-out: #14532d;
+      --danger: #f87171;
+      --warn: #fbbf24;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+  }
+  .app {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    min-height: 100vh;
+  }
+  .sidebar {
+    background: var(--sidebar-bg);
+    color: var(--sidebar-text);
+    padding: 20px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 10px 20px 10px;
+    font-weight: 700;
+    font-size: 17px;
+    color: #fff;
+  }
+  .brand-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--brand); box-shadow: 0 0 0 4px rgba(34,197,94,0.25); }
+  .nav-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--sidebar-text);
+    opacity: 0.85;
+  }
+  .nav-item:hover { background: rgba(255,255,255,0.06); opacity: 1; }
+  .nav-item.active { background: var(--sidebar-active); color: #06210f; font-weight: 600; opacity: 1; }
+  .badge-demo {
+    margin-top: auto;
+    font-size: 11px;
+    color: var(--sidebar-text);
+    opacity: 0.6;
+    padding: 10px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  .main { padding: 28px 32px; overflow-x: auto; }
+  .topbar { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 22px; flex-wrap: wrap; gap: 8px; }
+  .topbar h1 { font-size: 22px; margin: 0; }
+  .topbar p { margin: 4px 0 0; color: var(--text-muted); font-size: 13px; }
+  .demo-tag {
+    background: var(--brand-soft);
+    color: var(--brand-dark);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 14px; margin-bottom: 24px; }
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 18px;
+  }
+  .card .num { font-size: 26px; font-weight: 700; }
+  .card .label { font-size: 12.5px; color: var(--text-muted); margin-top: 2px; }
+  .view { display: none; }
+  .view.active { display: block; }
+  .panel {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .conv-layout { display: grid; grid-template-columns: 280px 1fr; min-height: 520px; }
+  .conv-list { border-right: 1px solid var(--border); overflow-y: auto; max-height: 600px; }
+  .conv-list-item { padding: 12px 16px; border-bottom: 1px solid var(--border); cursor: pointer; }
+  .conv-list-item:hover { background: rgba(34,197,94,0.06); }
+  .conv-list-item.active { background: var(--brand-soft); }
+  .conv-list-item .name { font-weight: 600; font-size: 14px; }
+  .conv-list-item .preview { font-size: 12.5px; color: var(--text-muted); margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .conv-list-item .status { display: inline-block; font-size: 10.5px; font-weight: 700; padding: 2px 7px; border-radius: 999px; margin-top: 6px; }
+  .status-open { background: var(--brand-soft); color: var(--brand-dark); }
+  .status-wait { background: #fef3c7; color: var(--warn); }
+  .chat-window { display: flex; flex-direction: column; }
+  .chat-header { padding: 14px 18px; border-bottom: 1px solid var(--border); font-weight: 600; }
+  .chat-body { flex: 1; padding: 18px; display: flex; flex-direction: column; gap: 10px; background: repeating-linear-gradient(135deg, transparent, transparent 40px); overflow-y: auto; max-height: 500px; }
+  .bubble { max-width: 70%; padding: 9px 13px; border-radius: 10px; font-size: 13.5px; line-height: 1.45; }
+  .bubble.in { background: var(--bubble-in); align-self: flex-start; border: 1px solid var(--border); }
+  .bubble.out { background: var(--bubble-out); align-self: flex-end; }
+  .bubble .meta { display: block; font-size: 10.5px; color: var(--text-muted); margin-top: 4px; text-align: right; }
+  table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+  th, td { text-align: left; padding: 12px 16px; border-bottom: 1px solid var(--border); }
+  th { color: var(--text-muted); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 0.02em; }
+  tr:last-child td { border-bottom: none; }
+  .pill { font-size: 11px; font-weight: 700; padding: 3px 9px; border-radius: 999px; }
+  .pill-open { background: var(--brand-soft); color: var(--brand-dark); }
+  .pill-converted { background: #dbeafe; color: #1d4ed8; }
+  .pill-abandoned { background: #fee2e2; color: var(--danger); }
+  .pill-scheduled { background: var(--brand-soft); color: var(--brand-dark); }
+  .price { font-variant-numeric: tabular-nums; font-weight: 600; }
+  @media (max-width: 720px) {
+    .app { grid-template-columns: 1fr; }
+    .sidebar { flex-direction: row; overflow-x: auto; }
+    .conv-layout { grid-template-columns: 1fr; }
+    .conv-list { max-height: 220px; }
+  }
+</style>
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand"><span class="brand-dot"></span> SmartLabIA</div>
+    <div class="nav-item active" data-view="conversas">💬 Conversas</div>
+    <div class="nav-item" data-view="orcamentos">🧾 Orçamentos</div>
+    <div class="nav-item" data-view="agendamentos">📅 Agendamentos</div>
+    <div class="nav-item" data-view="exames">🧪 Exames</div>
+    <div class="badge-demo">Dados de demonstração — não conectado a um laboratório real ainda.</div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <div>
+        <h1 id="view-title">Conversas</h1>
+        <p id="view-subtitle">Atendimentos do WhatsApp respondidos pela IA</p>
+      </div>
+      <span class="demo-tag">MODO DEMONSTRAÇÃO</span>
+    </div>
+
+    <div class="cards">
+      <div class="card"><div class="num">128</div><div class="label">Conversas este mês</div></div>
+      <div class="card"><div class="num">R$ 6.340</div><div class="label">Em orçamentos abertos</div></div>
+      <div class="card"><div class="num">37</div><div class="label">Agendamentos confirmados</div></div>
+      <div class="card"><div class="num">61%</div><div class="label">Taxa de conversão</div></div>
+    </div>
+
+    <!-- CONVERSAS -->
+    <section class="view active" id="view-conversas">
+      <div class="panel conv-layout">
+        <div class="conv-list" id="conv-list"></div>
+        <div class="chat-window">
+          <div class="chat-header" id="chat-header">Selecione uma conversa</div>
+          <div class="chat-body" id="chat-body"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ORÇAMENTOS -->
+    <section class="view" id="view-orcamentos">
+      <div class="panel">
+        <table>
+          <thead><tr><th>Cliente</th><th>Exames</th><th>Total</th><th>Origem</th><th>Status</th></tr></thead>
+          <tbody id="orcamentos-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- AGENDAMENTOS -->
+    <section class="view" id="view-agendamentos">
+      <div class="panel">
+        <table>
+          <thead><tr><th>Cliente</th><th>Data e hora</th><th>Observações</th><th>Status</th></tr></thead>
+          <tbody id="agendamentos-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- EXAMES -->
+    <section class="view" id="view-exames">
+      <div class="panel">
+        <table>
+          <thead><tr><th>Exame</th><th>Preço</th><th>Preparo</th><th>Amostra</th><th>Prazo</th></tr></thead>
+          <tbody id="exames-body"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+</div>
+
+<script>
+const conversations = [
+  {
+    id: 1, name: "Marcos Alves", phone: "+55 11 98888-1234", status: "open",
+    preview: "Perfeito, pode marcar sim!",
+    messages: [
+      { dir: "in", text: "Oi, quanto custa hemograma e glicemia?", time: "09:12" },
+      { dir: "out", text: "Oi, Marcos! Hemograma completo: R$ 35,00. Glicemia em jejum: R$ 20,00 (precisa de 8h de jejum). Total: R$ 55,00. Quer que eu já gere o orçamento?", time: "09:12" },
+      { dir: "in", text: "Sim, pode gerar", time: "09:14" },
+      { dir: "out", text: "Orçamento gerado! Quer aproveitar e já agendar a coleta?", time: "09:14" },
+      { dir: "in", text: "Perfeito, pode marcar sim!", time: "09:15" },
+    ],
+  },
+  {
+    id: 2, name: "Juliana Prado", phone: "+55 11 97777-5566", status: "wait",
+    preview: "[imagem recebida] pedido médico",
+    messages: [
+      { dir: "in", text: "[imagem recebida] pedido médico", time: "Ontem 18:40" },
+      { dir: "out", text: "Recebi seu pedido médico! Identifiquei: TSH e Colesterol total. O total fica R$ 85,00. Confere?", time: "Ontem 18:41" },
+    ],
+  },
+  {
+    id: 3, name: "Roberto Lima", phone: "+55 11 96666-9911", status: "open",
+    preview: "Vou pensar e te aviso",
+    messages: [
+      { dir: "out", text: "Oi Roberto! Notei que seu orçamento de Colesterol total ainda está em aberto. Posso te ajudar a marcar um horário?", time: "há 2 dias" },
+      { dir: "in", text: "Vou pensar e te aviso", time: "há 2 dias" },
+    ],
+  },
+  {
+    id: 4, name: "Fernanda Costa", phone: "+55 11 95555-2200", status: "open",
+    preview: "Qual o link pra pegar meu resultado?",
+    messages: [
+      { dir: "in", text: "Qual o link pra pegar meu resultado?", time: "08:02" },
+      { dir: "out", text: "Aqui está: https://exemplo.com.br/resultados — é só informar seu CPF e data de nascimento no site. Precisa de mais alguma coisa?", time: "08:02" },
+    ],
+  },
+];
+
+const orcamentos = [
+  { cliente: "Marcos Alves", exames: "Hemograma completo, Glicemia em jejum", total: 55.0, origem: "Texto", status: "converted" },
+  { cliente: "Juliana Prado", exames: "TSH, Colesterol total e frações", total: 85.0, origem: "Imagem", status: "open" },
+  { cliente: "Roberto Lima", exames: "Colesterol total e frações", total: 40.0, origem: "Texto", status: "open" },
+  { cliente: "Patrícia Nunes", exames: "Exame de urina tipo 1", total: 25.0, origem: "PDF", status: "abandoned" },
+];
+
+const agendamentos = [
+  { cliente: "Marcos Alves", data: "24/07/2026 09:00", obs: "Hemograma + Glicemia (jejum)", status: "scheduled" },
+  { cliente: "Ana Beatriz", data: "24/07/2026 10:30", obs: "TSH", status: "scheduled" },
+  { cliente: "Carlos Eduardo", data: "25/07/2026 07:30", obs: "Colesterol (jejum 12h)", status: "scheduled" },
+];
+
+const exames = [
+  { nome: "Hemograma completo", preco: 35.0, preparo: "Não é necessário jejum", amostra: "Sangue", prazo: "1 dia" },
+  { nome: "Glicemia em jejum", preco: 20.0, preparo: "Jejum de 8 horas", amostra: "Sangue", prazo: "1 dia" },
+  { nome: "Colesterol total e frações", preco: 40.0, preparo: "Jejum de 12 horas", amostra: "Sangue", prazo: "1 dia" },
+  { nome: "TSH", preco: 45.0, preparo: "Não é necessário jejum", amostra: "Sangue", prazo: "2 dias" },
+  { nome: "Exame de urina tipo 1", preco: 25.0, preparo: "Primeira urina da manhã", amostra: "Urina", prazo: "1 dia" },
+];
+
+function money(v) { return "R$ " + v.toFixed(2).replace(".", ","); }
+
+function renderConvList(activeId) {
+  const el = document.getElementById("conv-list");
+  el.innerHTML = conversations.map(c => `
+    <div class="conv-list-item ${c.id === activeId ? 'active' : ''}" data-id="${c.id}">
+      <div class="name">${c.name}</div>
+      <div class="preview">${c.preview}</div>
+      <span class="status status-${c.status === 'open' ? 'open' : 'wait'}">${c.status === 'open' ? 'IA respondendo' : 'Aguardando'}</span>
+    </div>
+  `).join("");
+  el.querySelectorAll(".conv-list-item").forEach(item => {
+    item.addEventListener("click", () => openConversation(Number(item.dataset.id)));
+  });
+}
+
+function openConversation(id) {
+  const conv = conversations.find(c => c.id === id);
+  document.getElementById("chat-header").textContent = `${conv.name} · ${conv.phone}`;
+  document.getElementById("chat-body").innerHTML = conv.messages.map(m => `
+    <div class="bubble ${m.dir}">${m.text}<span class="meta">${m.time}</span></div>
+  `).join("");
+  renderConvList(id);
+}
+
+function renderOrcamentos() {
+  const pillMap = { open: ["pill-open", "Aberto"], converted: ["pill-converted", "Convertido"], abandoned: ["pill-abandoned", "Abandonado"] };
+  document.getElementById("orcamentos-body").innerHTML = orcamentos.map(o => {
+    const [cls, label] = pillMap[o.status];
+    return `<tr><td>${o.cliente}</td><td>${o.exames}</td><td class="price">${money(o.total)}</td><td>${o.origem}</td><td><span class="pill ${cls}">${label}</span></td></tr>`;
+  }).join("");
+}
+
+function renderAgendamentos() {
+  document.getElementById("agendamentos-body").innerHTML = agendamentos.map(a => `
+    <tr><td>${a.cliente}</td><td>${a.data}</td><td>${a.obs}</td><td><span class="pill pill-scheduled">Confirmado</span></td></tr>
+  `).join("");
+}
+
+function renderExames() {
+  document.getElementById("exames-body").innerHTML = exames.map(e => `
+    <tr><td>${e.nome}</td><td class="price">${money(e.preco)}</td><td>${e.preparo}</td><td>${e.amostra}</td><td>${e.prazo}</td></tr>
+  `).join("");
+}
+
+const titles = {
+  conversas: ["Conversas", "Atendimentos do WhatsApp respondidos pela IA"],
+  orcamentos: ["Orçamentos", "Orçamentos gerados a partir de texto, imagem ou PDF de pedido médico"],
+  agendamentos: ["Agendamentos", "Coletas marcadas pelos clientes via WhatsApp"],
+  exames: ["Exames", "Catálogo de exames, preços e preparo cadastrados"],
+};
+
+document.querySelectorAll(".nav-item").forEach(item => {
+  item.addEventListener("click", () => {
+    document.querySelectorAll(".nav-item").forEach(n => n.classList.remove("active"));
+    item.classList.add("active");
+    const view = item.dataset.view;
+    document.querySelectorAll(".view").forEach(v => v.classList.remove("active"));
+    document.getElementById(`view-${view}`).classList.add("active");
+    document.getElementById("view-title").textContent = titles[view][0];
+    document.getElementById("view-subtitle").textContent = titles[view][1];
+  });
+});
+
+renderConvList(1);
+openConversation(1);
+renderOrcamentos();
+renderAgendamentos();
+renderExames();
+</script>
+</body>
+</html>
