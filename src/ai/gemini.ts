@@ -60,16 +60,39 @@ function toGeminiParts(parts: GeminiInputPart[]): GeminiPart[] {
   });
 }
 
-async function callGemini(body: unknown): Promise<{ candidates?: Array<{ content?: GeminiContent }>; error?: { message: string } }> {
-  const url = `${env.gemini.baseUrl}/models/${env.gemini.model}:generateContent`;
-  const res = await fetch(url, {
-    method: "POST",
-    headers: { "Content-Type": "application/json", "x-goog-api-key": env.gemini.apiKey },
-    body: JSON.stringify(body),
-  });
-  const data = (await res.json()) as { candidates?: Array<{ content?: GeminiContent }>; error?: { message: string } };
-  if (!res.ok) throw new Error(`Gemini ${res.status}: ${data.error?.message ?? "erro desconhecido"}`);
-  return data;
+type GeminiResponse = { candidates?: Array<{ content?: GeminiContent }>; error?: { message: string } };
+
+const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+
+// Tenta o modelo principal e, se estiver sobrecarregado (503/429) ou indisponivel (404),
+// repete e cai para os modelos reserva.
+async function callGemini(body: unknown): Promise<GeminiResponse> {
+  const models = [env.gemini.model, ...env.gemini.fallbackModels.filter((m) => m !== env.gemini.model)];
+  let lastError = "erro desconhecido";
+
+  for (const model of models) {
+    for (let attempt = 0; attempt < 2; attempt++) {
+      const url = `${env.gemini.baseUrl}/models/${model}:generateContent`;
+      try {
+        const res = await fetch(url, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", "x-goog-api-key": env.gemini.apiKey },
+          body: JSON.stringify(body),
+          signal: AbortSignal.timeout(60_000),
+        });
+        const data = (await res.json()) as GeminiResponse;
+        if (res.ok) return data;
+        lastError = `Gemini ${res.status} (${model}): ${data.error?.message ?? "erro desconhecido"}`;
+        if (![404, 429, 500, 503].includes(res.status)) throw new Error(lastError);
+        if (res.status === 404) break; // modelo indisponivel: vai direto para o proximo
+      } catch (err) {
+        if (err instanceof Error && err.message.startsWith("Gemini 4") && !err.message.startsWith("Gemini 429")) throw err;
+        lastError = err instanceof Error ? err.message : String(err);
+      }
+      await sleep(1500 * (attempt + 1));
+    }
+  }
+  throw new Error(lastError);
 }
 
 export async function runGeminiTurn(params: {
@@ -112,7 +135,13 @@ export async function runGeminiTurn(params: {
     const responses: GeminiPart[] = [];
     for (const part of calls) {
       const call = part.functionCall!;
-      const result = await params.executeTool(call.name, call.args ?? {});
+      let result: string;
+      try {
+        result = await params.executeTool(call.name, call.args ?? {});
+      } catch (err) {
+        // Falha na ferramenta (ex: envio do PDF): devolve o erro ao modelo para ele se recuperar.
+        result = `ERRO ao executar ${call.name}: ${err instanceof Error ? err.message : String(err)}`;
+      }
       responses.push({ functionResponse: { name: call.name, response: { result } } });
     }
     contents.push({ role: "user", parts: responses });

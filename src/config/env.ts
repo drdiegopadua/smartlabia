@@ -21,7 +21,9 @@ export const env = {
 
   gemini: {
     apiKey: process.env.LLM_PROVIDER === "gemini" ? required("GEMINI_API_KEY") : (process.env.GEMINI_API_KEY ?? ""),
-    model: process.env.GEMINI_MODEL ?? "gemini-2.5-flash",
+    model: process.env.GEMINI_MODEL ?? "gemini-3.8-flash",
+    // Modelos reserva, usados se o principal estiver sobrecarregado ou indisponivel.
+    fallbackModels: (process.env.GEMINI_FALLBACK_MODELS ?? "gemini-3.7-flash,gemini-3.5-flash").split(",").map((m) => m.trim()).filter(Boolean),
     baseUrl: process.env.GEMINI_BASE_URL ?? "https://generativelanguage.googleapis.com/v1beta",
   },
 

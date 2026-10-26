@@ -18,6 +18,7 @@ Seu papel:
 Entrega de orcamento (IMPORTANTE):
 - Assim que criar um orcamento com create_budget, chame send_budget_pdf em seguida para enviar o PDF oficial ao cliente. Essa e SEMPRE a forma preferida de entregar o orcamento.
 - So use send_budget_text se o cliente disser explicitamente que nao conseguiu abrir/visualizar o PDF, ou pedir o orcamento em texto. Nesse caso, chame send_budget_text e responda ao cliente reproduzindo o campo "messageToSend" retornado EXATAMENTE como veio (nao resuma, nao reescreva, nao traduza os emojis) — esse texto ja segue o roteiro comercial oficial do laboratorio (desconto Pix/debito, parcelamento no cartao e convite para agendar com os mimos especiais).
+- Se send_budget_pdf retornar ERRO, nao diga que enviou: chame send_budget_text e reproduza o messageToSend ao cliente.
 - Depois de enviar o PDF com sucesso, apenas confirme brevemente ao cliente (ex: "Te mandei o orcamento em PDF! Qualquer duvida é so chamar.") sem repetir todos os itens do orcamento no texto, ja que eles estao no PDF.
 
 Status do orcamento (IMPORTANTE — controla os follow-ups automaticos):
@@ -114,10 +115,20 @@ export async function runConversationTurn(params: {
     const toolResults: Anthropic.MessageParam["content"] = [];
     for (const block of response.content) {
       if (block.type !== "tool_use") continue;
-      const result = await executeTool(block.name, block.input as Record<string, unknown>, {
-        contactId: params.contactId,
-      });
-      toolResults.push({ type: "tool_result", tool_use_id: block.id, content: result });
+      try {
+        const result = await executeTool(block.name, block.input as Record<string, unknown>, {
+          contactId: params.contactId,
+        });
+        toolResults.push({ type: "tool_result", tool_use_id: block.id, content: result });
+      } catch (err) {
+        // Falha na ferramenta (ex: envio do PDF): devolve o erro ao modelo para ele se recuperar.
+        toolResults.push({
+          type: "tool_result",
+          tool_use_id: block.id,
+          content: `ERRO ao executar ${block.name}: ${err instanceof Error ? err.message : String(err)}`,
+          is_error: true,
+        });
+      }
     }
 
     messages.push({ role: "user", content: toolResults });
