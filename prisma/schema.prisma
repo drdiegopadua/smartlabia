@@ -89,6 +89,7 @@ model Budget {
 
   items       BudgetItem[]
   followUps   FollowUp[]
+  appointments Appointment[]
 }
 
 enum BudgetStatus {
@@ -116,6 +117,8 @@ model Appointment {
   id          String   @id @default(cuid())
   contactId   String
   contact     Contact  @relation(fields: [contactId], references: [id])
+  budgetId    String?
+  budget      Budget?  @relation(fields: [budgetId], references: [id])
   scheduledAt DateTime
   status      AppointmentStatus @default(SCHEDULED)
   notes       String?

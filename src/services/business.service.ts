@@ -27,3 +27,11 @@ export async function getBusinessHoursText(): Promise<string> {
 export function getResultsUrl(): string {
   return env.lab.resultsUrl;
 }
+
+export async function upsertBusinessHours(dayOfWeek: number, opensAt: string, closesAt: string, closed: boolean) {
+  const existing = await prisma.businessHours.findFirst({ where: { dayOfWeek } });
+  if (existing) {
+    return prisma.businessHours.update({ where: { id: existing.id }, data: { opensAt, closesAt, closed } });
+  }
+  return prisma.businessHours.create({ data: { dayOfWeek, opensAt, closesAt, closed } });
+}

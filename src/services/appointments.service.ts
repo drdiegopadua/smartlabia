@@ -4,11 +4,12 @@ interface ScheduleInput {
   contactId: string;
   scheduledAt: Date;
   notes?: string;
+  budgetId?: string;
 }
 
-export async function scheduleAppointment({ contactId, scheduledAt, notes }: ScheduleInput) {
+export async function scheduleAppointment({ contactId, scheduledAt, notes, budgetId }: ScheduleInput) {
   return prisma.appointment.create({
-    data: { contactId, scheduledAt, notes },
+    data: { contactId, scheduledAt, notes, budgetId },
   });
 }
 

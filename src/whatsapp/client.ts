@@ -67,3 +67,48 @@ export async function downloadMedia(mediaId: string): Promise<{ base64: string; 
   const base64 = Buffer.from(buffer).toString("base64");
   return { base64, mimeType: meta.mimeType };
 }
+
+export async function uploadMedia(buffer: Buffer, filename: string, mimeType: string): Promise<string> {
+  const form = new FormData();
+  form.append("messaging_product", "whatsapp");
+  form.append("file", new Blob([buffer], { type: mimeType }), filename);
+
+  const res = await fetch(`${GRAPH_BASE}/${env.whatsapp.phoneNumberId}/media`, {
+    method: "POST",
+    headers: { Authorization: `Bearer ${env.whatsapp.token}` },
+    body: form,
+  });
+  if (!res.ok) {
+    const errorBody = await res.text();
+    throw new Error(`Falha ao enviar midia para o WhatsApp: ${res.status} ${errorBody}`);
+  }
+  const data = (await res.json()) as { id: string };
+  return data.id;
+}
+
+export async function sendDocumentMessage(
+  to: string,
+  mediaId: string,
+  filename: string,
+  caption?: string
+): Promise<void> {
+  const res = await fetch(`${GRAPH_BASE}/${env.whatsapp.phoneNumberId}/messages`, {
+    method: "POST",
+    headers: authHeaders(),
+    body: JSON.stringify({
+      messaging_product: "whatsapp",
+      to,
+      type: "document",
+      document: { id: mediaId, filename, caption },
+    }),
+  });
+  if (!res.ok) {
+    const errorBody = await res.text();
+    throw new Error(`Falha ao enviar documento WhatsApp: ${res.status} ${errorBody}`);
+  }
+}
+
+export async function sendBudgetPdf(to: string, pdfBuffer: Buffer, filename: string, caption?: string): Promise<void> {
+  const mediaId = await uploadMedia(pdfBuffer, filename, "application/pdf");
+  await sendDocumentMessage(to, mediaId, filename, caption);
+}

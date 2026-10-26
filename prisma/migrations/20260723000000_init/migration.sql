@@ -104,6 +104,7 @@ CREATE TABLE "BudgetItem" (
 CREATE TABLE "Appointment" (
     "id" TEXT NOT NULL,
     "contactId" TEXT NOT NULL,
+    "budgetId" TEXT,
     "scheduledAt" TIMESTAMP(3) NOT NULL,
     "status" "AppointmentStatus" NOT NULL DEFAULT 'SCHEDULED',
     "notes" TEXT,
@@ -145,6 +146,9 @@ ALTER TABLE "BudgetItem" ADD CONSTRAINT "BudgetItem_examId_fkey" FOREIGN KEY ("e
 
 -- AddForeignKey
 ALTER TABLE "Appointment" ADD CONSTRAINT "Appointment_contactId_fkey" FOREIGN KEY ("contactId") REFERENCES "Contact"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE "Appointment" ADD CONSTRAINT "Appointment_budgetId_fkey" FOREIGN KEY ("budgetId") REFERENCES "Budget"("id") ON DELETE SET NULL ON UPDATE CASCADE;
 
 -- AddForeignKey
 ALTER TABLE "FollowUp" ADD CONSTRAINT "FollowUp_budgetId_fkey" FOREIGN KEY ("budgetId") REFERENCES "Budget"("id") ON DELETE RESTRICT ON UPDATE CASCADE;

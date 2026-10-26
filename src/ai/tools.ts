@@ -1,8 +1,11 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { searchExams, listAllExamNames } from "../services/exams.service";
-import { createBudget } from "../services/budgets.service";
+import { createBudget, getBudgetForDelivery, markBudgetConverted, markBudgetAbandoned } from "../services/budgets.service";
 import { scheduleAppointment, listUpcomingAppointments } from "../services/appointments.service";
 import { getBusinessHoursText, getResultsUrl } from "../services/business.service";
+import { generateBudgetPdf } from "../services/pdf.service";
+import { formatBudgetText } from "../services/budgetText.service";
+import { sendBudgetPdf } from "../whatsapp/client";
 
 export const toolDefinitions: Anthropic.Tool[] = [
   {
@@ -54,13 +57,42 @@ export const toolDefinitions: Anthropic.Tool[] = [
     },
   },
   {
+    name: "send_budget_pdf",
+    description:
+      "Envia o orcamento para o cliente no WhatsApp como um PDF formatado (layout oficial do laboratorio, com tabela de exames, total e descontos). Este e o formato PREFERIDO de entrega de orcamento — use sempre que criar um orcamento novo.",
+    input_schema: {
+      type: "object",
+      properties: {
+        budgetId: { type: "string", description: "ID do orcamento retornado por create_budget" },
+      },
+      required: ["budgetId"],
+    },
+  },
+  {
+    name: "send_budget_text",
+    description:
+      "Envia o orcamento para o cliente como mensagem de texto formatada (com emojis, lista de exames, valor total e as opcoes de desconto/parcelamento). Use isso APENAS se o cliente disser que nao conseguiu abrir o PDF ou pedir explicitamente o orcamento em texto — nunca como primeira opcao.",
+    input_schema: {
+      type: "object",
+      properties: {
+        budgetId: { type: "string", description: "ID do orcamento retornado por create_budget" },
+      },
+      required: ["budgetId"],
+    },
+  },
+  {
     name: "schedule_appointment",
-    description: "Agenda uma coleta/exame para o cliente em uma data e hora especificas.",
+    description:
+      "Agenda uma coleta/exame para o cliente em uma data e hora especificas. Se o agendamento for para realizar exames de um orcamento existente, SEMPRE passe o budgetId — isso marca automaticamente o orcamento como CONVERTIDO.",
     input_schema: {
       type: "object",
       properties: {
         scheduledAtIso: { type: "string", description: "Data e hora no formato ISO 8601" },
         notes: { type: "string", description: "Observacoes adicionais, ex: quais exames" },
+        budgetId: {
+          type: "string",
+          description: "ID do orcamento que este agendamento esta concretizando, se houver um (retornado por create_budget)",
+        },
       },
       required: ["scheduledAtIso"],
     },
@@ -69,6 +101,18 @@ export const toolDefinitions: Anthropic.Tool[] = [
     name: "list_upcoming_appointments",
     description: "Lista os agendamentos futuros do cliente atual.",
     input_schema: { type: "object", properties: {} },
+  },
+  {
+    name: "mark_budget_abandoned",
+    description:
+      "Marca um orcamento como ABANDONADO imediatamente. Use quando o cliente recusar explicitamente (ex: 'nao quero', 'muito caro, vou procurar outro lugar', 'obrigado, mas nao vou fazer') — assim ele para de receber mensagens de follow-up automaticas sobre esse orcamento.",
+    input_schema: {
+      type: "object",
+      properties: {
+        budgetId: { type: "string", description: "ID do orcamento recusado pelo cliente" },
+      },
+      required: ["budgetId"],
+    },
   },
 ];
 
@@ -120,12 +164,44 @@ export async function executeTool(
       });
     }
 
+    case "send_budget_pdf": {
+      const budgetId = String(input.budgetId ?? "");
+      const budget = await getBudgetForDelivery(budgetId);
+      if (!budget) return "Orcamento nao encontrado.";
+      const paciente = budget.contact.name || "Cliente";
+      const pdfBuffer = generateBudgetPdf({
+        paciente,
+        itens: budget.items.map((i) => ({ nome: i.exam.name, preco: Number(i.price) })),
+        data: budget.createdAt,
+      });
+      await sendBudgetPdf(budget.contact.phone, pdfBuffer, "orcamento.pdf", "Segue seu orçamento em anexo 🧾");
+      return "PDF do orcamento enviado com sucesso.";
+    }
+
+    case "send_budget_text": {
+      const budgetId = String(input.budgetId ?? "");
+      const budget = await getBudgetForDelivery(budgetId);
+      if (!budget) return "Orcamento nao encontrado.";
+      const paciente = budget.contact.name || "Cliente";
+      const text = formatBudgetText({
+        paciente,
+        itens: budget.items.map((i) => ({ nome: i.exam.name, preco: Number(i.price) })),
+        data: budget.createdAt,
+      });
+      return JSON.stringify({ messageToSend: text });
+    }
+
     case "schedule_appointment": {
+      const budgetId = input.budgetId ? String(input.budgetId) : undefined;
       const appointment = await scheduleAppointment({
         contactId: context.contactId,
         scheduledAt: new Date(String(input.scheduledAtIso)),
         notes: input.notes ? String(input.notes) : undefined,
+        budgetId,
       });
+      if (budgetId) {
+        await markBudgetConverted(budgetId);
+      }
       return JSON.stringify({ appointmentId: appointment.id, scheduledAt: appointment.scheduledAt });
     }
 
@@ -134,6 +210,12 @@ export async function executeTool(
       return JSON.stringify(
         appointments.map((a) => ({ id: a.id, scheduledAt: a.scheduledAt, notes: a.notes }))
       );
+    }
+
+    case "mark_budget_abandoned": {
+      const budgetId = String(input.budgetId ?? "");
+      await markBudgetAbandoned(budgetId);
+      return "Orcamento marcado como abandonado.";
     }
 
     default:

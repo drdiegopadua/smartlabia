@@ -9,6 +9,7 @@ IA que atende o WhatsApp de um laboratório: horário de funcionamento, orçamen
 - PostgreSQL + Prisma
 - Anthropic Claude (via `@anthropic-ai/sdk`), com *tool use* para consultar exames, montar orçamentos e agendar
 - WhatsApp Cloud API (Meta) para envio/recebimento de mensagens
+- `jsPDF` para gerar o orçamento em PDF no layout oficial do laboratório (com fallback em texto formatado)
 - `node-cron` para o job de follow-up de leads inativos
 
 ## Setup
@@ -49,13 +50,40 @@ src/
   db/prisma.ts             # cliente Prisma
   whatsapp/client.ts        # envio de mensagens e download de mídia (Cloud API)
   whatsapp/webhook.ts       # recebimento de mensagens e orquestração da resposta
-  ai/claude.ts              # loop de conversa com Claude (tool use, texto/imagem/PDF)
-  ai/tools.ts                # definição e execução das ferramentas que a IA pode chamar
+  ai/claude.ts              # loop de conversa com Claude (tool use, texto/imagem/PDF) — atende o cliente
+  ai/tools.ts                # ferramentas que a IA de atendimento pode chamar
+  ai/adminChat.ts            # loop de conversa com Claude para o chat de treinamento (admin)
+  ai/adminTools.ts           # ferramentas de escrita: atualizar preço, criar exame, mudar horário
+  admin/router.ts            # rota POST /admin/chat (protegida por token) usada pelo chat de treinamento
   services/                  # regras de negócio: exames, orçamentos, agendamentos, contatos
   jobs/followup.job.ts       # cron de reengajamento de orçamentos abertos sem fechamento
 prisma/schema.prisma        # modelo de dados (exames, orçamentos, agendamentos, conversas)
 prisma/seed.ts               # dados de exemplo
 ```
+
+## Chat de treinamento da IA (atualizar preços e exames por conversa)
+
+Existe um segundo "cérebro" da IA, separado do que atende o cliente no WhatsApp: um chat interno para o administrador do laboratório manter o banco de dados atualizado em linguagem natural — por exemplo, dizer "o hemograma agora custa R$ 20" e o preço já é atualizado no banco, refletindo na próxima resposta que a IA der a um cliente.
+
+- **Endpoint**: `POST /admin/chat`, protegido pelo header `x-admin-token` (valor de `ADMIN_API_TOKEN` no `.env`).
+- **Corpo da requisição**: `{ "message": "hemograma agora custa 20 reais", "history": [...] }` — `history` é o histórico da conversa (mantido pelo cliente/frontend, sem estado no servidor).
+- **Resposta**: `{ "reply": "Hemograma completo atualizado: R$ 15,00 → R$ 20,00 ✅" }`
+
+Exemplo rápido com `curl`:
+```bash
+curl -X POST http://localhost:3000/admin/chat \
+  -H "Content-Type: application/json" \
+  -H "x-admin-token: SEU_ADMIN_API_TOKEN" \
+  -d '{"message": "hemograma completo agora custa 20 reais"}'
+```
+
+O painel de demonstração (`demo/index.html`, aba "Treinar IA") simula essa conversa localmente, sem precisar do backend rodando — útil para mostrar o conceito antes de conectar tudo.
+
+## Status do orçamento
+
+- **`OPEN`** (em aberto): estado inicial, criado por `create_budget`.
+- **`CONVERTED`** (convertido): definido automaticamente quando a IA chama `schedule_appointment` passando o `budgetId` do orçamento — ou seja, quando o cliente confirma que quer agendar a coleta.
+- **`ABANDONED`** (abandonado): definido de duas formas — (1) automaticamente pelo job de follow-up após 3 tentativas sem resposta, ou (2) imediatamente, se a IA chamar `mark_budget_abandoned` porque o cliente recusou explicitamente o orçamento.
 
 ## Fluxo de reengajamento de leads
 

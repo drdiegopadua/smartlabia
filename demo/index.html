@@ -5,192 +5,652 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>SmartLabIA — Painel (demonstração)</title>
 <style>
+  /* Paleta "Black and Gold Elegance": branco, cinza claro, dourado, azul-marinho, preto.
+     Design fixo (nao adapta a tema claro/escuro do SO) — e a identidade visual do produto. */
   :root {
-    --bg: #f4f6f8;
-    --panel: #ffffff;
-    --text: #1b2430;
-    --text-muted: #64748b;
-    --border: #e2e8f0;
-    --brand: #16a34a;
-    --brand-dark: #15803d;
-    --brand-soft: #dcfce7;
-    --sidebar-bg: #0f2419;
-    --sidebar-text: #d1fae5;
-    --sidebar-active: #16a34a;
-    --bubble-in: #ffffff;
-    --bubble-out: #dcf8c6;
-    --danger: #dc2626;
-    --warn: #d97706;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #0b1120;
-      --panel: #111827;
-      --text: #e5e7eb;
-      --text-muted: #94a3b8;
-      --border: #1f2937;
-      --brand: #22c55e;
-      --brand-dark: #16a34a;
-      --brand-soft: #14532d;
-      --sidebar-bg: #06120c;
-      --sidebar-text: #bbf7d0;
-      --sidebar-active: #22c55e;
-      --bubble-in: #1f2937;
-      --bubble-out: #14532d;
-      --danger: #f87171;
-      --warn: #fbbf24;
-    }
+    --mint-bg-1: #14213d;
+    --mint-bg-2: #000000;
+    --coral: #fca311;
+    --coral-soft: #ffe9c2;
+    --card: #ffffff;
+    --card-soft: #e5e5e5;
+    --ink: #14213d;
+    --muted: rgba(20, 33, 61, 0.58);
+    --border: #e5e5e5;
+    --teal-900: #000000;
+    --teal-800: #14213d;
+    --teal-700: #14213d;
+    --teal-500: #fca311;
+    --teal-100: rgba(252, 163, 17, 0.16);
+    --danger: #e0562f;
+    --shadow: 0 24px 50px -18px rgba(0, 0, 0, 0.55);
   }
   * { box-sizing: border-box; }
   body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-  }
-  .app {
-    display: grid;
-    grid-template-columns: 220px 1fr;
     min-height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    background:
+      radial-gradient(circle at 10% 90%, rgba(252, 163, 17, 0.30), transparent 45%),
+      radial-gradient(circle at 92% 10%, rgba(255, 255, 255, 0.10), transparent 40%),
+      linear-gradient(150deg, var(--mint-bg-1), var(--mint-bg-2));
+    padding: 40px 28px;
   }
-  .sidebar {
-    background: var(--sidebar-bg);
-    color: var(--sidebar-text);
-    padding: 20px 12px;
+  .shell {
+    max-width: 1180px;
+    margin: 0 auto;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    background: var(--card);
+    border-radius: 32px;
+    box-shadow: var(--shadow);
+    min-height: calc(100vh - 80px);
+    padding-left: 86px;
+  }
+  .rail {
+    position: absolute;
+    left: -26px;
+    top: 32px;
+    bottom: 32px;
+    width: 78px;
+    background: linear-gradient(190deg, var(--teal-800), var(--teal-900));
+    border-radius: 40px;
     display: flex;
     flex-direction: column;
-    gap: 4px;
-  }
-  .brand {
-    display: flex;
     align-items: center;
+    padding: 24px 0;
     gap: 10px;
-    padding: 8px 10px 20px 10px;
-    font-weight: 700;
-    font-size: 17px;
-    color: #fff;
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.55);
+    z-index: 5;
   }
-  .brand-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--brand); box-shadow: 0 0 0 4px rgba(34,197,94,0.25); }
-  .nav-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 10px 12px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 14px;
-    color: var(--sidebar-text);
-    opacity: 0.85;
+  .rail-logo {
+    width: 34px; height: 34px; border-radius: 50%;
+    background: var(--coral);
+    margin-bottom: 22px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 15px; font-weight: 800; color: #14213d;
   }
-  .nav-item:hover { background: rgba(255,255,255,0.06); opacity: 1; }
-  .nav-item.active { background: var(--sidebar-active); color: #06210f; font-weight: 600; opacity: 1; }
-  .badge-demo {
-    margin-top: auto;
-    font-size: 11px;
-    color: var(--sidebar-text);
-    opacity: 0.6;
-    padding: 10px;
-    border-top: 1px solid rgba(255,255,255,0.08);
+  .rail nav { display: flex; flex-direction: column; gap: 12px; flex: 1; }
+  .rail-btn {
+    width: 46px; height: 46px; border-radius: 50%;
+    border: none; background: transparent; color: rgba(255,255,255,0.55);
+    font-size: 18px; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: background 0.15s, color 0.15s;
   }
-  .main { padding: 28px 32px; overflow-x: auto; }
-  .topbar { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 22px; flex-wrap: wrap; gap: 8px; }
+  .rail-btn:hover { background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.85); }
+  .rail-btn.active { background: #ffffff; color: var(--teal-700); box-shadow: 0 8px 18px -6px rgba(0,0,0,0.5); }
+  .rail-tag { font-size: 9px; letter-spacing: 0.08em; color: var(--coral); writing-mode: vertical-rl; padding-bottom: 6px; font-weight: 700; }
+
+  .content { padding: 30px 36px 36px; background: var(--card-soft); border-radius: 0 32px 32px 0; }
+  .topbar { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 20px; flex-wrap: wrap; gap: 8px; }
   .topbar h1 { font-size: 22px; margin: 0; }
-  .topbar p { margin: 4px 0 0; color: var(--text-muted); font-size: 13px; }
+  .topbar p { margin: 4px 0 0; color: var(--muted); font-size: 13px; }
   .demo-tag {
-    background: var(--brand-soft);
-    color: var(--brand-dark);
-    font-size: 12px;
-    font-weight: 600;
-    padding: 5px 10px;
-    border-radius: 999px;
-    white-space: nowrap;
+    background: var(--coral-soft); color: #9a4a12;
+    font-size: 11.5px; font-weight: 700;
+    padding: 5px 11px; border-radius: 999px; white-space: nowrap;
   }
-  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 14px; margin-bottom: 24px; }
-  .card {
-    background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 16px 18px;
-  }
-  .card .num { font-size: 26px; font-weight: 700; }
-  .card .label { font-size: 12.5px; color: var(--text-muted); margin-top: 2px; }
+
   .view { display: none; }
   .view.active { display: block; }
-  .panel {
-    background: var(--panel);
+
+  /* ---------- Dashboard view ---------- */
+  .grid-dash { display: grid; grid-template-columns: 300px 1fr; gap: 20px; }
+  .card {
+    background: var(--card);
     border: 1px solid var(--border);
-    border-radius: 12px;
-    overflow: hidden;
+    border-radius: 22px;
+    padding: 20px;
   }
-  .conv-layout { display: grid; grid-template-columns: 280px 1fr; min-height: 520px; }
-  .conv-list { border-right: 1px solid var(--border); overflow-y: auto; max-height: 600px; }
-  .conv-list-item { padding: 12px 16px; border-bottom: 1px solid var(--border); cursor: pointer; }
-  .conv-list-item:hover { background: rgba(34,197,94,0.06); }
-  .conv-list-item.active { background: var(--brand-soft); }
-  .conv-list-item .name { font-weight: 600; font-size: 14px; }
-  .conv-list-item .preview { font-size: 12.5px; color: var(--text-muted); margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .conv-list-item .status { display: inline-block; font-size: 10.5px; font-weight: 700; padding: 2px 7px; border-radius: 999px; margin-top: 6px; }
-  .status-open { background: var(--brand-soft); color: var(--brand-dark); }
-  .status-wait { background: #fef3c7; color: var(--warn); }
-  .chat-window { display: flex; flex-direction: column; }
-  .chat-header { padding: 14px 18px; border-bottom: 1px solid var(--border); font-weight: 600; }
-  .chat-body { flex: 1; padding: 18px; display: flex; flex-direction: column; gap: 10px; background: repeating-linear-gradient(135deg, transparent, transparent 40px); overflow-y: auto; max-height: 500px; }
-  .bubble { max-width: 70%; padding: 9px 13px; border-radius: 10px; font-size: 13.5px; line-height: 1.45; }
-  .bubble.in { background: var(--bubble-in); align-self: flex-start; border: 1px solid var(--border); }
-  .bubble.out { background: var(--bubble-out); align-self: flex-end; }
-  .bubble .meta { display: block; font-size: 10.5px; color: var(--text-muted); margin-top: 4px; text-align: right; }
-  table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
-  th, td { text-align: left; padding: 12px 16px; border-bottom: 1px solid var(--border); }
-  th { color: var(--text-muted); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 0.02em; }
+  .col-left { display: flex; flex-direction: column; gap: 18px; }
+
+  .profile-card { display: flex; flex-direction: column; align-items: center; text-align: center; }
+  .avatar {
+    width: 64px; height: 64px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--teal-500), var(--teal-700));
+    color: #fff; font-weight: 800; font-size: 22px;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 10px;
+  }
+  .profile-card .name { font-weight: 700; font-size: 15.5px; }
+  .profile-card .sub { color: var(--muted); font-size: 12.5px; margin-top: 2px; }
+  .stat-row { display: flex; gap: 10px; margin-top: 16px; width: 100%; }
+  .stat-pill { flex: 1; background: var(--teal-100); border-radius: 14px; padding: 8px 6px; }
+  .stat-pill .v { font-weight: 800; font-size: 14px; color: var(--teal-700); }
+  .stat-pill .k { font-size: 10px; color: var(--muted); margin-top: 1px; }
+
+  .plan-card {
+    margin-top: 18px; width: 100%; border-radius: 16px; padding: 14px 16px;
+    background: linear-gradient(135deg, var(--teal-800), var(--teal-900));
+    color: var(--coral); display: flex; align-items: center; justify-content: space-between;
+    position: relative; overflow: hidden;
+  }
+  .plan-card::after {
+    content: ""; position: absolute; top: -30px; right: -30px; width: 90px; height: 90px;
+    border-radius: 50%; background: radial-gradient(circle, rgba(252,163,17,0.35), transparent 70%);
+  }
+  .plan-card .t1 { font-size: 12.5px; font-weight: 800; color: #ffffff; }
+  .plan-card .t2 { font-size: 10.5px; opacity: 0.75; margin-top: 2px; color: #ffffff; }
+  .plan-add {
+    width: 34px; height: 34px; border-radius: 10px; background: rgba(252,163,17,0.25); color: var(--coral);
+    display: flex; align-items: center; justify-content: center; font-weight: 800; cursor: default; z-index: 1;
+  }
+
+  .notif-card header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+  .notif-card header .t { font-weight: 700; font-size: 13.5px; }
+  .notif-card header .d { font-size: 11px; color: var(--muted); }
+  .notif-item { padding: 10px 0; border-top: 1px solid var(--border); }
+  .notif-item:first-of-type { border-top: none; }
+  .notif-item .row1 { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 700; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--teal-500); flex-shrink: 0; }
+  .dot.amber { background: var(--coral); }
+  .notif-item .row2 { font-size: 12px; color: var(--muted); margin: 3px 0 0 16px; }
+  .notif-item .row3 { display: flex; gap: 14px; font-size: 11px; color: var(--muted); margin: 6px 0 0 16px; }
+
+  .col-right { display: flex; flex-direction: column; gap: 18px; }
+  .section-card header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+  .section-card header .t { font-weight: 700; font-size: 15px; color: var(--teal-800); }
+  .section-card header a { font-size: 12.5px; color: var(--teal-700); text-decoration: none; font-weight: 600; }
+
+  .exam-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .exam-tile { border-radius: 16px; padding: 14px; background: var(--card-soft); border-left: 4px solid var(--teal-500); position: relative; }
+  .exam-tile.warn { border-left-color: var(--coral); }
+  .exam-tile .date { font-size: 10.5px; color: var(--muted); }
+  .exam-tile .title { font-weight: 700; font-size: 13.5px; margin-top: 4px; }
+  .exam-tile .status { font-size: 11.5px; color: var(--muted); margin-top: 3px; }
+  .exam-tile .flag { position: absolute; top: 14px; right: 14px; width: 8px; height: 8px; border-radius: 50%; background: var(--coral); }
+
+  .chart-card .toggle-group { display: flex; gap: 4px; background: var(--card-soft); border-radius: 10px; padding: 3px; }
+  .toggle-group button { border: none; background: transparent; padding: 5px 10px; font-size: 11.5px; border-radius: 8px; color: var(--muted); font-weight: 600; cursor: default; }
+  .toggle-group button.active { background: var(--teal-700); color: #fff; }
+  .chart-wrap { position: relative; }
+  .chart-legend { display: flex; gap: 18px; margin-top: 6px; font-size: 11.5px; color: var(--muted); }
+  .legend-dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 6px; vertical-align: middle; }
+
+  .two-col { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 18px; }
+  .date-strip { display: flex; gap: 8px; margin-top: 10px; }
+  .date-chip { flex: 1; text-align: center; padding: 8px 0; border-radius: 12px; background: var(--card-soft); font-size: 12px; color: var(--muted); }
+  .date-chip .dow { display: block; font-size: 9.5px; margin-bottom: 4px; }
+  .date-chip.active { background: var(--teal-700); color: #fff; font-weight: 700; }
+  .next-appt { margin-top: 14px; font-size: 12.5px; color: var(--muted); }
+  .next-appt b { color: var(--ink); }
+
+  .advice-card p { font-size: 12.5px; color: var(--muted); line-height: 1.6; margin: 0 0 10px; }
+  .advice-card a { display: block; font-size: 12px; color: var(--teal-700); text-decoration: none; font-weight: 600; margin-top: 4px; }
+
+  /* ---------- Resumo rapido (tiles) ---------- */
+  .quick-summary-header { display: flex; justify-content: space-between; align-items: center; margin: 24px 2px 12px; }
+  .quick-summary-header .t { font-weight: 700; font-size: 14.5px; color: var(--teal-800); }
+  .quick-summary-header a { font-size: 12.5px; color: var(--teal-700); text-decoration: none; font-weight: 600; }
+  .quick-summary-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  .qs-tile { background: var(--card); border: 1px solid var(--border); border-radius: 18px; padding: 14px 16px; }
+  .qs-tile .qs-icon {
+    width: 30px; height: 30px; border-radius: 9px; background: var(--teal-100); color: var(--teal-700);
+    display: flex; align-items: center; justify-content: center; font-size: 14px; margin-bottom: 10px;
+  }
+  .qs-tile .qs-label { font-size: 11px; color: var(--muted); display: flex; justify-content: space-between; align-items: center; }
+  .qs-tile .qs-value { font-size: 18px; font-weight: 800; margin-top: 3px; }
+  .qs-trend { font-size: 10.5px; font-weight: 700; }
+  .qs-trend.up { color: #16a34a; }
+  .qs-trend.down { color: var(--danger); }
+  .qs-donut { display: flex; align-items: center; justify-content: center; }
+
+  .float-reminder {
+    position: absolute; right: 34px; bottom: 30px; width: 230px;
+    background: linear-gradient(135deg, var(--teal-800), var(--teal-900));
+    color: #fff; border-radius: 20px; padding: 16px 16px 14px; box-shadow: 0 20px 40px -14px rgba(0,0,0,0.55);
+    z-index: 4;
+  }
+  .float-reminder .fr-top { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+  .float-reminder .fr-icon {
+    width: 26px; height: 26px; border-radius: 50%; background: rgba(252,163,17,0.25); color: var(--coral);
+    display: flex; align-items: center; justify-content: center; font-size: 13px; flex-shrink: 0;
+  }
+  .float-reminder p { font-size: 12px; line-height: 1.45; margin: 0 0 12px; color: rgba(255,255,255,0.88); }
+  .float-reminder button {
+    background: var(--coral); color: #14213d; border: none; border-radius: 10px; font-size: 11.5px; font-weight: 800;
+    padding: 7px 14px; cursor: pointer;
+  }
+
+  /* ---------- shared table / chat styles ---------- */
+  .panel { background: var(--card); border: 1px solid var(--border); border-radius: 22px; overflow: hidden; }
+  .conv-layout { display: grid; grid-template-columns: 300px 1fr; min-height: 560px; }
+  .conv-list-wrap { border-right: 1px solid var(--border); display: flex; flex-direction: column; }
+  .conv-search { padding: 12px; border-bottom: 1px solid var(--border); }
+  .conv-search input {
+    width: 100%; border: none; background: var(--card-soft); border-radius: 999px;
+    padding: 9px 14px 9px 34px; font-size: 12.5px; color: var(--ink);
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236f938e' stroke-width='2'><circle cx='11' cy='11' r='7'/><line x1='21' y1='21' x2='16.65' y2='16.65'/></svg>");
+    background-repeat: no-repeat; background-position: 12px center; background-size: 14px;
+  }
+  .conv-search input:focus { outline: 2px solid var(--teal-500); outline-offset: -1px; }
+  .conv-list { overflow-y: auto; max-height: 512px; flex: 1; }
+  .conv-list-item { padding: 12px 16px; border-bottom: 1px solid var(--border); cursor: pointer; display: flex; gap: 11px; align-items: flex-start; }
+  .conv-list-item:hover { background: var(--teal-100); }
+  .conv-list-item.active { background: var(--teal-100); }
+  .conv-avatar {
+    width: 42px; height: 42px; border-radius: 50%; flex-shrink: 0;
+    background: linear-gradient(135deg, var(--teal-500), var(--teal-700));
+    color: #fff; font-weight: 700; font-size: 14px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .conv-list-item-body { flex: 1; min-width: 0; }
+  .conv-list-item-toprow { display: flex; justify-content: space-between; align-items: baseline; gap: 6px; }
+  .conv-list-item .name { font-weight: 700; font-size: 13.5px; }
+  .conv-list-item .time { font-size: 10.5px; color: var(--muted); flex-shrink: 0; }
+  .conv-list-item-botrow { display: flex; justify-content: space-between; align-items: center; gap: 6px; margin-top: 2px; }
+  .conv-list-item .preview { font-size: 12px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .unread-badge {
+    background: var(--teal-700); color: #fff; font-size: 10.5px; font-weight: 700;
+    min-width: 18px; height: 18px; border-radius: 999px; display: flex; align-items: center; justify-content: center;
+    padding: 0 5px; flex-shrink: 0;
+  }
+  .conv-list-item .status { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 999px; margin-top: 5px; }
+  .status-open { background: var(--teal-100); color: var(--teal-700); }
+  .status-wait { background: var(--coral-soft); color: #9a4a12; }
+  .chat-window { display: flex; flex-direction: column; background: var(--card-soft); }
+  .chat-header { padding: 12px 18px; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 11px; background: var(--card); }
+  .chat-header-body { flex: 1; min-width: 0; }
+  .chat-header .name { font-weight: 700; font-size: 13.5px; }
+  .chat-header .presence { font-size: 11.5px; color: var(--muted); margin-top: 1px; }
+  .chat-header .presence.online { color: var(--teal-700); }
+  .chat-header-icons { display: flex; gap: 16px; color: var(--muted); font-size: 15px; }
+  .chat-body {
+    flex: 1; padding: 18px; display: flex; flex-direction: column; gap: 4px; overflow-y: auto; max-height: 420px;
+    background-image: radial-gradient(var(--border) 1px, transparent 1px);
+    background-size: 18px 18px; background-position: -8px -8px;
+  }
+  .day-divider { align-self: center; background: var(--card); border: 1px solid var(--border); color: var(--muted); font-size: 10.5px; font-weight: 700; padding: 4px 12px; border-radius: 999px; margin: 10px 0 12px; }
+  .bubble { max-width: 68%; padding: 8px 13px; border-radius: 14px; font-size: 13px; line-height: 1.45; margin-bottom: 6px; }
+  .bubble.in { background: var(--card); align-self: flex-start; border: 1px solid var(--border); border-bottom-left-radius: 4px; }
+  .bubble.out { background: var(--teal-100); align-self: flex-end; border-bottom-right-radius: 4px; }
+  .bubble .meta { display: flex; justify-content: flex-end; align-items: center; gap: 3px; font-size: 10px; color: var(--muted); margin-top: 4px; }
+  .ticks { display: inline-flex; }
+  .ticks.read { color: #34b7f1; }
+  .chat-input-bar { display: flex; align-items: center; gap: 12px; padding: 12px 18px; border-top: 1px solid var(--border); background: var(--card); }
+  .chat-icon-btn { background: none; border: none; font-size: 18px; color: var(--muted); cursor: pointer; padding: 4px; line-height: 1; }
+  .chat-input-bar input {
+    flex: 1; border: none; background: var(--card-soft); border-radius: 999px;
+    padding: 10px 16px; font-size: 13px; color: var(--ink);
+  }
+  .chat-input-bar input:focus { outline: 2px solid var(--teal-500); outline-offset: -1px; }
+  .send-btn {
+    width: 36px; height: 36px; border-radius: 50%; border: none; background: var(--teal-700); color: #fff;
+    font-size: 15px; cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  .send-btn:hover { background: var(--teal-800); }
+
+  .chat-input-bar { position: relative; }
+  .popover {
+    position: absolute; bottom: 58px; left: 12px;
+    background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+    box-shadow: var(--shadow); display: none; z-index: 20;
+  }
+  .popover.open { display: block; }
+  .emoji-panel { width: 300px; padding: 10px; }
+  .emoji-panel .cat-label { font-size: 11px; font-weight: 700; color: var(--muted); margin: 6px 4px 4px; }
+  .emoji-grid { display: grid; grid-template-columns: repeat(8, 1fr); gap: 2px; max-height: 220px; overflow-y: auto; }
+  .emoji-grid button {
+    border: none; background: transparent; font-size: 19px; padding: 5px 0; border-radius: 8px; cursor: pointer;
+  }
+  .emoji-grid button:hover { background: var(--teal-100); }
+  .attach-menu { width: 200px; padding: 8px; }
+  .attach-option {
+    display: flex; align-items: center; gap: 12px; padding: 10px 10px; border-radius: 10px; cursor: pointer; font-size: 13px;
+  }
+  .attach-option:hover { background: var(--teal-100); }
+  .attach-option .ic {
+    width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    font-size: 16px; color: #fff;
+  }
+  .ic-doc { background: #7b6cf6; }
+  .ic-photo { background: #b45bc7; }
+  .ic-cam { background: #e0562f; }
+
+  .attachment-preview {
+    display: flex; align-items: center; gap: 10px; padding: 10px 18px; border-top: 1px solid var(--border);
+    background: var(--card);
+  }
+  .attachment-preview img { width: 46px; height: 46px; object-fit: cover; border-radius: 10px; }
+  .attachment-preview .doc-chip {
+    width: 46px; height: 46px; border-radius: 10px; background: var(--teal-100); color: var(--teal-700);
+    display: flex; align-items: center; justify-content: center; font-size: 20px;
+  }
+  .attachment-preview .fname { font-size: 12.5px; font-weight: 600; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .attachment-preview .remove-btn { background: none; border: none; color: var(--muted); font-size: 16px; cursor: pointer; }
+
+  .bubble img.msg-img { max-width: 220px; border-radius: 10px; display: block; margin-bottom: 4px; }
+  .bubble .doc-row { display: flex; align-items: center; gap: 10px; }
+  .bubble .doc-row .doc-ic {
+    width: 36px; height: 36px; border-radius: 8px; background: var(--teal-700); color: #fff;
+    display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0;
+  }
+
+  /* ---------- Agenda mensal ---------- */
+  .agd-toolbar { display: flex; align-items: center; justify-content: space-between; padding: 18px 20px 4px; }
+  .agd-toolbar .month-label { font-weight: 700; font-size: 15px; text-transform: capitalize; }
+  .agd-nav-btn {
+    width: 30px; height: 30px; border-radius: 9px; border: 1px solid var(--border); background: var(--card-soft);
+    color: var(--teal-700); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .agd-nav-btn:hover { background: var(--teal-100); }
+  .agd-nav-group { display: flex; gap: 8px; align-items: center; }
+  .agd-cal-wrap { padding: 12px 20px 4px; }
+  .agd-dow-row, .agd-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; }
+  .agd-dow-row { margin-bottom: 6px; }
+  .agd-dow { text-align: center; font-size: 10.5px; font-weight: 700; color: var(--muted); text-transform: uppercase; }
+  .agd-day {
+    height: 58px; border-radius: 12px; border: 1px solid var(--border); background: var(--card-soft);
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px;
+    font-size: 12.5px; font-weight: 700; color: var(--ink); cursor: pointer; position: relative;
+  }
+  .agd-day:hover { border-color: var(--teal-500); }
+  .agd-day.vazio { visibility: hidden; cursor: default; }
+  .agd-day.hoje { box-shadow: 0 0 0 2px var(--teal-500) inset; }
+  .agd-day.selecionado { outline: 2px solid var(--teal-800); outline-offset: 1px; }
+  .agd-day.com-evento { color: #fff; border-color: transparent; }
+  .agd-day-count {
+    font-size: 10px; font-weight: 800; background: rgba(255,255,255,0.9); color: var(--ink);
+    padding: 0 6px; border-radius: 999px; line-height: 1.5;
+  }
+  .agd-day-dots { display: flex; gap: 3px; }
+  .agd-day-dots span { width: 6px; height: 6px; border-radius: 50%; }
+
+  .agd-legend { display: flex; flex-wrap: wrap; gap: 14px; padding: 14px 20px; border-top: 1px solid var(--border); margin-top: 8px; }
+  .agd-legend-item { display: flex; align-items: center; gap: 7px; font-size: 12px; color: var(--muted); font-weight: 600; }
+  .agd-legend-dot { width: 11px; height: 11px; border-radius: 4px; flex-shrink: 0; }
+
+  .agd-list-header { display: flex; justify-content: space-between; align-items: center; padding: 14px 20px 6px; }
+  .agd-list-header .t { font-weight: 700; font-size: 13.5px; }
+  .agd-list-header button { border: none; background: var(--teal-100); color: var(--teal-700); font-size: 11.5px; font-weight: 700; padding: 5px 12px; border-radius: 999px; cursor: pointer; }
+
+  /* ---------- Treinar IA (chat estilo ChatGPT) ---------- */
+  .trainer-panel { display: flex; flex-direction: column; height: 680px; }
+  .trainer-messages { flex: 1; overflow-y: auto; }
+  .trainer-empty { height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 20px; }
+  .trainer-empty .te-icon {
+    width: 52px; height: 52px; border-radius: 16px; background: linear-gradient(135deg, var(--teal-800), var(--teal-900));
+    color: var(--coral); font-size: 24px; display: flex; align-items: center; justify-content: center; margin-bottom: 14px;
+  }
+  .trainer-empty h3 { margin: 0 0 6px; font-size: 17px; }
+  .trainer-empty p { margin: 0 0 20px; color: var(--muted); font-size: 13px; max-width: 380px; }
+  .trainer-chips { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; max-width: 460px; }
+  .trainer-chip {
+    border: 1px solid var(--border); background: var(--card); color: var(--ink); font-size: 12px;
+    padding: 8px 14px; border-radius: 999px; cursor: pointer; text-align: left;
+  }
+  .trainer-chip:hover { border-color: var(--teal-700); }
+
+  .trainer-msg { display: flex; gap: 12px; padding: 16px 22px; }
+  .trainer-msg.assistant { background: var(--card-soft); }
+  .trainer-msg .tm-avatar {
+    width: 30px; height: 30px; border-radius: 8px; flex-shrink: 0; display: flex; align-items: center; justify-content: center;
+    font-size: 14px; font-weight: 800;
+  }
+  .trainer-msg.user .tm-avatar { background: var(--teal-700); color: #fff; }
+  .trainer-msg.assistant .tm-avatar { background: linear-gradient(135deg, var(--teal-800), var(--teal-900)); color: var(--coral); }
+  .trainer-msg .tm-body { flex: 1; min-width: 0; }
+  .trainer-msg .tm-role { font-size: 11.5px; font-weight: 700; color: var(--muted); margin-bottom: 4px; }
+  .trainer-msg .tm-text { font-size: 13.5px; line-height: 1.6; white-space: pre-wrap; }
+  .trainer-msg .tm-diff {
+    display: inline-flex; align-items: center; gap: 6px; margin-top: 8px; font-size: 12px; font-weight: 700;
+    background: rgba(22,163,74,0.12); color: #16a34a; padding: 5px 12px; border-radius: 999px;
+  }
+
+  .trainer-input-bar { display: flex; gap: 10px; align-items: flex-end; padding: 16px 22px; border-top: 1px solid var(--border); background: var(--card); }
+  .trainer-input-bar textarea {
+    flex: 1; border: 1px solid var(--border); background: var(--card-soft); border-radius: 16px;
+    padding: 11px 16px; font-size: 13.5px; font-family: inherit; color: var(--ink); resize: none; max-height: 120px;
+  }
+  .trainer-input-bar textarea:focus { outline: 2px solid var(--teal-700); outline-offset: -1px; }
+  .trainer-send-btn {
+    width: 40px; height: 40px; border-radius: 12px; border: none; background: var(--teal-700); color: #fff;
+    font-size: 16px; cursor: pointer; flex-shrink: 0; display: flex; align-items: center; justify-content: center;
+  }
+  .trainer-send-btn:hover { background: var(--teal-800); }
+  .trainer-hint { font-size: 11px; color: var(--muted); padding: 0 22px 14px; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th, td { text-align: left; padding: 13px 18px; border-bottom: 1px solid var(--border); }
+  th { color: var(--muted); font-weight: 700; font-size: 11px; text-transform: uppercase; letter-spacing: 0.03em; }
   tr:last-child td { border-bottom: none; }
-  .pill { font-size: 11px; font-weight: 700; padding: 3px 9px; border-radius: 999px; }
-  .pill-open { background: var(--brand-soft); color: var(--brand-dark); }
-  .pill-converted { background: #dbeafe; color: #1d4ed8; }
-  .pill-abandoned { background: #fee2e2; color: var(--danger); }
-  .pill-scheduled { background: var(--brand-soft); color: var(--brand-dark); }
-  .price { font-variant-numeric: tabular-nums; font-weight: 600; }
-  @media (max-width: 720px) {
-    .app { grid-template-columns: 1fr; }
-    .sidebar { flex-direction: row; overflow-x: auto; }
-    .conv-layout { grid-template-columns: 1fr; }
-    .conv-list { max-height: 220px; }
+  .pill { font-size: 10.5px; font-weight: 700; padding: 3px 10px; border-radius: 999px; display: inline-flex; align-items: center; gap: 5px; }
+  .pill::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+  .pill-open { background: rgba(252,163,17,0.16); color: #b8710a; }
+  .pill-converted { background: rgba(22,163,74,0.14); color: #16a34a; }
+  .pill-abandoned { background: rgba(224,86,47,0.14); color: var(--danger); }
+  .pill-scheduled { background: var(--teal-100); color: var(--teal-700); }
+  .price { font-variant-numeric: tabular-nums; font-weight: 700; }
+
+  /* ---------- Resumo de orcamentos por status ---------- */
+  .orc-status-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; padding: 18px 20px 4px; }
+  .orc-status-card {
+    border: 1.5px solid var(--border); border-radius: 16px; padding: 13px 15px; cursor: pointer;
+    background: var(--card); transition: border-color 0.15s, transform 0.1s;
+  }
+  .orc-status-card:hover { transform: translateY(-1px); }
+  .orc-status-card.active { border-color: var(--status-color, var(--teal-700)); background: color-mix(in srgb, var(--status-color, var(--teal-700)) 8%, white); }
+  .orc-status-card .osc-top { display: flex; align-items: center; gap: 7px; font-size: 11.5px; font-weight: 700; color: var(--muted); }
+  .orc-status-card .osc-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--status-color, var(--teal-700)); }
+  .orc-status-card .osc-count { font-size: 22px; font-weight: 800; margin-top: 6px; color: var(--ink); }
+  .orc-status-card .osc-value { font-size: 11.5px; color: var(--muted); margin-top: 2px; }
+  .orc-row-flag td:first-child { border-left: 3px solid var(--row-color, transparent); }
+
+  @media (max-width: 860px) {
+    .shell { padding-left: 0; padding-top: 92px; }
+    .rail { position: static; width: auto; flex-direction: row; padding: 12px; border-radius: 24px; margin: 16px 16px 0; }
+    .rail nav { flex-direction: row; flex: none; }
+    .rail-tag { display: none; }
+    .grid-dash, .two-col, .conv-layout { grid-template-columns: 1fr; }
+    .exam-row { grid-template-columns: 1fr; }
+    .quick-summary-grid { grid-template-columns: repeat(2, 1fr); }
+    .float-reminder { position: static; width: auto; margin-top: 16px; }
   }
 </style>
 </head>
 <body>
-<div class="app">
-  <aside class="sidebar">
-    <div class="brand"><span class="brand-dot"></span> SmartLabIA</div>
-    <div class="nav-item active" data-view="conversas">💬 Conversas</div>
-    <div class="nav-item" data-view="orcamentos">🧾 Orçamentos</div>
-    <div class="nav-item" data-view="agendamentos">📅 Agendamentos</div>
-    <div class="nav-item" data-view="exames">🧪 Exames</div>
-    <div class="badge-demo">Dados de demonstração — não conectado a um laboratório real ainda.</div>
+<div class="shell">
+  <aside class="rail">
+    <div class="rail-logo">S</div>
+    <nav>
+      <button class="rail-btn active" data-view="dashboard" title="Dashboard">⌂</button>
+      <button class="rail-btn" data-view="conversas" title="Conversas">💬</button>
+      <button class="rail-btn" data-view="orcamentos" title="Orçamentos">🧾</button>
+      <button class="rail-btn" data-view="agendamentos" title="Agendamentos">📅</button>
+      <button class="rail-btn" data-view="exames" title="Exames">🧪</button>
+      <button class="rail-btn" data-view="treinar" title="Treinar IA">🧠</button>
+    </nav>
+    <div class="rail-tag">SMARTLABIA</div>
   </aside>
 
-  <main class="main">
+  <main class="content">
     <div class="topbar">
       <div>
-        <h1 id="view-title">Conversas</h1>
-        <p id="view-subtitle">Atendimentos do WhatsApp respondidos pela IA</p>
+        <h1 id="view-title">Dashboard</h1>
+        <p id="view-subtitle">Visão geral do atendimento via WhatsApp</p>
       </div>
       <span class="demo-tag">MODO DEMONSTRAÇÃO</span>
     </div>
 
-    <div class="cards">
-      <div class="card"><div class="num">128</div><div class="label">Conversas este mês</div></div>
-      <div class="card"><div class="num">R$ 6.340</div><div class="label">Em orçamentos abertos</div></div>
-      <div class="card"><div class="num">37</div><div class="label">Agendamentos confirmados</div></div>
-      <div class="card"><div class="num">61%</div><div class="label">Taxa de conversão</div></div>
-    </div>
+    <!-- DASHBOARD -->
+    <section class="view active" id="view-dashboard" style="position:relative; padding-bottom:210px;">
+      <div class="grid-dash">
+        <div class="col-left">
+          <div class="card profile-card">
+            <div class="avatar">LE</div>
+            <div class="name">Laboratório Exemplo</div>
+            <div class="sub">Plano Profissional</div>
+            <div class="stat-row">
+              <div class="stat-pill"><div class="v">5</div><div class="k">Exames</div></div>
+              <div class="stat-pill"><div class="v">128</div><div class="k">Clientes</div></div>
+              <div class="stat-pill"><div class="v">R$49</div><div class="k">Ticket médio</div></div>
+            </div>
+            <div class="plan-card">
+              <div>
+                <div class="t1">Renovação automática</div>
+                <div class="t2">Próxima cobrança 05/08/2026</div>
+              </div>
+              <div class="plan-add">＋</div>
+            </div>
+          </div>
+
+          <div class="card notif-card">
+            <header><span class="t">Notificações</span><span class="d">23 Jul</span></header>
+            <div class="notif-item">
+              <div class="row1"><span class="dot amber"></span>Juliana Prado</div>
+              <div class="row2">Enviou pedido médico (imagem)</div>
+              <div class="row3"><span>há 2h</span><span>Aguardando resposta</span></div>
+            </div>
+            <div class="notif-item">
+              <div class="row1"><span class="dot"></span>Dra. Marcos Alves</div>
+              <div class="row2">Confirmou agendamento — Hemograma + Glicemia</div>
+              <div class="row3"><span>Hoje</span><span>09:00</span></div>
+            </div>
+            <div class="notif-item">
+              <div class="row1"><span class="dot amber"></span>Roberto Lima</div>
+              <div class="row2">Orçamento aberto há 3 dias sem resposta</div>
+              <div class="row3"><span>Follow-up 2/3 enviado</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-right">
+          <div class="card section-card">
+            <header><span class="t">Orçamentos recentes</span><a href="#" onclick="return false">Ver todos</a></header>
+            <div class="exam-row">
+              <div class="exam-tile">
+                <div class="date">21 Jul 2026</div>
+                <div class="title">Hemograma + Glicemia</div>
+                <div class="status">Convertido</div>
+              </div>
+              <div class="exam-tile warn">
+                <div class="date">20 Jul 2026</div>
+                <div class="title">TSH + Colesterol</div>
+                <div class="status">Aguardando cliente</div>
+                <div class="flag"></div>
+              </div>
+              <div class="exam-tile">
+                <div class="date">18 Jul 2026</div>
+                <div class="title">Urina tipo 1</div>
+                <div class="status">Agendado</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card section-card chart-card">
+            <header>
+              <span class="t">Curva de atendimentos</span>
+              <div class="toggle-group">
+                <button>D</button><button>S</button><button>M</button><button class="active">A</button>
+              </div>
+            </header>
+            <div class="chart-wrap">
+              <svg viewBox="0 0 600 190" width="100%" height="190" preserveAspectRatio="none">
+                <path d="M0,120 C50,150 100,90 150,110 C200,130 250,60 300,90 C350,120 400,140 450,80 C500,40 550,100 600,70 L600,190 L0,190 Z" fill="var(--teal-100)" opacity="0.7"/>
+                <path d="M0,120 C50,150 100,90 150,110 C200,130 250,60 300,90 C350,120 400,140 450,80 C500,40 550,100 600,70" fill="none" stroke="var(--border)" stroke-width="2"/>
+                <path d="M0,150 C60,100 120,160 180,120 C240,80 300,130 360,90 C420,50 480,110 540,60 L600,40" fill="none" stroke="var(--teal-700)" stroke-width="3.5" stroke-linecap="round"/>
+                <circle cx="0" cy="150" r="6" fill="var(--teal-700)"/>
+                <circle cx="600" cy="40" r="6" fill="var(--teal-700)"/>
+              </svg>
+            </div>
+            <div class="chart-legend">
+              <span><span class="legend-dot" style="background:var(--border)"></span>Média do setor</span>
+              <span><span class="legend-dot" style="background:var(--teal-700)"></span>Laboratório Exemplo</span>
+            </div>
+          </div>
+
+          <div class="two-col">
+            <div class="card">
+              <header class="section-card-header" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+                <span class="t" style="font-weight:700;font-size:14px;color:var(--teal-800);">Próximos agendamentos</span>
+              </header>
+              <div class="date-strip">
+                <div class="date-chip"><span class="dow">QUI</span>23</div>
+                <div class="date-chip active"><span class="dow">SEX</span>24</div>
+                <div class="date-chip"><span class="dow">SAB</span>25</div>
+                <div class="date-chip"><span class="dow">DOM</span>26</div>
+                <div class="date-chip"><span class="dow">SEG</span>27</div>
+              </div>
+              <div class="next-appt">Próxima coleta: <b>Marcos Alves</b> às 09:00 — Hemograma + Glicemia</div>
+            </div>
+            <div class="card advice-card">
+              <div class="t" style="font-weight:700;font-size:14px;color:var(--teal-800);margin-bottom:8px;">Dica do dia</div>
+              <p>3 orçamentos estão parados há mais de 24h sem agendamento. A IA já está enviando mensagens de reengajamento automaticamente.</p>
+              <a href="#" onclick="return false">Ver orçamentos parados →</a>
+              <a href="#" onclick="return false">Central de ajuda</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="quick-summary-header">
+        <span class="t">Resumo rápido do laboratório</span>
+        <a href="#" onclick="return false">Ver relatório completo</a>
+      </div>
+      <div class="quick-summary-grid">
+        <div class="qs-tile">
+          <div class="qs-icon">🧾</div>
+          <div class="qs-label"><span>Orçamentos</span><span class="qs-trend up">↑ 12%</span></div>
+          <div class="qs-value">R$ 6.340</div>
+        </div>
+        <div class="qs-tile">
+          <div class="qs-icon">📅</div>
+          <div class="qs-label"><span>Agendamentos</span><span class="qs-trend up">↑ 8%</span></div>
+          <div class="qs-value">37</div>
+        </div>
+        <div class="qs-tile">
+          <div class="qs-icon">🧪</div>
+          <div class="qs-label"><span>Exames no catálogo</span><span class="qs-trend down">↓ 2</span></div>
+          <div class="qs-value">741</div>
+        </div>
+        <div class="qs-tile">
+          <div class="qs-label" style="margin-bottom:4px;"><span>Taxa de conversão</span></div>
+          <div class="qs-donut">
+            <svg width="64" height="64" viewBox="0 0 42 42">
+              <circle cx="21" cy="21" r="16" fill="none" stroke="var(--border)" stroke-width="6"/>
+              <circle cx="21" cy="21" r="16" fill="none" stroke="var(--coral)" stroke-width="6"
+                stroke-dasharray="61 100" stroke-dashoffset="25" stroke-linecap="round" transform="rotate(-90 21 21)"/>
+              <text x="21" y="24" text-anchor="middle" font-size="9" font-weight="800" fill="var(--ink)">61%</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="float-reminder">
+        <div class="fr-top"><span class="fr-icon">🔔</span><strong style="font-size:12.5px;">Lembrete</strong></div>
+        <p>Roberto Lima está sem responder há 3 dias sobre o orçamento de Colesterol. Que tal um follow-up manual?</p>
+        <button onclick="return false">Enviar mensagem →</button>
+      </div>
+    </section>
 
     <!-- CONVERSAS -->
-    <section class="view active" id="view-conversas">
+    <section class="view" id="view-conversas">
       <div class="panel conv-layout">
-        <div class="conv-list" id="conv-list"></div>
+        <div class="conv-list-wrap">
+          <div class="conv-search"><input id="conv-search" placeholder="Pesquisar conversa" /></div>
+          <div class="conv-list" id="conv-list"></div>
+        </div>
         <div class="chat-window">
-          <div class="chat-header" id="chat-header">Selecione uma conversa</div>
+          <div class="chat-header" id="chat-header"></div>
           <div class="chat-body" id="chat-body"></div>
+          <div id="attachment-preview-wrap"></div>
+          <div class="chat-input-bar">
+            <div class="popover emoji-panel" id="emoji-popover"></div>
+            <div class="popover attach-menu" id="attach-popover">
+              <div class="attach-option" id="opt-doc"><span class="ic ic-doc">📄</span> Documento</div>
+              <div class="attach-option" id="opt-photo"><span class="ic ic-photo">🖼️</span> Fotos e vídeos</div>
+              <div class="attach-option" id="opt-cam"><span class="ic ic-cam">📷</span> Câmera</div>
+            </div>
+            <button class="chat-icon-btn" id="emoji-btn" title="Emoji">😊</button>
+            <button class="chat-icon-btn" id="attach-btn" title="Anexar">📎</button>
+            <input type="file" id="file-doc" style="display:none" accept=".pdf,.doc,.docx,.txt,application/pdf" />
+            <input type="file" id="file-photo" style="display:none" accept="image/*" multiple />
+            <input id="chat-input" placeholder="Digite uma mensagem" />
+            <button class="send-btn" id="chat-send" title="Enviar">➤</button>
+          </div>
         </div>
       </div>
     </section>
@@ -198,6 +658,11 @@
     <!-- ORÇAMENTOS -->
     <section class="view" id="view-orcamentos">
       <div class="panel">
+        <div class="orc-status-row" id="orc-status-row"></div>
+        <div class="agd-list-header">
+          <span class="t" id="orc-list-title">Todos os orçamentos</span>
+          <button id="orc-list-reset">Ver todos</button>
+        </div>
         <table>
           <thead><tr><th>Cliente</th><th>Exames</th><th>Total</th><th>Origem</th><th>Status</th></tr></thead>
           <tbody id="orcamentos-body"></tbody>
@@ -208,8 +673,27 @@
     <!-- AGENDAMENTOS -->
     <section class="view" id="view-agendamentos">
       <div class="panel">
+        <div class="agd-toolbar">
+          <div class="month-label" id="agd-month-label"></div>
+          <div class="agd-nav-group">
+            <button class="agd-nav-btn" id="agd-prev">‹</button>
+            <button class="agd-nav-btn" id="agd-today">●</button>
+            <button class="agd-nav-btn" id="agd-next">›</button>
+          </div>
+        </div>
+        <div class="agd-cal-wrap">
+          <div class="agd-dow-row">
+            <span class="agd-dow">Dom</span><span class="agd-dow">Seg</span><span class="agd-dow">Ter</span><span class="agd-dow">Qua</span><span class="agd-dow">Qui</span><span class="agd-dow">Sex</span><span class="agd-dow">Sáb</span>
+          </div>
+          <div class="agd-grid" id="agd-grid"></div>
+        </div>
+        <div class="agd-legend" id="agd-legend"></div>
+        <div class="agd-list-header">
+          <span class="t" id="agd-list-title">Todos os agendamentos</span>
+          <button id="agd-list-reset">Ver todos</button>
+        </div>
         <table>
-          <thead><tr><th>Cliente</th><th>Data e hora</th><th>Observações</th><th>Status</th></tr></thead>
+          <thead><tr><th>Cliente</th><th>Data e hora</th><th>Tipo</th><th>Observações</th><th>Status</th></tr></thead>
           <tbody id="agendamentos-body"></tbody>
         </table>
       </div>
@@ -218,53 +702,143 @@
     <!-- EXAMES -->
     <section class="view" id="view-exames">
       <div class="panel">
-        <table>
-          <thead><tr><th>Exame</th><th>Preço</th><th>Preparo</th><th>Amostra</th><th>Prazo</th></tr></thead>
-          <tbody id="exames-body"></tbody>
-        </table>
+        <div class="conv-search" style="border-bottom:1px solid var(--border);">
+          <input id="exames-search" placeholder="Buscar por nome ou código do exame" />
+        </div>
+        <div style="max-height:560px; overflow-y:auto;">
+          <table>
+            <thead><tr><th>Código</th><th>Exame</th><th>Categoria</th><th>Preço</th></tr></thead>
+            <tbody id="exames-body"></tbody>
+          </table>
+        </div>
+        <div id="exames-count" style="padding:10px 18px; font-size:11.5px; color:var(--muted); border-top:1px solid var(--border);"></div>
+      </div>
+    </section>
+
+    <!-- TREINAR IA -->
+    <section class="view" id="view-treinar">
+      <div class="panel trainer-panel">
+        <div class="trainer-messages" id="trainer-messages"></div>
+        <div class="trainer-input-bar">
+          <textarea id="trainer-input" rows="1" placeholder="Ex: hemograma completo agora custa R$ 20"></textarea>
+          <button class="trainer-send-btn" id="trainer-send" title="Enviar">➤</button>
+        </div>
+        <div class="trainer-hint">A IA aplica a mudança na hora — sem precisar mexer em planilha ou código.</div>
       </div>
     </section>
   </main>
 </div>
 
+<script src="data/exames-data.js"></script>
 <script>
 const conversations = [
   {
-    id: 1, name: "Marcos Alves", phone: "+55 11 98888-1234", status: "open",
-    preview: "Perfeito, pode marcar sim!",
+    id: 1, name: "Marcos Alves", phone: "+55 11 98888-1234", status: "open", unread: 0, online: true,
     messages: [
-      { dir: "in", text: "Oi, quanto custa hemograma e glicemia?", time: "09:12" },
-      { dir: "out", text: "Oi, Marcos! Hemograma completo: R$ 35,00. Glicemia em jejum: R$ 20,00 (precisa de 8h de jejum). Total: R$ 55,00. Quer que eu já gere o orçamento?", time: "09:12" },
-      { dir: "in", text: "Sim, pode gerar", time: "09:14" },
-      { dir: "out", text: "Orçamento gerado! Quer aproveitar e já agendar a coleta?", time: "09:14" },
-      { dir: "in", text: "Perfeito, pode marcar sim!", time: "09:15" },
+      { dir: "in", text: "Oi, quanto custa hemograma e glicemia?", time: "09:12", day: "Hoje" },
+      { dir: "out", text: "Oi, Marcos! Hemograma completo: R$ 35,00. Glicemia em jejum: R$ 20,00 (precisa de 8h de jejum). Total: R$ 55,00. Quer que eu já gere o orçamento?", time: "09:12", day: "Hoje", tick: "read" },
+      { dir: "in", text: "Sim, pode gerar", time: "09:14", day: "Hoje" },
+      { dir: "out", text: "Orçamento gerado! Quer aproveitar e já agendar a coleta?", time: "09:14", day: "Hoje", tick: "read" },
+      { dir: "in", text: "Perfeito, pode marcar sim!", time: "09:15", day: "Hoje" },
     ],
   },
   {
-    id: 2, name: "Juliana Prado", phone: "+55 11 97777-5566", status: "wait",
-    preview: "[imagem recebida] pedido médico",
+    id: 2, name: "Juliana Prado", phone: "+55 11 97777-5566", status: "wait", unread: 1, online: false,
     messages: [
-      { dir: "in", text: "[imagem recebida] pedido médico", time: "Ontem 18:40" },
-      { dir: "out", text: "Recebi seu pedido médico! Identifiquei: TSH e Colesterol total. O total fica R$ 85,00. Confere?", time: "Ontem 18:41" },
+      { dir: "in", text: "[imagem recebida] pedido médico", time: "18:40", day: "Ontem", mediaType: "image" },
+      { dir: "out", text: "Recebi seu pedido médico! Identifiquei: TSH e Colesterol total. O total fica R$ 85,00. Confere?", time: "18:41", day: "Ontem", tick: "delivered" },
     ],
   },
   {
-    id: 3, name: "Roberto Lima", phone: "+55 11 96666-9911", status: "open",
-    preview: "Vou pensar e te aviso",
+    id: 3, name: "Roberto Lima", phone: "+55 11 96666-9911", status: "open", unread: 0, online: false,
     messages: [
-      { dir: "out", text: "Oi Roberto! Notei que seu orçamento de Colesterol total ainda está em aberto. Posso te ajudar a marcar um horário?", time: "há 2 dias" },
-      { dir: "in", text: "Vou pensar e te aviso", time: "há 2 dias" },
+      { dir: "out", text: "Oi Roberto! Notei que seu orçamento de Colesterol total ainda está em aberto. Posso te ajudar a marcar um horário?", time: "11:03", day: "21 de julho", tick: "read" },
+      { dir: "in", text: "Vou pensar e te aviso", time: "11:20", day: "21 de julho" },
     ],
   },
   {
-    id: 4, name: "Fernanda Costa", phone: "+55 11 95555-2200", status: "open",
-    preview: "Qual o link pra pegar meu resultado?",
+    id: 4, name: "Fernanda Costa", phone: "+55 11 95555-2200", status: "open", unread: 0, online: true,
     messages: [
-      { dir: "in", text: "Qual o link pra pegar meu resultado?", time: "08:02" },
-      { dir: "out", text: "Aqui está: https://exemplo.com.br/resultados — é só informar seu CPF e data de nascimento no site. Precisa de mais alguma coisa?", time: "08:02" },
+      { dir: "in", text: "Qual o link pra pegar meu resultado?", time: "08:02", day: "Hoje" },
+      { dir: "out", text: "Aqui está: https://exemplo.com.br/resultados — é só informar seu CPF e data de nascimento no site. Precisa de mais alguma coisa?", time: "08:02", day: "Hoje", tick: "sent" },
     ],
   },
 ];
+
+let activeConvId = null;
+
+function previewText(m) {
+  if (m.mediaType === "image") return "📷 Foto" + (m.text ? `: ${m.text}` : "");
+  if (m.mediaType === "document") return "📄 " + (m.fileName || "Documento");
+  return m.text;
+}
+
+function initials(name) {
+  return name.split(" ").filter(Boolean).slice(0, 2).map(p => p[0]).join("").toUpperCase();
+}
+
+function tickIcon(tick) {
+  if (!tick) return "";
+  if (tick === "sent") return '<span class="ticks">✓</span>';
+  if (tick === "delivered") return '<span class="ticks">✓✓</span>';
+  return '<span class="ticks read">✓✓</span>';
+}
+
+const EMOJIS = [
+  "😀","😁","😂","🤣","😊","😍","😘","😉","😎","🤩",
+  "🥳","😇","🙂","🙃","😅","😌","😴","🤔","🤗","🤝",
+  "👍","👎","👏","🙏","💪","🤲","👌","✌️","🤙","👋",
+  "❤️","💚","💙","💛","🧡","💜","🖤","💯","✨","🔥",
+  "🎉","🎂","🏥","💉","🩺","🧪","🩸","💊","📋","🧾",
+  "📎","📄","📷","🕐","📅","✅","❌","⚠️","❓","💬",
+];
+
+let pendingAttachment = null;
+
+function renderEmojiPanel() {
+  const el = document.getElementById("emoji-popover");
+  el.innerHTML = `<div class="emoji-grid">${EMOJIS.map(e => `<button type="button">${e}</button>`).join("")}</div>`;
+  el.querySelectorAll("button").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const input = document.getElementById("chat-input");
+      input.value += btn.textContent;
+      input.focus();
+    });
+  });
+}
+
+function closePopovers(except) {
+  document.querySelectorAll(".popover").forEach(p => { if (p.id !== except) p.classList.remove("open"); });
+}
+
+function renderAttachmentPreview() {
+  const wrap = document.getElementById("attachment-preview-wrap");
+  if (!pendingAttachment) { wrap.innerHTML = ""; return; }
+  const a = pendingAttachment;
+  wrap.innerHTML = `
+    <div class="attachment-preview">
+      ${a.type === "image"
+        ? `<img src="${a.dataUrl}" />`
+        : `<div class="doc-chip">📄</div>`}
+      <span class="fname">${a.name}</span>
+      <button class="remove-btn" id="remove-attachment" title="Remover">✕</button>
+    </div>`;
+  document.getElementById("remove-attachment").addEventListener("click", () => {
+    pendingAttachment = null;
+    renderAttachmentPreview();
+  });
+}
+
+function handleFileChosen(file) {
+  if (!file) return;
+  const isImage = file.type.startsWith("image/");
+  const reader = new FileReader();
+  reader.onload = () => {
+    pendingAttachment = { type: isImage ? "image" : "document", dataUrl: reader.result, name: file.name };
+    renderAttachmentPreview();
+  };
+  reader.readAsDataURL(file);
+}
 
 const orcamentos = [
   { cliente: "Marcos Alves", exames: "Hemograma completo, Glicemia em jejum", total: 55.0, origem: "Texto", status: "converted" },
@@ -273,75 +847,533 @@ const orcamentos = [
   { cliente: "Patrícia Nunes", exames: "Exame de urina tipo 1", total: 25.0, origem: "PDF", status: "abandoned" },
 ];
 
+const TYPE_INFO = {
+  exame: { label: "Exames", dark: "#0d9488", light: "#14b8a6" },
+  recoleta: { label: "Recoleta", dark: "#b45309", light: "#f59e0b" },
+  dna: { label: "DNA", dark: "#6d28d9", light: "#8b5cf6" },
+  toxicologico: { label: "Toxicológico", dark: "#be123c", light: "#f43f5e" },
+};
+
 const agendamentos = [
-  { cliente: "Marcos Alves", data: "24/07/2026 09:00", obs: "Hemograma + Glicemia (jejum)", status: "scheduled" },
-  { cliente: "Ana Beatriz", data: "24/07/2026 10:30", obs: "TSH", status: "scheduled" },
-  { cliente: "Carlos Eduardo", data: "25/07/2026 07:30", obs: "Colesterol (jejum 12h)", status: "scheduled" },
+  { cliente: "Lucas Prado", data: "2026-07-08T10:00", obs: "Teste de DNA - vínculo materno", status: "scheduled", tipo: "dna" },
+  { cliente: "Diego Souza", data: "2026-07-14T08:30", obs: "Exame toxicológico admissional", status: "scheduled", tipo: "toxicologico" },
+  { cliente: "Beatriz Nogueira", data: "2026-07-14T09:00", obs: "Recoleta - volume insuficiente", status: "scheduled", tipo: "recoleta" },
+  { cliente: "Marina Alves", data: "2026-07-14T09:30", obs: "Hemograma completo", status: "scheduled", tipo: "exame" },
+  { cliente: "Marcos Alves", data: "2026-07-24T09:00", obs: "Hemograma + Glicemia (jejum)", status: "scheduled", tipo: "exame" },
+  { cliente: "Ana Beatriz", data: "2026-07-24T10:30", obs: "TSH", status: "scheduled", tipo: "exame" },
+  { cliente: "Carlos Eduardo", data: "2026-07-25T07:30", obs: "Colesterol (jejum 12h)", status: "scheduled", tipo: "exame" },
+  { cliente: "Juliana Prado", data: "2026-07-25T14:00", obs: "Recoleta - amostra hemolisada", status: "scheduled", tipo: "recoleta" },
+  { cliente: "Roberto Lima", data: "2026-07-28T08:00", obs: "Teste de paternidade", status: "scheduled", tipo: "dna" },
+  { cliente: "Fernanda Costa", data: "2026-07-28T09:15", obs: "Exame toxicológico - CNH", status: "scheduled", tipo: "toxicologico" },
+  { cliente: "Patrícia Nunes", data: "2026-07-30T11:00", obs: "Urina tipo 1", status: "scheduled", tipo: "exame" },
 ];
 
-const exames = [
-  { nome: "Hemograma completo", preco: 35.0, preparo: "Não é necessário jejum", amostra: "Sangue", prazo: "1 dia" },
-  { nome: "Glicemia em jejum", preco: 20.0, preparo: "Jejum de 8 horas", amostra: "Sangue", prazo: "1 dia" },
-  { nome: "Colesterol total e frações", preco: 40.0, preparo: "Jejum de 12 horas", amostra: "Sangue", prazo: "1 dia" },
-  { nome: "TSH", preco: 45.0, preparo: "Não é necessário jejum", amostra: "Sangue", prazo: "2 dias" },
-  { nome: "Exame de urina tipo 1", preco: 25.0, preparo: "Primeira urina da manhã", amostra: "Urina", prazo: "1 dia" },
-];
+const exames = (window.EXAMES_REAL || []).map(e => ({
+  codigo: e.codigo, nome: e.nome, categoria: e.categoria, preco: Number(e.preco), busca: e.busca || (e.codigo + " " + e.nome),
+}));
 
 function money(v) { return "R$ " + v.toFixed(2).replace(".", ","); }
 
-function renderConvList(activeId) {
+function renderConvList(activeId, filterText) {
   const el = document.getElementById("conv-list");
-  el.innerHTML = conversations.map(c => `
+  const term = (filterText || "").trim().toLowerCase();
+  const filtered = conversations.filter(c => !term || c.name.toLowerCase().includes(term));
+
+  el.innerHTML = filtered.map(c => {
+    const last = c.messages[c.messages.length - 1];
+    return `
     <div class="conv-list-item ${c.id === activeId ? 'active' : ''}" data-id="${c.id}">
-      <div class="name">${c.name}</div>
-      <div class="preview">${c.preview}</div>
-      <span class="status status-${c.status === 'open' ? 'open' : 'wait'}">${c.status === 'open' ? 'IA respondendo' : 'Aguardando'}</span>
+      <div class="conv-avatar">${initials(c.name)}</div>
+      <div class="conv-list-item-body">
+        <div class="conv-list-item-toprow">
+          <span class="name">${c.name}</span>
+          <span class="time">${last ? last.time : ''}</span>
+        </div>
+        <div class="conv-list-item-botrow">
+          <span class="preview">${last ? (last.dir === 'out' ? tickIcon(last.tick) + ' ' : '') + previewText(last) : ''}</span>
+          ${c.unread > 0 ? `<span class="unread-badge">${c.unread}</span>` : ''}
+        </div>
+        <span class="status status-${c.status === 'open' ? 'open' : 'wait'}">${c.status === 'open' ? 'IA respondendo' : 'Aguardando'}</span>
+      </div>
     </div>
-  `).join("");
+  `;
+  }).join("") || `<div style="padding:20px;text-align:center;color:var(--muted);font-size:12.5px;">Nenhuma conversa encontrada</div>`;
+
   el.querySelectorAll(".conv-list-item").forEach(item => {
     item.addEventListener("click", () => openConversation(Number(item.dataset.id)));
   });
 }
 
+function bubbleContent(m) {
+  if (m.mediaType === "image") {
+    return `<img class="msg-img" src="${m.mediaUrl}" />${m.text ? `<div>${m.text}</div>` : ""}`;
+  }
+  if (m.mediaType === "document") {
+    return `<div class="doc-row"><span class="doc-ic">📄</span><span>${m.text || m.fileName}</span></div>`;
+  }
+  return m.text;
+}
+
+function renderChatBody(conv) {
+  let lastDay = null;
+  let html = "";
+  for (const m of conv.messages) {
+    if (m.day !== lastDay) {
+      html += `<div class="day-divider">${m.day}</div>`;
+      lastDay = m.day;
+    }
+    html += `<div class="bubble ${m.dir}">${bubbleContent(m)}<span class="meta">${m.time} ${m.dir === 'out' ? tickIcon(m.tick) : ''}</span></div>`;
+  }
+  document.getElementById("chat-body").innerHTML = html;
+  const body = document.getElementById("chat-body");
+  body.scrollTop = body.scrollHeight;
+}
+
 function openConversation(id) {
+  activeConvId = id;
   const conv = conversations.find(c => c.id === id);
-  document.getElementById("chat-header").textContent = `${conv.name} · ${conv.phone}`;
-  document.getElementById("chat-body").innerHTML = conv.messages.map(m => `
-    <div class="bubble ${m.dir}">${m.text}<span class="meta">${m.time}</span></div>
-  `).join("");
-  renderConvList(id);
+  conv.unread = 0;
+  document.getElementById("chat-header").innerHTML = `
+    <div class="conv-avatar">${initials(conv.name)}</div>
+    <div class="chat-header-body">
+      <div class="name">${conv.name}</div>
+      <div class="presence ${conv.online ? 'online' : ''}">${conv.online ? 'online' : 'visto por último hoje às ' + (conv.messages[conv.messages.length - 1]?.time || '')}</div>
+    </div>
+    <div class="chat-header-icons"><span title="Pesquisar">🔍</span><span title="Mais opções">⋮</span></div>
+  `;
+  renderChatBody(conv);
+  renderConvList(id, document.getElementById("conv-search").value);
+}
+
+function sendMessage() {
+  const input = document.getElementById("chat-input");
+  const text = input.value.trim();
+  if (!text && !pendingAttachment) return;
+  if (!activeConvId) return;
+  const conv = conversations.find(c => c.id === activeConvId);
+  const now = new Date();
+  const time = now.getHours().toString().padStart(2, "0") + ":" + now.getMinutes().toString().padStart(2, "0");
+  const msg = { dir: "out", text, time, day: "Hoje", tick: "sent" };
+  if (pendingAttachment) {
+    msg.mediaType = pendingAttachment.type;
+    msg.mediaUrl = pendingAttachment.dataUrl;
+    msg.fileName = pendingAttachment.name;
+  }
+  conv.messages.push(msg);
+  input.value = "";
+  pendingAttachment = null;
+  renderAttachmentPreview();
+  renderChatBody(conv);
+  renderConvList(activeConvId, document.getElementById("conv-search").value);
+}
+
+document.getElementById("chat-send").addEventListener("click", sendMessage);
+document.getElementById("chat-input").addEventListener("keydown", (e) => {
+  if (e.key === "Enter") sendMessage();
+});
+document.getElementById("conv-search").addEventListener("input", (e) => {
+  renderConvList(activeConvId, e.target.value);
+});
+
+renderEmojiPanel();
+document.getElementById("emoji-btn").addEventListener("click", (e) => {
+  e.stopPropagation();
+  closePopovers("emoji-popover");
+  document.getElementById("emoji-popover").classList.toggle("open");
+});
+document.getElementById("attach-btn").addEventListener("click", (e) => {
+  e.stopPropagation();
+  closePopovers("attach-popover");
+  document.getElementById("attach-popover").classList.toggle("open");
+});
+document.addEventListener("click", () => closePopovers());
+
+document.getElementById("opt-doc").addEventListener("click", () => {
+  closePopovers();
+  document.getElementById("file-doc").click();
+});
+document.getElementById("opt-photo").addEventListener("click", () => {
+  closePopovers();
+  document.getElementById("file-photo").click();
+});
+document.getElementById("opt-cam").addEventListener("click", () => {
+  closePopovers();
+  document.getElementById("file-photo").click();
+});
+document.getElementById("file-doc").addEventListener("change", (e) => handleFileChosen(e.target.files[0]));
+document.getElementById("file-photo").addEventListener("change", (e) => handleFileChosen(e.target.files[0]));
+
+const ORC_STATUS_INFO = {
+  open: { label: "Em aberto", singular: "Aberto", pillClass: "pill-open", color: "#fca311", hint: "Aguardando decisão do cliente" },
+  converted: { label: "Convertidos", singular: "Convertido", pillClass: "pill-converted", color: "#16a34a", hint: "Cliente fechou/agendou" },
+  abandoned: { label: "Abandonados", singular: "Abandonado", pillClass: "pill-abandoned", color: "#e0562f", hint: "Sem resposta após follow-ups" },
+};
+
+let orcFiltroStatus = null; // null = todos
+
+function renderOrcStatusCards() {
+  const el = document.getElementById("orc-status-row");
+  const porStatus = { open: [], converted: [], abandoned: [] };
+  orcamentos.forEach(o => porStatus[o.status].push(o));
+
+  const totalGeral = orcamentos.reduce((s, o) => s + o.total, 0);
+
+  const cardsHtml = Object.entries(ORC_STATUS_INFO).map(([key, info]) => {
+    const items = porStatus[key];
+    const total = items.reduce((s, o) => s + o.total, 0);
+    const active = orcFiltroStatus === key ? " active" : "";
+    return `
+      <div class="orc-status-card${active}" style="--status-color:${info.color}" data-status="${key}">
+        <div class="osc-top"><span class="osc-dot"></span>${info.label}</div>
+        <div class="osc-count">${items.length}</div>
+        <div class="osc-value">${money(total)} · ${info.hint}</div>
+      </div>`;
+  }).join("");
+
+  const totalCard = `
+    <div class="orc-status-card${orcFiltroStatus === null ? " active" : ""}" style="--status-color:#14213d" data-status="">
+      <div class="osc-top"><span class="osc-dot"></span>Total geral</div>
+      <div class="osc-count">${orcamentos.length}</div>
+      <div class="osc-value">${money(totalGeral)} em orçamentos</div>
+    </div>`;
+
+  el.innerHTML = totalCard + cardsHtml;
+  el.querySelectorAll(".orc-status-card").forEach(card => {
+    card.addEventListener("click", () => {
+      orcFiltroStatus = card.dataset.status || null;
+      renderOrcStatusCards();
+      renderOrcamentos();
+    });
+  });
 }
 
 function renderOrcamentos() {
-  const pillMap = { open: ["pill-open", "Aberto"], converted: ["pill-converted", "Convertido"], abandoned: ["pill-abandoned", "Abandonado"] };
-  document.getElementById("orcamentos-body").innerHTML = orcamentos.map(o => {
-    const [cls, label] = pillMap[o.status];
-    return `<tr><td>${o.cliente}</td><td>${o.exames}</td><td class="price">${money(o.total)}</td><td>${o.origem}</td><td><span class="pill ${cls}">${label}</span></td></tr>`;
-  }).join("");
+  const filtered = orcFiltroStatus ? orcamentos.filter(o => o.status === orcFiltroStatus) : orcamentos;
+
+  document.getElementById("orc-list-title").textContent = orcFiltroStatus
+    ? `Orçamentos — ${ORC_STATUS_INFO[orcFiltroStatus].label}`
+    : "Todos os orçamentos";
+
+  document.getElementById("orcamentos-body").innerHTML = filtered.map(o => {
+    const info = ORC_STATUS_INFO[o.status];
+    return `<tr class="orc-row-flag" style="--row-color:${info.color}">
+      <td>${o.cliente}</td>
+      <td>${o.exames}</td>
+      <td class="price">${money(o.total)}</td>
+      <td>${o.origem}</td>
+      <td><span class="pill ${info.pillClass}">${info.singular}</span></td>
+    </tr>`;
+  }).join("") || `<tr><td colspan="5" style="text-align:center;color:var(--muted);padding:20px;">Nenhum orçamento neste status</td></tr>`;
+}
+
+document.getElementById("orc-list-reset").addEventListener("click", () => {
+  orcFiltroStatus = null;
+  renderOrcStatusCards();
+  renderOrcamentos();
+});
+
+let agdMesRef = new Date(2026, 6, 1); // Julho/2026 (mês de referência dos dados de demonstração)
+let agdDiaSelecionado = null; // "YYYY-MM-DD" ou null (todos)
+
+function agdDataISO(d) {
+  return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
+}
+
+function formatDateTimeBR(iso) {
+  const d = new Date(iso);
+  return d.toLocaleDateString("pt-BR") + " " + d.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" });
+}
+
+function renderAgendaLegend() {
+  document.getElementById("agd-legend").innerHTML = Object.entries(TYPE_INFO).map(([key, info]) => `
+    <div class="agd-legend-item"><span class="agd-legend-dot" style="background:${info.light}"></span>${info.label}</div>
+  `).join("");
+}
+
+function renderAgendaCalendar() {
+  const grid = document.getElementById("agd-grid");
+  const ano = agdMesRef.getFullYear(), mes = agdMesRef.getMonth();
+  document.getElementById("agd-month-label").textContent = agdMesRef.toLocaleDateString("pt-BR", { month: "long", year: "numeric" });
+
+  const primeiroDiaSemana = new Date(ano, mes, 1).getDay();
+  const diasNoMes = new Date(ano, mes + 1, 0).getDate();
+
+  const tiposPorDia = {};
+  agendamentos.forEach(a => {
+    const dt = new Date(a.data);
+    if (dt.getFullYear() === ano && dt.getMonth() === mes) {
+      const dia = dt.getDate();
+      (tiposPorDia[dia] = tiposPorDia[dia] || []).push(a.tipo);
+    }
+  });
+
+  const hoje = new Date();
+  const ehMesAtual = hoje.getFullYear() === ano && hoje.getMonth() === mes;
+
+  let html = "";
+  for (let i = 0; i < primeiroDiaSemana; i++) html += `<div class="agd-day vazio"></div>`;
+
+  for (let d = 1; d <= diasNoMes; d++) {
+    const tipos = tiposPorDia[d] || [];
+    const count = tipos.length;
+    const distintos = [...new Set(tipos)];
+    const iso = agdDataISO(new Date(ano, mes, d));
+    let classes = "agd-day";
+    let style = "";
+    if (count > 0) {
+      classes += " com-evento";
+      if (distintos.length === 1) {
+        const c = TYPE_INFO[distintos[0]];
+        style = `background: linear-gradient(135deg, ${c.dark}, ${c.light});`;
+      } else {
+        const seg = 360 / distintos.length;
+        const stops = distintos.map((t, i) => `${TYPE_INFO[t].light} ${i * seg}deg ${(i + 1) * seg}deg`).join(", ");
+        style = `background: conic-gradient(${stops});`;
+      }
+    }
+    if (ehMesAtual && hoje.getDate() === d) classes += " hoje";
+    if (agdDiaSelecionado === iso) classes += " selecionado";
+
+    html += `<div class="${classes}" style="${style}" data-iso="${iso}">
+      <span>${d}</span>
+      ${count > 0 ? `<span class="agd-day-count">${count}</span>` : ""}
+    </div>`;
+  }
+  grid.innerHTML = html;
+
+  grid.querySelectorAll(".agd-day:not(.vazio)").forEach(cell => {
+    cell.addEventListener("click", () => {
+      agdDiaSelecionado = agdDiaSelecionado === cell.dataset.iso ? null : cell.dataset.iso;
+      renderAgendaCalendar();
+      renderAgendamentos();
+    });
+  });
 }
 
 function renderAgendamentos() {
-  document.getElementById("agendamentos-body").innerHTML = agendamentos.map(a => `
-    <tr><td>${a.cliente}</td><td>${a.data}</td><td>${a.obs}</td><td><span class="pill pill-scheduled">Confirmado</span></td></tr>
-  `).join("");
+  const filtered = agdDiaSelecionado
+    ? agendamentos.filter(a => agdDataISO(new Date(a.data)) === agdDiaSelecionado)
+    : agendamentos;
+  const sorted = [...filtered].sort((a, b) => new Date(a.data) - new Date(b.data));
+
+  document.getElementById("agd-list-title").textContent = agdDiaSelecionado
+    ? `Agendamentos em ${new Date(agdDiaSelecionado + "T00:00").toLocaleDateString("pt-BR")}`
+    : "Todos os agendamentos do mês";
+
+  document.getElementById("agendamentos-body").innerHTML = sorted.map(a => {
+    const info = TYPE_INFO[a.tipo];
+    return `<tr>
+      <td>${a.cliente}</td>
+      <td>${formatDateTimeBR(a.data)}</td>
+      <td><span class="pill" style="background:${info.light}22; color:${info.dark};">${info.label}</span></td>
+      <td>${a.obs}</td>
+      <td><span class="pill pill-scheduled">Confirmado</span></td>
+    </tr>`;
+  }).join("") || `<tr><td colspan="5" style="text-align:center;color:var(--muted);padding:20px;">Nenhum agendamento neste dia</td></tr>`;
 }
 
-function renderExames() {
-  document.getElementById("exames-body").innerHTML = exames.map(e => `
-    <tr><td>${e.nome}</td><td class="price">${money(e.preco)}</td><td>${e.preparo}</td><td>${e.amostra}</td><td>${e.prazo}</td></tr>
+document.getElementById("agd-prev").addEventListener("click", () => {
+  agdMesRef.setMonth(agdMesRef.getMonth() - 1);
+  agdDiaSelecionado = null;
+  renderAgendaCalendar();
+  renderAgendamentos();
+});
+document.getElementById("agd-next").addEventListener("click", () => {
+  agdMesRef.setMonth(agdMesRef.getMonth() + 1);
+  agdDiaSelecionado = null;
+  renderAgendaCalendar();
+  renderAgendamentos();
+});
+document.getElementById("agd-today").addEventListener("click", () => {
+  agdMesRef = new Date(2026, 6, 1);
+  agdDiaSelecionado = null;
+  renderAgendaCalendar();
+  renderAgendamentos();
+});
+document.getElementById("agd-list-reset").addEventListener("click", () => {
+  agdDiaSelecionado = null;
+  renderAgendaCalendar();
+  renderAgendamentos();
+});
+
+/* ---------- Treinar IA (simulacao local, sem backend) ---------- */
+
+function escapeHtml(s) {
+  return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+}
+
+function titleCase(s) {
+  return s.trim().split(/\s+/).map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(" ");
+}
+
+function parsePrice(str) {
+  const m = String(str).match(/(\d+(?:[.,]\d{1,2})?)/);
+  if (!m) return null;
+  return parseFloat(m[1].replace(",", "."));
+}
+
+function findExamByFuzzyName(fragment) {
+  const term = (fragment || "").trim().toLowerCase();
+  if (!term) return null;
+  let match = exames.find(e => e.nome.toLowerCase() === term);
+  if (match) return match;
+  match = exames.find(e => e.busca.toLowerCase().includes(term));
+  if (match) return match;
+  const words = term.split(/\s+/).filter(w => w.length > 2);
+  if (words.length > 0) {
+    match = exames.find(e => words.every(w => e.busca.toLowerCase().includes(w)));
+    if (match) return match;
+  }
+  return null;
+}
+
+function parseAdminMessage(text) {
+  const lower = text.trim().toLowerCase();
+
+  let m = lower.match(/(?:criar|cadastrar|adicionar|novo)\s+exame\s+(.+?)\s+(?:por|custando|no valor de)\s+r?\$?\s*([\d.,]+)/i);
+  if (m) return { type: "create", name: titleCase(m[1]), price: parsePrice(m[2]) };
+
+  m = lower.match(/(?:desativar|remover|excluir|tirar)\s+(?:o\s+exame\s+|exame\s+)?(.+?)(?:\s+do cat[aá]logo)?$/i);
+  if (m) {
+    const exam = findExamByFuzzyName(m[1]);
+    if (exam) return { type: "deactivate", exam };
+  }
+
+  m = lower.match(/^(.+?)\s+(?:agora custa|custar[aá]|passa a custar|passar[aá]? a custar)\s+r?\$?\s*([\d.,]+)/i)
+    || lower.match(/(?:atualizar|mudar|alterar)\s+(?:o\s+)?pre[cç]o\s+(?:d[oa]\s+)?(.+?)\s+para\s+r?\$?\s*([\d.,]+)/i)
+    || lower.match(/pre[cç]o\s+(?:d[oa]\s+)?(.+?)\s+(?:agora\s+)?[eé]\s+r?\$?\s*([\d.,]+)/i);
+  if (m) {
+    const exam = findExamByFuzzyName(m[1]);
+    const price = parsePrice(m[2]);
+    if (exam && price != null) return { type: "update_price", exam, newPrice: price };
+    if (!exam) return { type: "exam_not_found", nameGuess: m[1] };
+  }
+
+  return { type: "unknown" };
+}
+
+let trainerMessages = [];
+
+function renderTrainerEmpty() {
+  return `<div class="trainer-empty">
+    <div class="te-icon">🧠</div>
+    <h3>Treine a IA em linguagem natural</h3>
+    <p>Diga o que mudou no laboratório e a IA atualiza o banco de dados na hora — preços, novos exames, exames descontinuados. Teste um exemplo:</p>
+    <div class="trainer-chips">
+      <div class="trainer-chip" data-fill="Hemograma completo agora custa R$ 20">"Hemograma completo agora custa R$ 20"</div>
+      <div class="trainer-chip" data-fill="Criar exame Vitamina B12 por R$ 40">"Criar exame Vitamina B12 por R$ 40"</div>
+      <div class="trainer-chip" data-fill="Desativar exame Prova do Laço">"Desativar exame Prova do Laço"</div>
+    </div>
+  </div>`;
+}
+
+function renderTrainer() {
+  const el = document.getElementById("trainer-messages");
+  if (trainerMessages.length === 0) {
+    el.innerHTML = renderTrainerEmpty();
+    el.querySelectorAll(".trainer-chip").forEach(chip => {
+      chip.addEventListener("click", () => {
+        document.getElementById("trainer-input").value = chip.dataset.fill;
+        sendTrainerMessage();
+      });
+    });
+    return;
+  }
+  el.innerHTML = trainerMessages.map(m => `
+    <div class="trainer-msg ${m.role}">
+      <div class="tm-avatar">${m.role === "user" ? "EU" : "🧠"}</div>
+      <div class="tm-body">
+        <div class="tm-role">${m.role === "user" ? "Você" : "SmartLabIA"}</div>
+        <div class="tm-text">${escapeHtml(m.text)}</div>
+        ${m.diff ? `<div class="tm-diff">✓ ${m.diff}</div>` : ""}
+      </div>
+    </div>
   `).join("");
+  el.scrollTop = el.scrollHeight;
+}
+
+function sendTrainerMessage() {
+  const input = document.getElementById("trainer-input");
+  const text = input.value.trim();
+  if (!text) return;
+  trainerMessages.push({ role: "user", text });
+  input.value = "";
+  renderTrainer();
+
+  setTimeout(() => {
+    const result = parseAdminMessage(text);
+    let replyText = "";
+    let diff = null;
+
+    if (result.type === "update_price") {
+      const old = result.exam.preco;
+      result.exam.preco = result.newPrice;
+      diff = `${money(old)} → ${money(result.newPrice)}`;
+      replyText = `Pronto! ${result.exam.nome} atualizado: ${money(old)} → ${money(result.newPrice)}. A IA já vai informar esse novo valor pros próximos clientes no WhatsApp.`;
+      renderExames(document.getElementById("exames-search").value);
+    } else if (result.type === "create") {
+      const novo = {
+        codigo: "NOVO" + (exames.length + 1),
+        nome: result.name,
+        categoria: "PARTICULAR",
+        preco: result.price,
+        busca: (result.name + " PARTICULAR").toUpperCase(),
+      };
+      exames.push(novo);
+      diff = `Novo exame: ${money(novo.preco)}`;
+      replyText = `Exame criado: ${novo.nome} — ${money(novo.preco)}. Já está disponível pra IA oferecer no WhatsApp.`;
+      renderExames(document.getElementById("exames-search").value);
+    } else if (result.type === "deactivate") {
+      const idx = exames.indexOf(result.exam);
+      if (idx >= 0) exames.splice(idx, 1);
+      replyText = `${result.exam.nome} foi removido do catálogo — não vai mais aparecer pros clientes.`;
+      renderExames(document.getElementById("exames-search").value);
+    } else if (result.type === "exam_not_found") {
+      replyText = `Não encontrei nenhum exame parecido com "${result.nameGuess}". Pode confirmar o nome exato, ou quer que eu cadastre esse como um exame novo?`;
+    } else {
+      replyText = 'Não entendi bem essa instrução. Você pode dizer algo como:\n• "Hemograma completo agora custa R$ 20"\n• "Criar exame Vitamina B12 por R$ 40"\n• "Desativar exame Prova do Laço"';
+    }
+
+    trainerMessages.push({ role: "assistant", text: replyText, diff });
+    renderTrainer();
+  }, 350);
+}
+
+document.getElementById("trainer-send").addEventListener("click", sendTrainerMessage);
+document.getElementById("trainer-input").addEventListener("keydown", (e) => {
+  if (e.key === "Enter" && !e.shiftKey) {
+    e.preventDefault();
+    sendTrainerMessage();
+  }
+});
+
+function renderExames(filterText) {
+  const term = (filterText || "").trim().toLowerCase();
+  const filtered = term ? exames.filter(e => e.busca.toLowerCase().includes(term)) : exames;
+  const shown = filtered.slice(0, 300);
+  document.getElementById("exames-body").innerHTML = shown.map(e => `
+    <tr><td><span style="font-family:monospace;font-size:11.5px;color:var(--muted);">${e.codigo}</span></td><td>${e.nome}</td><td>${e.categoria}</td><td class="price">${money(e.preco)}</td></tr>
+  `).join("") || `<tr><td colspan="4" style="text-align:center;color:var(--muted);padding:20px;">Nenhum exame encontrado</td></tr>`;
+  const countEl = document.getElementById("exames-count");
+  if (countEl) {
+    countEl.textContent = filtered.length > shown.length
+      ? `Mostrando ${shown.length} de ${filtered.length} exames (refine a busca para ver mais) — catálogo completo: ${exames.length}`
+      : `${filtered.length} de ${exames.length} exames`;
+  }
 }
 
 const titles = {
+  dashboard: ["Dashboard", "Visão geral do atendimento via WhatsApp"],
   conversas: ["Conversas", "Atendimentos do WhatsApp respondidos pela IA"],
   orcamentos: ["Orçamentos", "Orçamentos gerados a partir de texto, imagem ou PDF de pedido médico"],
   agendamentos: ["Agendamentos", "Coletas marcadas pelos clientes via WhatsApp"],
   exames: ["Exames", "Catálogo de exames, preços e preparo cadastrados"],
+  treinar: ["Treinar IA", "Converse para atualizar preços, exames e horários — sem precisar programar"],
 };
 
-document.querySelectorAll(".nav-item").forEach(item => {
+document.querySelectorAll(".rail-btn").forEach(item => {
   item.addEventListener("click", () => {
-    document.querySelectorAll(".nav-item").forEach(n => n.classList.remove("active"));
+    document.querySelectorAll(".rail-btn").forEach(n => n.classList.remove("active"));
     item.classList.add("active");
     const view = item.dataset.view;
     document.querySelectorAll(".view").forEach(v => v.classList.remove("active"));
@@ -351,11 +1383,16 @@ document.querySelectorAll(".nav-item").forEach(item => {
   });
 });
 
-renderConvList(1);
+document.getElementById("exames-search").addEventListener("input", (e) => renderExames(e.target.value));
+
 openConversation(1);
+renderOrcStatusCards();
 renderOrcamentos();
+renderAgendaLegend();
+renderAgendaCalendar();
 renderAgendamentos();
 renderExames();
+renderTrainer();
 </script>
 </body>
 </html>

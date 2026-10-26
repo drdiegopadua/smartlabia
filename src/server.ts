@@ -1,6 +1,7 @@
 import express from "express";
 import { env } from "./config/env";
 import { webhookRouter } from "./whatsapp/webhook";
+import { adminRouter } from "./admin/router";
 import { startFollowUpJob } from "./jobs/followup.job";
 
 const app = express();
@@ -16,6 +17,7 @@ app.use(
 
 app.get("/health", (_req, res) => res.json({ status: "ok" }));
 app.use("/", webhookRouter);
+app.use("/", adminRouter);
 
 app.listen(env.port, () => {
   console.log(`SmartLabIA rodando na porta ${env.port}`);

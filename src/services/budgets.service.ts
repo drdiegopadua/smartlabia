@@ -35,8 +35,19 @@ export async function createBudget({ contactId, examNames, sourceType }: CreateB
   return { budget, notFound };
 }
 
+export async function getBudgetForDelivery(budgetId: string) {
+  return prisma.budget.findUnique({
+    where: { id: budgetId },
+    include: { contact: true, items: { include: { exam: true } } },
+  });
+}
+
 export async function markBudgetConverted(budgetId: string) {
   return prisma.budget.update({ where: { id: budgetId }, data: { status: "CONVERTED" } });
+}
+
+export async function markBudgetAbandoned(budgetId: string) {
+  return prisma.budget.update({ where: { id: budgetId }, data: { status: "ABANDONED" } });
 }
 
 export async function findStaleOpenBudgets(inactivityHours: number) {
