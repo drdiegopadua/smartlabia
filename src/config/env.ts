@@ -13,8 +13,17 @@ export const env = {
 
   databaseUrl: required("DATABASE_URL"),
 
-  anthropicApiKey: required("ANTHROPIC_API_KEY"),
+  // "claude" (padrao, producao) ou "gemini" (testes sem custo, apenas com dados ficticios)
+  llmProvider: (process.env.LLM_PROVIDER ?? "claude") as "claude" | "gemini",
+
+  anthropicApiKey: process.env.LLM_PROVIDER === "gemini" ? (process.env.ANTHROPIC_API_KEY ?? "") : required("ANTHROPIC_API_KEY"),
   claudeModel: process.env.CLAUDE_MODEL ?? "claude-sonnet-5",
+
+  gemini: {
+    apiKey: process.env.LLM_PROVIDER === "gemini" ? required("GEMINI_API_KEY") : (process.env.GEMINI_API_KEY ?? ""),
+    model: process.env.GEMINI_MODEL ?? "gemini-2.5-flash",
+    baseUrl: process.env.GEMINI_BASE_URL ?? "https://generativelanguage.googleapis.com/v1beta",
+  },
 
   whatsapp: {
     token: required("WHATSAPP_TOKEN"),

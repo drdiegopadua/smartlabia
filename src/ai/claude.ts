@@ -1,6 +1,7 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { env } from "../config/env";
 import { toolDefinitions, executeTool } from "./tools";
+import { runGeminiTurn } from "./gemini";
 
 const anthropic = new Anthropic({ apiKey: env.anthropicApiKey });
 
@@ -72,6 +73,17 @@ export async function runConversationTurn(params: {
   newUserParts: IncomingContent[];
   contactId: string;
 }): Promise<string> {
+  if (env.llmProvider === "gemini") {
+    const text = await runGeminiTurn({
+      system: SYSTEM_PROMPT,
+      tools: toolDefinitions,
+      history: params.history,
+      userParts: params.newUserParts,
+      executeTool: (name, input) => executeTool(name, input, { contactId: params.contactId }),
+    });
+    return text || "Desculpe, nao consegui processar sua mensagem agora. Pode tentar novamente?";
+  }
+
   const messages: Anthropic.MessageParam[] = params.history.map((m) => ({
     role: m.role,
     content: m.content,

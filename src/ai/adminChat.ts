@@ -1,6 +1,7 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { env } from "../config/env";
 import { adminToolDefinitions, executeAdminTool } from "./adminTools";
+import { runGeminiTurn } from "./gemini";
 
 const anthropic = new Anthropic({ apiKey: env.anthropicApiKey });
 
@@ -25,6 +26,17 @@ export async function runAdminChatTurn(params: {
   history: AdminHistoryMessage[];
   message: string;
 }): Promise<string> {
+  if (env.llmProvider === "gemini") {
+    const text = await runGeminiTurn({
+      system: ADMIN_SYSTEM_PROMPT,
+      tools: adminToolDefinitions,
+      history: params.history,
+      userParts: [{ type: "text", text: params.message }],
+      executeTool: (name, input) => executeAdminTool(name, input),
+    });
+    return text || "Nao consegui processar essa alteracao agora. Pode tentar reformular?";
+  }
+
   const messages: Anthropic.MessageParam[] = params.history.map((m) => ({
     role: m.role,
     content: m.content,
