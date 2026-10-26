@@ -48,7 +48,7 @@ function buildUserContent(parts: IncomingContent[]): Anthropic.MessageParam["con
         type: "image" as const,
         source: {
           type: "base64" as const,
-          media_type: (part.mimeType as Anthropic.Base64ImageSource["media_type"]) ?? "image/jpeg",
+          media_type: (part.mimeType as "image/jpeg" | "image/png" | "image/gif" | "image/webp") ?? "image/jpeg",
           data: part.base64 ?? "",
         },
       };
