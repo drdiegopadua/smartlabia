@@ -1,0 +1,5930 @@
+[
+  {
+    "id": 1,
+    "codigo": "ACUR",
+    "nome": "ACIDO URICO URINARIO (ISOLADA)",
+    "categoria": "PARTICULAR",
+    "preco": 33.34,
+    "busca": "ACUR ACIDO URICO URINARIO ISOLADA PARTICULAR"
+  },
+  {
+    "id": 2,
+    "codigo": "CITRI",
+    "nome": "CITRATO(AMOSTRA ISOLADA)",
+    "categoria": "PARTICULAR",
+    "preco": 33.34,
+    "busca": "CITRI CITRATO AMOSTRA ISOLADA PARTICULAR"
+  },
+  {
+    "id": 4,
+    "codigo": "F07",
+    "nome": "IgE ESP. AVEIA",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "F07 IGE ESP AVEIA PARTICULAR"
+  },
+  {
+    "id": 5,
+    "codigo": "F20",
+    "nome": "IgE ESP. AMENDOA",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "F20 IGE ESP AMENDOA PARTICULAR"
+  },
+  {
+    "id": 6,
+    "codigo": "LPT",
+    "nome": "LEPTINA",
+    "categoria": "PARTICULAR",
+    "preco": 133.36,
+    "busca": "LPT LEPTINA PARTICULAR"
+  },
+  {
+    "id": 7,
+    "codigo": "NAUT",
+    "nome": "SÓDIO URINÁRIO - 24 HORAS",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "NAUT SODIO URINARIO 24 HORAS PARTICULAR"
+  },
+  {
+    "id": 8,
+    "codigo": "OXALI",
+    "nome": "OXALATO (AMOSTRA ISOLADA)",
+    "categoria": "PARTICULAR",
+    "preco": 66.68,
+    "busca": "OXALI OXALATO AMOSTRA ISOLADA PARTICULAR"
+  },
+  {
+    "id": 9,
+    "codigo": "NIQS",
+    "nome": "NÍQUEL SÉRICO",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "NIQS NIQUEL SERICO PARTICULAR"
+  },
+  {
+    "id": 10,
+    "codigo": "ARSI",
+    "nome": "ARSÊNIO URINÁRIO INÍCIO DE JORNADA",
+    "categoria": "PARTICULAR",
+    "preco": 75.02,
+    "busca": "ARSI ARSENIO URINARIO INICIO DE JORNADA PARTICULAR"
+  },
+  {
+    "id": 11,
+    "codigo": "BARTO",
+    "nome": "BARTONELLA - ANTICORPOS (BARTONELLA HENSELAE IGM E IGG",
+    "categoria": "PARTICULAR",
+    "preco": 666.8,
+    "busca": "BARTO BARTONELLA ANTICORPOS BARTONELLA HENSELAE IGM E IGG PARTICULAR"
+  },
+  {
+    "id": 12,
+    "codigo": "AMOXI",
+    "nome": "IGE ESP - DROGAS - AMOXICILINA",
+    "categoria": "PARTICULAR",
+    "preco": 66.68,
+    "busca": "AMOXI IGE ESP DROGAS AMOXICILINA PARTICULAR"
+  },
+  {
+    "id": 13,
+    "codigo": "CRYUM",
+    "nome": "CRYPTOSPORIDIUM - PESQUISA NAS FEZE",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "CRYUM CRYPTOSPORIDIUM PESQUISA NAS FEZE PARTICULAR"
+  },
+  {
+    "id": 14,
+    "codigo": "HG",
+    "nome": "HEMOGRAMA COMPLETO",
+    "categoria": "PARTICULAR",
+    "preco": 25.0,
+    "busca": "HG HEMOGRAMA COMPLETO PARTICULAR"
+  },
+  {
+    "id": 15,
+    "codigo": "EAS",
+    "nome": "URINA TIPO I",
+    "categoria": "PARTICULAR",
+    "preco": 20.0,
+    "busca": "EAS URINA TIPO I PARTICULAR"
+  },
+  {
+    "id": 16,
+    "codigo": "GLI",
+    "nome": "GLICOSE JEJUM",
+    "categoria": "PARTICULAR",
+    "preco": 16.67,
+    "busca": "GLI GLICOSE JEJUM PARTICULAR"
+  },
+  {
+    "id": 17,
+    "codigo": "CRE",
+    "nome": "CREATININA",
+    "categoria": "PARTICULAR",
+    "preco": 16.67,
+    "busca": "CRE CREATININA PARTICULAR"
+  },
+  {
+    "id": 18,
+    "codigo": "URE",
+    "nome": "URÉIA",
+    "categoria": "PARTICULAR",
+    "preco": 16.67,
+    "busca": "URE UREIA PARTICULAR"
+  },
+  {
+    "id": 19,
+    "codigo": "PCR",
+    "nome": "PROTEÍNA C REATIVA",
+    "categoria": "PARTICULAR",
+    "preco": 33.34,
+    "busca": "PCR PROTEINA C REATIVA PARTICULAR"
+  },
+  {
+    "id": 20,
+    "codigo": "COL",
+    "nome": "COLESTEROL TOTAL",
+    "categoria": "PARTICULAR",
+    "preco": 16.67,
+    "busca": "COL COLESTEROL TOTAL PARTICULAR"
+  },
+  {
+    "id": 21,
+    "codigo": "TRI",
+    "nome": "TRIGLICERÍDEOS",
+    "categoria": "PARTICULAR",
+    "preco": 16.67,
+    "busca": "TRI TRIGLICERIDEOS PARTICULAR"
+  },
+  {
+    "id": 22,
+    "codigo": "TGO",
+    "nome": "TRANSAMINASE OXALÁCETICA (TGO/AST)",
+    "categoria": "PARTICULAR",
+    "preco": 16.67,
+    "busca": "TGO TRANSAMINASE OXALACETICA TGO AST PARTICULAR"
+  },
+  {
+    "id": 23,
+    "codigo": "TGP",
+    "nome": "TRANSAMINASE PIRÚVICA (TGP/ALT)",
+    "categoria": "PARTICULAR",
+    "preco": 16.67,
+    "busca": "TGP TRANSAMINASE PIRUVICA TGP ALT PARTICULAR"
+  },
+  {
+    "id": 24,
+    "codigo": "HDL",
+    "nome": "COLESTEROL HDL",
+    "categoria": "PARTICULAR",
+    "preco": 25.0,
+    "busca": "HDL COLESTEROL HDL PARTICULAR"
+  },
+  {
+    "id": 25,
+    "codigo": "TSH",
+    "nome": "TSH - HORMÔNIO TIREOESTIMULANTE - Ultrassensivel",
+    "categoria": "PARTICULAR",
+    "preco": 33.34,
+    "busca": "TSH TSH HORMONIO TIREOESTIMULANTE ULTRASSENSIVEL PARTICULAR"
+  },
+  {
+    "id": 26,
+    "codigo": "LDL",
+    "nome": "COLESTEROL LDL",
+    "categoria": "PARTICULAR",
+    "preco": 20.0,
+    "busca": "LDL COLESTEROL LDL PARTICULAR"
+  },
+  {
+    "id": 27,
+    "codigo": "EPF",
+    "nome": "PARASITOLÓGICO DE FEZES",
+    "categoria": "PARTICULAR",
+    "preco": 20.0,
+    "busca": "EPF PARASITOLOGICO DE FEZES PARTICULAR"
+  },
+  {
+    "id": 28,
+    "codigo": "VITD",
+    "nome": "VITAMINA D - 25 HIDROXI",
+    "categoria": "PARTICULAR",
+    "preco": 35.01,
+    "busca": "VITD VITAMINA D 25 HIDROXI PARTICULAR"
+  },
+  {
+    "id": 30,
+    "codigo": "T4L",
+    "nome": "T4 LIVRE",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "T4L T4 LIVRE PARTICULAR"
+  },
+  {
+    "id": 31,
+    "codigo": "AUR",
+    "nome": "ÁCIDO ÚRICO",
+    "categoria": "PARTICULAR",
+    "preco": 20.0,
+    "busca": "AUR ACIDO URICO PARTICULAR"
+  },
+  {
+    "id": 32,
+    "codigo": "FERRI",
+    "nome": "FERRITINA",
+    "categoria": "PARTICULAR",
+    "preco": 41.68,
+    "busca": "FERRI FERRITINA PARTICULAR"
+  },
+  {
+    "id": 33,
+    "codigo": "HGS",
+    "nome": "HEMOGLOBINA GLICOSILADA",
+    "categoria": "PARTICULAR",
+    "preco": 33.34,
+    "busca": "HGS HEMOGLOBINA GLICOSILADA PARTICULAR"
+  },
+  {
+    "id": 34,
+    "codigo": "GGT",
+    "nome": "GAMA-GLUTAMILTRANSFERASE - GGT",
+    "categoria": "PARTICULAR",
+    "preco": 25.0,
+    "busca": "GGT GAMA GLUTAMILTRANSFERASE GGT PARTICULAR"
+  },
+  {
+    "id": 36,
+    "codigo": "B12",
+    "nome": "VITAMINA B12",
+    "categoria": "PARTICULAR",
+    "preco": 38.34,
+    "busca": "B12 VITAMINA B12 PARTICULAR"
+  },
+  {
+    "id": 37,
+    "codigo": "TAP",
+    "nome": "TEMPO DE PROTROMBINA",
+    "categoria": "PARTICULAR",
+    "preco": 20.0,
+    "busca": "TAP TEMPO DE PROTROMBINA PARTICULAR"
+  },
+  {
+    "id": 38,
+    "codigo": "URC",
+    "nome": "UROCULTURA",
+    "categoria": "PARTICULAR",
+    "preco": 66.68,
+    "busca": "URC UROCULTURA PARTICULAR"
+  },
+  {
+    "id": 39,
+    "codigo": "TPA",
+    "nome": "TEMPO DE TROMBOPLASTINA P. ATIVADA",
+    "categoria": "PARTICULAR",
+    "preco": 20.0,
+    "busca": "TPA TEMPO DE TROMBOPLASTINA P ATIVADA PARTICULAR"
+  },
+  {
+    "id": 40,
+    "codigo": "ABO",
+    "nome": "GRUPO SANGUINEO ABO/RH",
+    "categoria": "PARTICULAR",
+    "preco": 41.68,
+    "busca": "ABO GRUPO SANGUINEO ABO RH PARTICULAR"
+  },
+  {
+    "id": 41,
+    "codigo": "TROP",
+    "nome": "TROPONINA \"I\"",
+    "categoria": "PARTICULAR",
+    "preco": 100.02,
+    "busca": "TROP TROPONINA I PARTICULAR"
+  },
+  {
+    "id": 42,
+    "codigo": "CPK",
+    "nome": "CREATINO FOSFOQUINASE-CPK",
+    "categoria": "PARTICULAR",
+    "preco": 26.67,
+    "busca": "CPK CREATINO FOSFOQUINASE CPK PARTICULAR"
+  },
+  {
+    "id": 43,
+    "codigo": "PSAT",
+    "nome": "PSA TOTAL ULTRA SENSIVEL",
+    "categoria": "PARTICULAR",
+    "preco": 60.01,
+    "busca": "PSAT PSA TOTAL ULTRA SENSIVEL PARTICULAR"
+  },
+  {
+    "id": 44,
+    "codigo": "FAL",
+    "nome": "FOSFATASE ALCALINA",
+    "categoria": "PARTICULAR",
+    "preco": 20.0,
+    "busca": "FAL FOSFATASE ALCALINA PARTICULAR"
+  },
+  {
+    "id": 45,
+    "codigo": "BIL",
+    "nome": "BILIRRUBINA TOTAL E FRAÇÕES",
+    "categoria": "PARTICULAR",
+    "preco": 25.0,
+    "busca": "BIL BILIRRUBINA TOTAL E FRACOES PARTICULAR"
+  },
+  {
+    "id": 46,
+    "codigo": "VDR",
+    "nome": "VDRL",
+    "categoria": "PARTICULAR",
+    "preco": 25.0,
+    "busca": "VDR VDRL PARTICULAR"
+  },
+  {
+    "id": 47,
+    "codigo": "FER",
+    "nome": "FERRO SERICO",
+    "categoria": "PARTICULAR",
+    "preco": 25.0,
+    "busca": "FER FERRO SERICO PARTICULAR"
+  },
+  {
+    "id": 48,
+    "codigo": "CKMB",
+    "nome": "CREATINO FOSFOQUINASE-MB",
+    "categoria": "PARTICULAR",
+    "preco": 83.35,
+    "busca": "CKMB CREATINO FOSFOQUINASE MB PARTICULAR"
+  },
+  {
+    "id": 49,
+    "codigo": "HBSAG",
+    "nome": "HBSAG (HEPATITE B)",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "HBSAG HEPATITE B PARTICULAR"
+  },
+  {
+    "id": 50,
+    "codigo": "HIV",
+    "nome": "HIV 1 e 2 ANTÍGENO/ANTICORPOS",
+    "categoria": "PARTICULAR",
+    "preco": 83.35,
+    "busca": "HIV HIV 1 E 2 ANTIGENO ANTICORPOS PARTICULAR"
+  },
+  {
+    "id": 51,
+    "codigo": "AMI",
+    "nome": "AMILASE",
+    "categoria": "PARTICULAR",
+    "preco": 30.01,
+    "busca": "AMI AMILASE PARTICULAR"
+  },
+  {
+    "id": 52,
+    "codigo": "TC",
+    "nome": "TEMPO DE COAGULAÇÃO",
+    "categoria": "PARTICULAR",
+    "preco": 16.67,
+    "busca": "TC TEMPO DE COAGULACAO PARTICULAR"
+  },
+  {
+    "id": 53,
+    "codigo": "HCV",
+    "nome": "ANTI-HCV (HEPATITE C)",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "HCV ANTI HCV HEPATITE C PARTICULAR"
+  },
+  {
+    "id": 54,
+    "codigo": "MAG",
+    "nome": "MAGNÉSIO",
+    "categoria": "PARTICULAR",
+    "preco": 20.0,
+    "busca": "MAG MAGNESIO PARTICULAR"
+  },
+  {
+    "id": 55,
+    "codigo": "COVIA",
+    "nome": "TESTE IMUNOCROMATOGRÁFICO SARS-CoV-2 ANTÍGENOS",
+    "categoria": "PARTICULAR",
+    "preco": 166.7,
+    "busca": "COVIA TESTE IMUNOCROMATOGRAFICO SARS COV 2 ANTIGENOS PARTICULAR"
+  },
+  {
+    "id": 56,
+    "codigo": "TOXOG",
+    "nome": "TOXOPLASMOSE IGG ANTICORPOS",
+    "categoria": "PARTICULAR",
+    "preco": 41.68,
+    "busca": "TOXOG TOXOPLASMOSE IGG ANTICORPOS PARTICULAR"
+  },
+  {
+    "id": 57,
+    "codigo": "TOXOM",
+    "nome": "TOXOPLASMOSE IGM ANTICORPOS",
+    "categoria": "PARTICULAR",
+    "preco": 41.68,
+    "busca": "TOXOM TOXOPLASMOSE IGM ANTICORPOS PARTICULAR"
+  },
+  {
+    "id": 58,
+    "codigo": "VHS",
+    "nome": "HEMOSSEDIMENTACAO - VHS",
+    "categoria": "PARTICULAR",
+    "preco": 25.0,
+    "busca": "VHS HEMOSSEDIMENTACAO VHS PARTICULAR"
+  },
+  {
+    "id": 59,
+    "codigo": "T3T",
+    "nome": "TIROXINA - T3",
+    "categoria": "PARTICULAR",
+    "preco": 41.68,
+    "busca": "T3T TIROXINA T3 PARTICULAR"
+  },
+  {
+    "id": 61,
+    "codigo": "TS",
+    "nome": "TEMPO DE SANGRAMENTO",
+    "categoria": "PARTICULAR",
+    "preco": 16.67,
+    "busca": "TS TEMPO DE SANGRAMENTO PARTICULAR"
+  },
+  {
+    "id": 62,
+    "codigo": "HBS",
+    "nome": "Anti-HBs-Anticorpo contra antígeno de superfície do HBV",
+    "categoria": "PARTICULAR",
+    "preco": 66.68,
+    "busca": "HBS ANTI HBS ANTICORPO CONTRA ANTIGENO DE SUPERFICIE DO HBV PARTICULAR"
+  },
+  {
+    "id": 63,
+    "codigo": "RET",
+    "nome": "RETICULOCITOS",
+    "categoria": "PARTICULAR",
+    "preco": 33.34,
+    "busca": "RET RETICULOCITOS PARTICULAR"
+  },
+  {
+    "id": 64,
+    "codigo": "CAL",
+    "nome": "CÁLCIO",
+    "categoria": "PARTICULAR",
+    "preco": 20.0,
+    "busca": "CAL CALCIO PARTICULAR"
+  },
+  {
+    "id": 65,
+    "codigo": "LATEX",
+    "nome": "FATOR REUMATÓIDE",
+    "categoria": "PARTICULAR",
+    "preco": 20.0,
+    "busca": "LATEX FATOR REUMATOIDE PARTICULAR"
+  },
+  {
+    "id": 66,
+    "codigo": "TESTO",
+    "nome": "TESTOSTERONA TOTAL",
+    "categoria": "PARTICULAR",
+    "preco": 75.02,
+    "busca": "TESTO TESTOSTERONA TOTAL PARTICULAR"
+  },
+  {
+    "id": 67,
+    "codigo": "AHI",
+    "nome": "ÁCIDO HIPÚRICO URINÁRIO - PRÉ JORNADA",
+    "categoria": "PARTICULAR",
+    "preco": 54.18,
+    "busca": "AHI ACIDO HIPURICO URINARIO PRE JORNADA PARTICULAR"
+  },
+  {
+    "id": 68,
+    "codigo": "AMHI",
+    "nome": "ÁCIDO METIL HIPÚRICO URINÁRIO PRÉ JORNADA",
+    "categoria": "PARTICULAR",
+    "preco": 54.18,
+    "busca": "AMHI ACIDO METIL HIPURICO URINARIO PRE JORNADA PARTICULAR"
+  },
+  {
+    "id": 69,
+    "codigo": "ATRAI",
+    "nome": "ÁCIDO TRANS-TRANS MUCÔNICO PRÉ JORNADA",
+    "categoria": "PARTICULAR",
+    "preco": 116.69,
+    "busca": "ATRAI ACIDO TRANS TRANS MUCONICO PRE JORNADA PARTICULAR"
+  },
+  {
+    "id": 70,
+    "codigo": "AFO",
+    "nome": "ACIDO FOLICO",
+    "categoria": "PARTICULAR",
+    "preco": 41.68,
+    "busca": "AFO ACIDO FOLICO PARTICULAR"
+  },
+  {
+    "id": 71,
+    "codigo": "RUBEG",
+    "nome": "RUBEOLA IgG",
+    "categoria": "PARTICULAR",
+    "preco": 41.68,
+    "busca": "RUBEG RUBEOLA IGG PARTICULAR"
+  },
+  {
+    "id": 72,
+    "codigo": "INSUL",
+    "nome": "INSULINA",
+    "categoria": "PARTICULAR",
+    "preco": 43.34,
+    "busca": "INSUL INSULINA PARTICULAR"
+  },
+  {
+    "id": 73,
+    "codigo": "RUBEM",
+    "nome": "RUBEOLA IgM",
+    "categoria": "PARTICULAR",
+    "preco": 41.68,
+    "busca": "RUBEM RUBEOLA IGM PARTICULAR"
+  },
+  {
+    "id": 74,
+    "codigo": "CITOG",
+    "nome": "CITOMEGALOVIRUS IgG",
+    "categoria": "PARTICULAR",
+    "preco": 41.68,
+    "busca": "CITOG CITOMEGALOVIRUS IGG PARTICULAR"
+  },
+  {
+    "id": 75,
+    "codigo": "CITOM",
+    "nome": "CITOMEGALOVIRUS IgM",
+    "categoria": "PARTICULAR",
+    "preco": 41.68,
+    "busca": "CITOM CITOMEGALOVIRUS IGM PARTICULAR"
+  },
+  {
+    "id": 76,
+    "codigo": "SAN",
+    "nome": "SANGUE OCULTO NAS FEZES",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "SAN SANGUE OCULTO NAS FEZES PARTICULAR"
+  },
+  {
+    "id": 77,
+    "codigo": "VLDL",
+    "nome": "COLESTEROL VLDL",
+    "categoria": "PARTICULAR",
+    "preco": 20.0,
+    "busca": "VLDL COLESTEROL VLDL PARTICULAR"
+  },
+  {
+    "id": 78,
+    "codigo": "FSH",
+    "nome": "HORMÔNIO FOLÌCULO ESTIMULANTE - FSH",
+    "categoria": "PARTICULAR",
+    "preco": 54.18,
+    "busca": "FSH HORMONIO FOLICULO ESTIMULANTE FSH PARTICULAR"
+  },
+  {
+    "id": 79,
+    "codigo": "CSE",
+    "nome": "COLINESTERASE",
+    "categoria": "PARTICULAR",
+    "preco": 41.68,
+    "busca": "CSE COLINESTERASE PARTICULAR"
+  },
+  {
+    "id": 80,
+    "codigo": "TESTL",
+    "nome": "TESTOSTERONA LIVRE",
+    "categoria": "PARTICULAR",
+    "preco": 75.02,
+    "busca": "TESTL TESTOSTERONA LIVRE PARTICULAR"
+  },
+  {
+    "id": 81,
+    "codigo": "T4T",
+    "nome": "TIROXINA - T4",
+    "categoria": "PARTICULAR",
+    "preco": 37.51,
+    "busca": "T4T TIROXINA T4 PARTICULAR"
+  },
+  {
+    "id": 82,
+    "codigo": "LIP",
+    "nome": "LIPASE",
+    "categoria": "PARTICULAR",
+    "preco": 33.34,
+    "busca": "LIP LIPASE PARTICULAR"
+  },
+  {
+    "id": 83,
+    "codigo": "FAN",
+    "nome": "PESQUISA DE AUTO-ANTICORPOS ANTICÉLULA - FAN",
+    "categoria": "PARTICULAR",
+    "preco": 41.68,
+    "busca": "FAN PESQUISA DE AUTO ANTICORPOS ANTICELULA FAN PARTICULAR"
+  },
+  {
+    "id": 84,
+    "codigo": "LH",
+    "nome": "HORMONIO LUTEINIZANTE - LH",
+    "categoria": "PARTICULAR",
+    "preco": 41.68,
+    "busca": "LH HORMONIO LUTEINIZANTE LH PARTICULAR"
+  },
+  {
+    "id": 85,
+    "codigo": "ESTRA",
+    "nome": "ESTRADIOL",
+    "categoria": "PARTICULAR",
+    "preco": 61.68,
+    "busca": "ESTRA ESTRADIOL PARTICULAR"
+  },
+  {
+    "id": 86,
+    "codigo": "ASO",
+    "nome": "ANTIESTREPTOLISINA O (ASO)",
+    "categoria": "PARTICULAR",
+    "preco": 20.0,
+    "busca": "ASO ANTIESTREPTOLISINA O ASO PARTICULAR"
+  },
+  {
+    "id": 87,
+    "codigo": "CAI",
+    "nome": "CÁLCIO IONIZADO",
+    "categoria": "PARTICULAR",
+    "preco": 30.01,
+    "busca": "CAI CALCIO IONIZADO PARTICULAR"
+  },
+  {
+    "id": 88,
+    "codigo": "PROLA",
+    "nome": "PROLACTINA",
+    "categoria": "PARTICULAR",
+    "preco": 33.34,
+    "busca": "PROLA PROLACTINA PARTICULAR"
+  },
+  {
+    "id": 89,
+    "codigo": "PSAL",
+    "nome": "PSA LIVRE",
+    "categoria": "PARTICULAR",
+    "preco": 60.01,
+    "busca": "PSAL PSA LIVRE PARTICULAR"
+  },
+  {
+    "id": 90,
+    "codigo": "TAD30",
+    "nome": "TESTE DE TOLERÂNCIA LACTOSE 30 MI",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "TAD30 TESTE DE TOLERANCIA LACTOSE 30 MI PARTICULAR"
+  },
+  {
+    "id": 91,
+    "codigo": "TAD60",
+    "nome": "TESTE DE TOLERÂNCIA A LACTOSE 60 MI",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "TAD60 TESTE DE TOLERANCIA A LACTOSE 60 MI PARTICULAR"
+  },
+  {
+    "id": 92,
+    "codigo": "LAC",
+    "nome": "TOLERÂNCIA À LACTOSE - BASAL",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "LAC TOLERANCIA A LACTOSE BASAL PARTICULAR"
+  },
+  {
+    "id": 93,
+    "codigo": "TAD90",
+    "nome": "TESTE DE TOLERÂNCIA À LACTOSE 90 MI",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "TAD90 TESTE DE TOLERANCIA A LACTOSE 90 MI PARTICULAR"
+  },
+  {
+    "id": 94,
+    "codigo": "CORT",
+    "nome": "CORTISOL",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "CORT CORTISOL PARTICULAR"
+  },
+  {
+    "id": 95,
+    "codigo": "TPO",
+    "nome": "ANTI-PEROXIDASE (ANTI TPO)",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "TPO ANTI PEROXIDASE ANTI TPO PARTICULAR"
+  },
+  {
+    "id": 96,
+    "codigo": "MIF",
+    "nome": "PARASITOLÓGICO DE FEZES - MIF",
+    "categoria": "PARTICULAR",
+    "preco": 33.34,
+    "busca": "MIF PARASITOLOGICO DE FEZES MIF PARTICULAR"
+  },
+  {
+    "id": 97,
+    "codigo": "ZIN",
+    "nome": "ZINCO",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "ZIN ZINCO PARTICULAR"
+  },
+  {
+    "id": 98,
+    "codigo": "PTF",
+    "nome": "PROTEÍNAS TOTAIS E FRAÇÕES",
+    "categoria": "PARTICULAR",
+    "preco": 41.68,
+    "busca": "PTF PROTEINAS TOTAIS E FRACOES PARTICULAR"
+  },
+  {
+    "id": 99,
+    "codigo": "PTH",
+    "nome": "PARATORMONIO - PTH INTACTO",
+    "categoria": "PARTICULAR",
+    "preco": 83.35,
+    "busca": "PTH PARATORMONIO PTH INTACTO PARTICULAR"
+  },
+  {
+    "id": 100,
+    "codigo": "T3L",
+    "nome": "T3 LIVRE",
+    "categoria": "PARTICULAR",
+    "preco": 41.68,
+    "busca": "T3L T3 LIVRE PARTICULAR"
+  },
+  {
+    "id": 101,
+    "codigo": "DCR",
+    "nome": "CLEARENCE DE CREATININA",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "DCR CLEARENCE DE CREATININA PARTICULAR"
+  },
+  {
+    "id": 102,
+    "codigo": "CEA",
+    "nome": "ANTIGENO CARCINOEMBRIONARIO - CEA",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "CEA ANTIGENO CARCINOEMBRIONARIO CEA PARTICULAR"
+  },
+  {
+    "id": 103,
+    "codigo": "RETRA",
+    "nome": "RETRAÇÃO DO COÁGULO",
+    "categoria": "PARTICULAR",
+    "preco": 16.67,
+    "busca": "RETRA RETRACAO DO COAGULO PARTICULAR"
+  },
+  {
+    "id": 104,
+    "codigo": "PROVA",
+    "nome": "PROVA DO LAÇO",
+    "categoria": "PARTICULAR",
+    "preco": 16.67,
+    "busca": "PROVA PROVA DO LACO PARTICULAR"
+  },
+  {
+    "id": 105,
+    "codigo": "MICAL",
+    "nome": "MICROALBUMINÚRIA(amostra isolada)",
+    "categoria": "PARTICULAR",
+    "preco": 41.68,
+    "busca": "MICAL MICROALBUMINURIA AMOSTRA ISOLADA PARTICULAR"
+  },
+  {
+    "id": 106,
+    "codigo": "PROG",
+    "nome": "PROGESTERONA",
+    "categoria": "PARTICULAR",
+    "preco": 41.68,
+    "busca": "PROG PROGESTERONA PARTICULAR"
+  },
+  {
+    "id": 107,
+    "codigo": "GLIP",
+    "nome": "GLICOSE PÓS-PRANDIAL",
+    "categoria": "PARTICULAR",
+    "preco": 20.0,
+    "busca": "GLIP GLICOSE POS PRANDIAL PARTICULAR"
+  },
+  {
+    "id": 108,
+    "codigo": "FOS",
+    "nome": "FÓSFORO",
+    "categoria": "PARTICULAR",
+    "preco": 20.0,
+    "busca": "FOS FOSFORO PARTICULAR"
+  },
+  {
+    "id": 109,
+    "codigo": "TRANS",
+    "nome": "TRANSFERRINA",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "TRANS TRANSFERRINA PARTICULAR"
+  },
+  {
+    "id": 110,
+    "codigo": "ESQUI",
+    "nome": "ESQUISTOSSOMOSE",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "ESQUI ESQUISTOSSOMOSE PARTICULAR"
+  },
+  {
+    "id": 111,
+    "codigo": "MUCO",
+    "nome": "MUCOPROTEINAS",
+    "categoria": "PARTICULAR",
+    "preco": 25.0,
+    "busca": "MUCO MUCOPROTEINAS PARTICULAR"
+  },
+  {
+    "id": 112,
+    "codigo": "ATIRE",
+    "nome": "ANTI - TIREOGLOBULINA",
+    "categoria": "PARTICULAR",
+    "preco": 66.68,
+    "busca": "ATIRE ANTI TIREOGLOBULINA PARTICULAR"
+  },
+  {
+    "id": 113,
+    "codigo": "BIOS",
+    "nome": "BIOPSIA (PEÇA PEQUENA)",
+    "categoria": "PARTICULAR",
+    "preco": 166.7,
+    "busca": "BIOS BIOPSIA PECA PEQUENA PARTICULAR"
+  },
+  {
+    "id": 114,
+    "codigo": "BIOP2",
+    "nome": "BIOPSIA - HISTOPATOLÓGICO - 2ª PEÇA",
+    "categoria": "PARTICULAR",
+    "preco": 166.7,
+    "busca": "BIOP2 BIOPSIA HISTOPATOLOGICO 2 PECA PARTICULAR"
+  },
+  {
+    "id": 115,
+    "codigo": "BIOP3",
+    "nome": "BIOPSIA - HISTOPATOLÓGICO - 3ª PEÇA",
+    "categoria": "PARTICULAR",
+    "preco": 166.7,
+    "busca": "BIOP3 BIOPSIA HISTOPATOLOGICO 3 PECA PARTICULAR"
+  },
+  {
+    "id": 116,
+    "codigo": "BIOP4",
+    "nome": "BIOPSIA - HISTOPATOLÓGICO - 4ª PEÇA",
+    "categoria": "PARTICULAR",
+    "preco": 166.7,
+    "busca": "BIOP4 BIOPSIA HISTOPATOLOGICO 4 PECA PARTICULAR"
+  },
+  {
+    "id": 117,
+    "codigo": "DIM",
+    "nome": "D-DÍMERO",
+    "categoria": "PARTICULAR",
+    "preco": 150.03,
+    "busca": "DIM D DIMERO PARTICULAR"
+  },
+  {
+    "id": 118,
+    "codigo": "ALB",
+    "nome": "ALBUMINA",
+    "categoria": "PARTICULAR",
+    "preco": 16.67,
+    "busca": "ALB ALBUMINA PARTICULAR"
+  },
+  {
+    "id": 119,
+    "codigo": "WROSE",
+    "nome": "WAALER-ROSE",
+    "categoria": "PARTICULAR",
+    "preco": 26.67,
+    "busca": "WROSE WAALER ROSE PARTICULAR"
+  },
+  {
+    "id": 120,
+    "codigo": "HBCG",
+    "nome": "ANTI HBC IgG",
+    "categoria": "PARTICULAR",
+    "preco": 41.68,
+    "busca": "HBCG ANTI HBC IGG PARTICULAR"
+  },
+  {
+    "id": 121,
+    "codigo": "HBCM",
+    "nome": "ANTI HBC IgM",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "HBCM ANTI HBC IGM PARTICULAR"
+  },
+  {
+    "id": 122,
+    "codigo": "HOMO",
+    "nome": "HOMOCISTEINA",
+    "categoria": "PARTICULAR",
+    "preco": 100.02,
+    "busca": "HOMO HOMOCISTEINA PARTICULAR"
+  },
+  {
+    "id": 123,
+    "codigo": "IE",
+    "nome": "IMUNOGLOBULINA E",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "IE IMUNOGLOBULINA E PARTICULAR"
+  },
+  {
+    "id": 124,
+    "codigo": "FIB",
+    "nome": "FIBRINOGENIO",
+    "categoria": "PARTICULAR",
+    "preco": 63.35,
+    "busca": "FIB FIBRINOGENIO PARTICULAR"
+  },
+  {
+    "id": 125,
+    "codigo": "COIN",
+    "nome": "COOMBS INDIRETO",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "COIN COOMBS INDIRETO PARTICULAR"
+  },
+  {
+    "id": 126,
+    "codigo": "C3",
+    "nome": "COMPLEMENTO C3",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "C3 COMPLEMENTO C3 PARTICULAR"
+  },
+  {
+    "id": 127,
+    "codigo": "DHT",
+    "nome": "DEHIDROTESTOSTERONA - DHT",
+    "categoria": "PARTICULAR",
+    "preco": 91.69,
+    "busca": "DHT DEHIDROTESTOSTERONA DHT PARTICULAR"
+  },
+  {
+    "id": 128,
+    "codigo": "ELEPR",
+    "nome": "ELETROFORESE PROTEINAS",
+    "categoria": "PARTICULAR",
+    "preco": 66.68,
+    "busca": "ELEPR ELETROFORESE PROTEINAS PARTICULAR"
+  },
+  {
+    "id": 129,
+    "codigo": "SHBG",
+    "nome": "SHBG-Globulina Ligadora de Hormônios Sexuais",
+    "categoria": "PARTICULAR",
+    "preco": 75.02,
+    "busca": "SHBG SHBG GLOBULINA LIGADORA DE HORMONIOS SEXUAIS PARTICULAR"
+  },
+  {
+    "id": 130,
+    "codigo": "IST",
+    "nome": "INDICE DE SATURACAO DA TRANSFERRINA",
+    "categoria": "PARTICULAR",
+    "preco": 41.68,
+    "busca": "IST INDICE DE SATURACAO DA TRANSFERRINA PARTICULAR"
+  },
+  {
+    "id": 131,
+    "codigo": "C4",
+    "nome": "COMPLEMENTO C4",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "C4 COMPLEMENTO C4 PARTICULAR"
+  },
+  {
+    "id": 132,
+    "codigo": "FTAG",
+    "nome": "FTA-ABS IgG",
+    "categoria": "PARTICULAR",
+    "preco": 106.69,
+    "busca": "FTAG FTA ABS IGG PARTICULAR"
+  },
+  {
+    "id": 133,
+    "codigo": "PTR24",
+    "nome": "PROTEINÚRIA DE 24 HORAS",
+    "categoria": "PARTICULAR",
+    "preco": 41.68,
+    "busca": "PTR24 PROTEINURIA DE 24 HORAS PARTICULAR"
+  },
+  {
+    "id": 134,
+    "codigo": "DHE",
+    "nome": "DEHIDROEPIANDROSTERONA DHEA",
+    "categoria": "PARTICULAR",
+    "preco": 91.69,
+    "busca": "DHE DEHIDROEPIANDROSTERONA DHEA PARTICULAR"
+  },
+  {
+    "id": 135,
+    "codigo": "FTAM",
+    "nome": "FTA-ABS IgM",
+    "categoria": "PARTICULAR",
+    "preco": 106.69,
+    "busca": "FTAM FTA ABS IGM PARTICULAR"
+  },
+  {
+    "id": 136,
+    "codigo": "CA125",
+    "nome": "CA 125",
+    "categoria": "PARTICULAR",
+    "preco": 66.68,
+    "busca": "CA125 CA 125 PARTICULAR"
+  },
+  {
+    "id": 137,
+    "codigo": "ESTRO",
+    "nome": "ESTRONA",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "ESTRO ESTRONA PARTICULAR"
+  },
+  {
+    "id": 138,
+    "codigo": "HAVM",
+    "nome": "HEPATITE A IgM",
+    "categoria": "PARTICULAR",
+    "preco": 75.02,
+    "busca": "HAVM HEPATITE A IGM PARTICULAR"
+  },
+  {
+    "id": 139,
+    "codigo": "CLORO",
+    "nome": "CLORO",
+    "categoria": "PARTICULAR",
+    "preco": 26.67,
+    "busca": "CLORO CLORO PARTICULAR"
+  },
+  {
+    "id": 140,
+    "codigo": "ADNA",
+    "nome": "DNA NATIVO AUTO ANTICORPOS",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "ADNA DNA NATIVO AUTO ANTICORPOS PARTICULAR"
+  },
+  {
+    "id": 141,
+    "codigo": "HAVG",
+    "nome": "HEPATITE A IgG",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "HAVG HEPATITE A IGG PARTICULAR"
+  },
+  {
+    "id": 142,
+    "codigo": "TOXIC",
+    "nome": "TOXICOLOGICO",
+    "categoria": "PARTICULAR",
+    "preco": 150.03,
+    "busca": "TOXIC TOXICOLOGICO PARTICULAR"
+  },
+  {
+    "id": 143,
+    "codigo": "SELEN",
+    "nome": "SELENIO SERICO",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "SELEN SELENIO SERICO PARTICULAR"
+  },
+  {
+    "id": 144,
+    "codigo": "VITC",
+    "nome": "VITAMINA C",
+    "categoria": "PARTICULAR",
+    "preco": 108.36,
+    "busca": "VITC VITAMINA C PARTICULAR"
+  },
+  {
+    "id": 145,
+    "codigo": "COBS",
+    "nome": "COBRE SERICO",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "COBS COBRE SERICO PARTICULAR"
+  },
+  {
+    "id": 146,
+    "codigo": "CUL",
+    "nome": "CULTURA E ANTIBIOGRAMA - DIVERSOS",
+    "categoria": "PARTICULAR",
+    "preco": 133.36,
+    "busca": "CUL CULTURA E ANTIBIOGRAMA DIVERSOS PARTICULAR"
+  },
+  {
+    "id": 147,
+    "codigo": "EBG",
+    "nome": "EPSTEIN BAAR IGG ANTICORPOS",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "EBG EPSTEIN BAAR IGG ANTICORPOS PARTICULAR"
+  },
+  {
+    "id": 148,
+    "codigo": "EBM",
+    "nome": "EPSTEIN BAAR IGM ANTICORPOS",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "EBM EPSTEIN BAAR IGM ANTICORPOS PARTICULAR"
+  },
+  {
+    "id": 149,
+    "codigo": "IGG",
+    "nome": "IMUNOGLOBULINAS IGG",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "IGG IMUNOGLOBULINAS IGG PARTICULAR"
+  },
+  {
+    "id": 150,
+    "codigo": "LIT",
+    "nome": "LITIO",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "LIT LITIO PARTICULAR"
+  },
+  {
+    "id": 151,
+    "codigo": "AFP",
+    "nome": "ALFA FETOPROTEINA",
+    "categoria": "PARTICULAR",
+    "preco": 70.01,
+    "busca": "AFP ALFA FETOPROTEINA PARTICULAR"
+  },
+  {
+    "id": 152,
+    "codigo": "ESTRL",
+    "nome": "ESTRIOL LIVRE",
+    "categoria": "PARTICULAR",
+    "preco": 66.68,
+    "busca": "ESTRL ESTRIOL LIVRE PARTICULAR"
+  },
+  {
+    "id": 153,
+    "codigo": "DHSL",
+    "nome": "DEHIDROEPIANDROSTERONA SULFATO",
+    "categoria": "PARTICULAR",
+    "preco": 83.35,
+    "busca": "DHSL DEHIDROEPIANDROSTERONA SULFATO PARTICULAR"
+  },
+  {
+    "id": 154,
+    "codigo": "TIREO",
+    "nome": "TIREOGLOBULINA",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "TIREO TIREOGLOBULINA PARTICULAR"
+  },
+  {
+    "id": 155,
+    "codigo": "FRU",
+    "nome": "FRUTOSAMINA",
+    "categoria": "PARTICULAR",
+    "preco": 41.68,
+    "busca": "FRU FRUTOSAMINA PARTICULAR"
+  },
+  {
+    "id": 157,
+    "codigo": "STC",
+    "nome": "SOMATOMEDINA C (IGF-1)",
+    "categoria": "PARTICULAR",
+    "preco": 100.02,
+    "busca": "STC SOMATOMEDINA C IGF 1 PARTICULAR"
+  },
+  {
+    "id": 158,
+    "codigo": "CCP",
+    "nome": "ANTI-CITRULINA",
+    "categoria": "PARTICULAR",
+    "preco": 141.69,
+    "busca": "CCP ANTI CITRULINA PARTICULAR"
+  },
+  {
+    "id": 159,
+    "codigo": "CLAMG",
+    "nome": "CHLAMYDIA TRACHOMATIS IgG",
+    "categoria": "PARTICULAR",
+    "preco": 83.35,
+    "busca": "CLAMG CHLAMYDIA TRACHOMATIS IGG PARTICULAR"
+  },
+  {
+    "id": 160,
+    "codigo": "CLAMM",
+    "nome": "CHLAMYDIA TRACHOMATIS IgM",
+    "categoria": "PARTICULAR",
+    "preco": 83.35,
+    "busca": "CLAMM CHLAMYDIA TRACHOMATIS IGM PARTICULAR"
+  },
+  {
+    "id": 161,
+    "codigo": "D1",
+    "nome": "IgE ESPECÍFICO (D1)-Ácaros-D.pteronyssinus",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "D1 IGE ESPECIFICO D1 ACAROS D PTERONYSSINUS PARTICULAR"
+  },
+  {
+    "id": 162,
+    "codigo": "ESP",
+    "nome": "ESPERMOGRAMA-CONTROLE APÓS VASECTOMIA",
+    "categoria": "PARTICULAR",
+    "preco": 200.04,
+    "busca": "ESP ESPERMOGRAMA CONTROLE APOS VASECTOMIA PARTICULAR"
+  },
+  {
+    "id": 163,
+    "codigo": "IGA",
+    "nome": "IMUNOGLOBULINAS IGA",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "IGA IMUNOGLOBULINAS IGA PARTICULAR"
+  },
+  {
+    "id": 164,
+    "codigo": "CAG",
+    "nome": "CARDIOLIPINA IgG",
+    "categoria": "PARTICULAR",
+    "preco": 66.68,
+    "busca": "CAG CARDIOLIPINA IGG PARTICULAR"
+  },
+  {
+    "id": 165,
+    "codigo": "CAM",
+    "nome": "CARDIOLIPINA IgM",
+    "categoria": "PARTICULAR",
+    "preco": 66.68,
+    "busca": "CAM CARDIOLIPINA IGM PARTICULAR"
+  },
+  {
+    "id": 166,
+    "codigo": "D201",
+    "nome": "IgE ESPECÍFICO (D201) - Ácaros - Blomia tropicalis",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "D201 IGE ESPECIFICO D201 ACAROS BLOMIA TROPICALIS PARTICULAR"
+  },
+  {
+    "id": 167,
+    "codigo": "CTCF",
+    "nome": "CAPACIDADE TOTAL DE COMBINAÇÃO DO F",
+    "categoria": "PARTICULAR",
+    "preco": 41.68,
+    "busca": "CTCF CAPACIDADE TOTAL DE COMBINACAO DO F PARTICULAR"
+  },
+  {
+    "id": 168,
+    "codigo": "D2",
+    "nome": "IgE ESPECÍFICO (D2)-Ácaros-D.farinae",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "D2 IGE ESPECIFICO D2 ACAROS D FARINAE PARTICULAR"
+  },
+  {
+    "id": 169,
+    "codigo": "SSA",
+    "nome": "ANTI - SS-A (RO)",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "SSA ANTI SS A RO PARTICULAR"
+  },
+  {
+    "id": 170,
+    "codigo": "C19",
+    "nome": "CA 19-9",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "C19 CA 19 9 PARTICULAR"
+  },
+  {
+    "id": 171,
+    "codigo": "TRA",
+    "nome": "ANTI-TRANSGLUTAMINASE IgA",
+    "categoria": "PARTICULAR",
+    "preco": 150.03,
+    "busca": "TRA ANTI TRANSGLUTAMINASE IGA PARTICULAR"
+  },
+  {
+    "id": 172,
+    "codigo": "ELFHB",
+    "nome": "ELETROFORESE DE HEMOGLOBINA",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "ELFHB ELETROFORESE DE HEMOGLOBINA PARTICULAR"
+  },
+  {
+    "id": 173,
+    "codigo": "LUP",
+    "nome": "ANTICOAGULANTE LUPICO",
+    "categoria": "PARTICULAR",
+    "preco": 86.68,
+    "busca": "LUP ANTICOAGULANTE LUPICO PARTICULAR"
+  },
+  {
+    "id": 174,
+    "codigo": "TRAB",
+    "nome": "TSH ANTICORPO ANTI RECEPTOR -TRAB",
+    "categoria": "PARTICULAR",
+    "preco": 86.68,
+    "busca": "TRAB TSH ANTICORPO ANTI RECEPTOR TRAB PARTICULAR"
+  },
+  {
+    "id": 175,
+    "codigo": "CAU",
+    "nome": "CÁLCIO URINÁRIO 24 HORAS",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "CAU CALCIO URINARIO 24 HORAS PARTICULAR"
+  },
+  {
+    "id": 176,
+    "codigo": "VITA",
+    "nome": "VITAMINA A",
+    "categoria": "PARTICULAR",
+    "preco": 108.36,
+    "busca": "VITA VITAMINA A PARTICULAR"
+  },
+  {
+    "id": 177,
+    "codigo": "17ALF",
+    "nome": "17 ALFA-HIDROXIPROGESTERONA",
+    "categoria": "PARTICULAR",
+    "preco": 91.69,
+    "busca": "17ALF 17 ALFA HIDROXIPROGESTERONA PARTICULAR"
+  },
+  {
+    "id": 178,
+    "codigo": "AND",
+    "nome": "ANDROSTENEDIONA",
+    "categoria": "PARTICULAR",
+    "preco": 83.35,
+    "busca": "AND ANDROSTENEDIONA PARTICULAR"
+  },
+  {
+    "id": 179,
+    "codigo": "SSB",
+    "nome": "ANTI-SSB (LA)",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "SSB ANTI SSB LA PARTICULAR"
+  },
+  {
+    "id": 180,
+    "codigo": "SSM",
+    "nome": "ANTI-SM",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "SSM ANTI SM PARTICULAR"
+  },
+  {
+    "id": 181,
+    "codigo": "C50",
+    "nome": "COMPLEMENTO TOTAL - CH50",
+    "categoria": "PARTICULAR",
+    "preco": 60.01,
+    "busca": "C50 COMPLEMENTO TOTAL CH50 PARTICULAR"
+  },
+  {
+    "id": 182,
+    "codigo": "ACTH",
+    "nome": "ADRENOCORTICOTROFICO (ACTH)",
+    "categoria": "PARTICULAR",
+    "preco": 133.36,
+    "busca": "ACTH ADRENOCORTICOTROFICO ACTH PARTICULAR"
+  },
+  {
+    "id": 183,
+    "codigo": "PEC",
+    "nome": "PEPTÍDEO C",
+    "categoria": "PARTICULAR",
+    "preco": 83.35,
+    "busca": "PEC PEPTIDEO C PARTICULAR"
+  },
+  {
+    "id": 184,
+    "codigo": "ALUM",
+    "nome": "ALUMINIO (SERICO)",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "ALUM ALUMINIO SERICO PARTICULAR"
+  },
+  {
+    "id": 185,
+    "codigo": "GLIAA",
+    "nome": "GLIADINA IgA ANTICORPOS ANTI",
+    "categoria": "PARTICULAR",
+    "preco": 75.02,
+    "busca": "GLIAA GLIADINA IGA ANTICORPOS ANTI PARTICULAR"
+  },
+  {
+    "id": 186,
+    "codigo": "BNP",
+    "nome": "BNP - PEPTíDEO NATRIURéTICO",
+    "categoria": "PARTICULAR",
+    "preco": 266.72,
+    "busca": "BNP BNP PEPTIDEO NATRIURETICO PARTICULAR"
+  },
+  {
+    "id": 187,
+    "codigo": "HLA27",
+    "nome": "HLA B27",
+    "categoria": "PARTICULAR",
+    "preco": 163.37,
+    "busca": "HLA27 HLA B27 PARTICULAR"
+  },
+  {
+    "id": 188,
+    "codigo": "F1",
+    "nome": "IgE ESP. CLARA DE OVO",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "F1 IGE ESP CLARA DE OVO PARTICULAR"
+  },
+  {
+    "id": 189,
+    "codigo": "LIPT",
+    "nome": "LIPIDEOS TOTAIS",
+    "categoria": "PARTICULAR",
+    "preco": 41.68,
+    "busca": "LIPT LIPIDEOS TOTAIS PARTICULAR"
+  },
+  {
+    "id": 190,
+    "codigo": "PTO",
+    "nome": "PROTEÍNAS TOTAIS",
+    "categoria": "PARTICULAR",
+    "preco": 25.0,
+    "busca": "PTO PROTEINAS TOTAIS PARTICULAR"
+  },
+  {
+    "id": 191,
+    "codigo": "T3REV",
+    "nome": "T3 REVERSO",
+    "categoria": "PARTICULAR",
+    "preco": 83.35,
+    "busca": "T3REV T3 REVERSO PARTICULAR"
+  },
+  {
+    "id": 192,
+    "codigo": "ACLAT",
+    "nome": "ACIDO LATICO - LACTATO",
+    "categoria": "PARTICULAR",
+    "preco": 41.68,
+    "busca": "ACLAT ACIDO LATICO LACTATO PARTICULAR"
+  },
+  {
+    "id": 193,
+    "codigo": "ENDOA",
+    "nome": "ENDOMISIO IGA ANTICORPOS ANTI",
+    "categoria": "PARTICULAR",
+    "preco": 115.02,
+    "busca": "ENDOA ENDOMISIO IGA ANTICORPOS ANTI PARTICULAR"
+  },
+  {
+    "id": 194,
+    "codigo": "CROMO",
+    "nome": "CROMO SÉRICO",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "CROMO CROMO SERICO PARTICULAR"
+  },
+  {
+    "id": 195,
+    "codigo": "DENGG",
+    "nome": "DENGUE IGG",
+    "categoria": "PARTICULAR",
+    "preco": 129.19,
+    "busca": "DENGG DENGUE IGG PARTICULAR"
+  },
+  {
+    "id": 196,
+    "codigo": "DENM",
+    "nome": "DENGUE IGM",
+    "categoria": "PARTICULAR",
+    "preco": 129.19,
+    "busca": "DENM DENGUE IGM PARTICULAR"
+  },
+  {
+    "id": 197,
+    "codigo": "F2",
+    "nome": "IGE ESPECIFICO PARA LEITE DE VACA",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "F2 IGE ESPECIFICO PARA LEITE DE VACA PARTICULAR"
+  },
+  {
+    "id": 198,
+    "codigo": "MIAL",
+    "nome": "MICROALBUMINURIA - URINA 24 H",
+    "categoria": "PARTICULAR",
+    "preco": 83.35,
+    "busca": "MIAL MICROALBUMINURIA URINA 24 H PARTICULAR"
+  },
+  {
+    "id": 199,
+    "codigo": "VITD1",
+    "nome": "VITAMINA D - 125 DIHIDROXI",
+    "categoria": "PARTICULAR",
+    "preco": 133.36,
+    "busca": "VITD1 VITAMINA D 125 DIHIDROXI PARTICULAR"
+  },
+  {
+    "id": 200,
+    "codigo": "HTLV",
+    "nome": "HTLV I/II - ANTICORPOS",
+    "categoria": "PARTICULAR",
+    "preco": 83.35,
+    "busca": "HTLV HTLV I II ANTICORPOS PARTICULAR"
+  },
+  {
+    "id": 201,
+    "codigo": "C15",
+    "nome": "CA 15.3",
+    "categoria": "PARTICULAR",
+    "preco": 75.02,
+    "busca": "C15 CA 15 3 PARTICULAR"
+  },
+  {
+    "id": 202,
+    "codigo": "CHAIF",
+    "nome": "TRYPANOSSOMA CRUZI IGG",
+    "categoria": "PARTICULAR",
+    "preco": 33.34,
+    "busca": "CHAIF TRYPANOSSOMA CRUZI IGG PARTICULAR"
+  },
+  {
+    "id": 203,
+    "codigo": "CHAMI",
+    "nome": "TRYPANOSSOMA CRUZI IGM",
+    "categoria": "PARTICULAR",
+    "preco": 33.34,
+    "busca": "CHAMI TRYPANOSSOMA CRUZI IGM PARTICULAR"
+  },
+  {
+    "id": 204,
+    "codigo": "CULF",
+    "nome": "COPROCULTURA",
+    "categoria": "PARTICULAR",
+    "preco": 83.35,
+    "busca": "CULF COPROCULTURA PARTICULAR"
+  },
+  {
+    "id": 205,
+    "codigo": "DNM",
+    "nome": "DNA (FILHO E SUPOSTO PAI)",
+    "categoria": "PARTICULAR",
+    "preco": 833.5,
+    "busca": "DNM DNA FILHO E SUPOSTO PAI PARTICULAR"
+  },
+  {
+    "id": 206,
+    "codigo": "ELIPO",
+    "nome": "ELETROFORESE DE LIPOPROTEÍNAS",
+    "categoria": "PARTICULAR",
+    "preco": 83.35,
+    "busca": "ELIPO ELETROFORESE DE LIPOPROTEINAS PARTICULAR"
+  },
+  {
+    "id": 207,
+    "codigo": "MULLE",
+    "nome": "HORMONIO ANTI-MULLERIAN",
+    "categoria": "PARTICULAR",
+    "preco": 383.41,
+    "busca": "MULLE HORMONIO ANTI MULLERIAN PARTICULAR"
+  },
+  {
+    "id": 208,
+    "codigo": "HGH",
+    "nome": "HORMÔNIO DO CRESCIMENTO HUMANO - HGH",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "HGH HORMONIO DO CRESCIMENTO HUMANO HGH PARTICULAR"
+  },
+  {
+    "id": 209,
+    "codigo": "F14",
+    "nome": "IgE ESPECÍFICO (F14)-Alimentos-Grão de soja",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "F14 IGE ESPECIFICO F14 ALIMENTOS GRAO DE SOJA PARTICULAR"
+  },
+  {
+    "id": 210,
+    "codigo": "M3",
+    "nome": "IgG ESPECÍFICO (m3) - Aspergillus fumigatus",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "M3 IGG ESPECIFICO M3 ASPERGILLUS FUMIGATUS PARTICULAR"
+  },
+  {
+    "id": 211,
+    "codigo": "ALD",
+    "nome": "ALDOLASE",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "ALD ALDOLASE PARTICULAR"
+  },
+  {
+    "id": 212,
+    "codigo": "GLIAG",
+    "nome": "GLIADINA IgG ANTICORPOS ANTI",
+    "categoria": "PARTICULAR",
+    "preco": 75.02,
+    "busca": "GLIAG GLIADINA IGG ANTICORPOS ANTI PARTICULAR"
+  },
+  {
+    "id": 213,
+    "codigo": "ASC70",
+    "nome": "ANTI - SCL - 70",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "ASC70 ANTI SCL 70 PARTICULAR"
+  },
+  {
+    "id": 214,
+    "codigo": "ANT",
+    "nome": "ANTITROMBINA-III DOSAGEM",
+    "categoria": "PARTICULAR",
+    "preco": 100.02,
+    "busca": "ANT ANTITROMBINA III DOSAGEM PARTICULAR"
+  },
+  {
+    "id": 215,
+    "codigo": "F13",
+    "nome": "IgE ESPECÍFICO (F13) - Alimentos - Amendoim",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "F13 IGE ESPECIFICO F13 ALIMENTOS AMENDOIM PARTICULAR"
+  },
+  {
+    "id": 216,
+    "codigo": "F76",
+    "nome": "IgE ESP. A-LACTOALBUMINA",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "F76 IGE ESP A LACTOALBUMINA PARTICULAR"
+  },
+  {
+    "id": 217,
+    "codigo": "F77",
+    "nome": "IgE ESP. B-LACTOGLOBULINA",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "F77 IGE ESP B LACTOGLOBULINA PARTICULAR"
+  },
+  {
+    "id": 218,
+    "codigo": "F79",
+    "nome": "IgE ESP. GLUTEN",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "F79 IGE ESP GLUTEN PARTICULAR"
+  },
+  {
+    "id": 219,
+    "codigo": "PC",
+    "nome": "PROTEINA \"C\" FUNCIONAL",
+    "categoria": "PARTICULAR",
+    "preco": 143.36,
+    "busca": "PC PROTEINA C FUNCIONAL PARTICULAR"
+  },
+  {
+    "id": 220,
+    "codigo": "VITB6",
+    "nome": "VITAMINA B6",
+    "categoria": "PARTICULAR",
+    "preco": 150.03,
+    "busca": "VITB6 VITAMINA B6 PARTICULAR"
+  },
+  {
+    "id": 221,
+    "codigo": "AVAL",
+    "nome": "ACIDO VALPROICO",
+    "categoria": "PARTICULAR",
+    "preco": 75.02,
+    "busca": "AVAL ACIDO VALPROICO PARTICULAR"
+  },
+  {
+    "id": 222,
+    "codigo": "ALDO",
+    "nome": "ALDOSTERONA",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "ALDO ALDOSTERONA PARTICULAR"
+  },
+  {
+    "id": 223,
+    "codigo": "PARIE",
+    "nome": "CELULAS PARIETAIS",
+    "categoria": "PARTICULAR",
+    "preco": 100.02,
+    "busca": "PARIE CELULAS PARIETAIS PARTICULAR"
+  },
+  {
+    "id": 224,
+    "codigo": "ENDOG",
+    "nome": "ENDOMISIO IGG ANTICORPOS ANTI",
+    "categoria": "PARTICULAR",
+    "preco": 116.69,
+    "busca": "ENDOG ENDOMISIO IGG ANTICORPOS ANTI PARTICULAR"
+  },
+  {
+    "id": 225,
+    "codigo": "ENDOM",
+    "nome": "ENDOMISIO IGM ANTICORPOS ANTI",
+    "categoria": "PARTICULAR",
+    "preco": 150.03,
+    "busca": "ENDOM ENDOMISIO IGM ANTICORPOS ANTI PARTICULAR"
+  },
+  {
+    "id": 226,
+    "codigo": "APB",
+    "nome": "APOLIPOPROTEINA B - Apo(B)",
+    "categoria": "PARTICULAR",
+    "preco": 41.68,
+    "busca": "APB APOLIPOPROTEINA B APO B PARTICULAR"
+  },
+  {
+    "id": 227,
+    "codigo": "APA",
+    "nome": "APOLIPOPROTEINA A - Apo(A1)",
+    "categoria": "PARTICULAR",
+    "preco": 41.68,
+    "busca": "APA APOLIPOPROTEINA A APO A1 PARTICULAR"
+  },
+  {
+    "id": 228,
+    "codigo": "CALCI",
+    "nome": "CALCITONINA",
+    "categoria": "PARTICULAR",
+    "preco": 100.02,
+    "busca": "CALCI CALCITONINA PARTICULAR"
+  },
+  {
+    "id": 229,
+    "codigo": "CALPR",
+    "nome": "CALPROTECTINA EM FEZES",
+    "categoria": "PARTICULAR",
+    "preco": 250.05,
+    "busca": "CALPR CALPROTECTINA EM FEZES PARTICULAR"
+  },
+  {
+    "id": 230,
+    "codigo": "COOD",
+    "nome": "Teste de Coombs Direto - Poliespecífico",
+    "categoria": "PARTICULAR",
+    "preco": 33.34,
+    "busca": "COOD TESTE DE COOMBS DIRETO POLIESPECIFICO PARTICULAR"
+  },
+  {
+    "id": 231,
+    "codigo": "COS",
+    "nome": "CORTISOL SALIVAR - AMOSTRA MANHÃ",
+    "categoria": "PARTICULAR",
+    "preco": 100.02,
+    "busca": "COS CORTISOL SALIVAR AMOSTRA MANHA PARTICULAR"
+  },
+  {
+    "id": 232,
+    "codigo": "CORS3",
+    "nome": "CORTISOL SALIVAR - AMOSTRA NOITE",
+    "categoria": "PARTICULAR",
+    "preco": 100.02,
+    "busca": "CORS3 CORTISOL SALIVAR AMOSTRA NOITE PARTICULAR"
+  },
+  {
+    "id": 233,
+    "codigo": "CULFU",
+    "nome": "CULTURA E ANTIFUNGIGRAMA - FUNGOS",
+    "categoria": "PARTICULAR",
+    "preco": 108.36,
+    "busca": "CULFU CULTURA E ANTIFUNGIGRAMA FUNGOS PARTICULAR"
+  },
+  {
+    "id": 234,
+    "codigo": "F5F2",
+    "nome": "FATOR V DE LEIDEN - PROTOMBINA",
+    "categoria": "PARTICULAR",
+    "preco": 333.4,
+    "busca": "F5F2 FATOR V DE LEIDEN PROTOMBINA PARTICULAR"
+  },
+  {
+    "id": 235,
+    "codigo": "FVL",
+    "nome": "FATOR V LEIDEN - Det. Mutação",
+    "categoria": "PARTICULAR",
+    "preco": 500.1,
+    "busca": "FVL FATOR V LEIDEN DET MUTACAO PARTICULAR"
+  },
+  {
+    "id": 236,
+    "codigo": "HOI",
+    "nome": "HOMA IR",
+    "categoria": "PARTICULAR",
+    "preco": 70.01,
+    "busca": "HOI HOMA IR PARTICULAR"
+  },
+  {
+    "id": 237,
+    "codigo": "F93",
+    "nome": "IgE ESP. CACAU",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "F93 IGE ESP CACAU PARTICULAR"
+  },
+  {
+    "id": 238,
+    "codigo": "F8",
+    "nome": "IgE ESPECÍFICO (F8) - Alimentos - Milho",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "F8 IGE ESPECIFICO F8 ALIMENTOS MILHO PARTICULAR"
+  },
+  {
+    "id": 239,
+    "codigo": "F4",
+    "nome": "IgE ESPECÍFICO (F4) - Alimentos - Trigo",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "F4 IGE ESPECIFICO F4 ALIMENTOS TRIGO PARTICULAR"
+  },
+  {
+    "id": 240,
+    "codigo": "E1",
+    "nome": "IGE ESP - EPITELIO - CASPA DE GATO",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "E1 IGE ESP EPITELIO CASPA DE GATO PARTICULAR"
+  },
+  {
+    "id": 241,
+    "codigo": "LAMTG",
+    "nome": "LAMOTRIGINA",
+    "categoria": "PARTICULAR",
+    "preco": 300.06,
+    "busca": "LAMTG LAMOTRIGINA PARTICULAR"
+  },
+  {
+    "id": 242,
+    "codigo": "LEPTG",
+    "nome": "LEPTOSPIROSE - ANTICORPOS IGG",
+    "categoria": "PARTICULAR",
+    "preco": 158.37,
+    "busca": "LEPTG LEPTOSPIROSE ANTICORPOS IGG PARTICULAR"
+  },
+  {
+    "id": 243,
+    "codigo": "LEPTM",
+    "nome": "LEPTOSPIROSE - ANTICORPOS IGM",
+    "categoria": "PARTICULAR",
+    "preco": 158.37,
+    "busca": "LEPTM LEPTOSPIROSE ANTICORPOS IGM PARTICULAR"
+  },
+  {
+    "id": 244,
+    "codigo": "MEN",
+    "nome": "METANEFRINAS URINÁRIAS",
+    "categoria": "PARTICULAR",
+    "preco": 283.39,
+    "busca": "MEN METANEFRINAS URINARIAS PARTICULAR"
+  },
+  {
+    "id": 245,
+    "codigo": "PS",
+    "nome": "PROTEINA \"S\" FUNCIONAL",
+    "categoria": "PARTICULAR",
+    "preco": 175.03,
+    "busca": "PS PROTEINA S FUNCIONAL PARTICULAR"
+  },
+  {
+    "id": 246,
+    "codigo": "BIC",
+    "nome": "BICARBONATO",
+    "categoria": "PARTICULAR",
+    "preco": 33.34,
+    "busca": "BIC BICARBONATO PARTICULAR"
+  },
+  {
+    "id": 247,
+    "codigo": "TPAM",
+    "nome": "TESTE DO PEZINHO AMPLIADO",
+    "categoria": "PARTICULAR",
+    "preco": 166.7,
+    "busca": "TPAM TESTE DO PEZINHO AMPLIADO PARTICULAR"
+  },
+  {
+    "id": 248,
+    "codigo": "JO",
+    "nome": "ANTI-JO1",
+    "categoria": "PARTICULAR",
+    "preco": 91.69,
+    "busca": "JO ANTI JO1 PARTICULAR"
+  },
+  {
+    "id": 249,
+    "codigo": "RNP1",
+    "nome": "ANTI-RNP",
+    "categoria": "PARTICULAR",
+    "preco": 75.02,
+    "busca": "RNP1 ANTI RNP PARTICULAR"
+  },
+  {
+    "id": 250,
+    "codigo": "B2S",
+    "nome": "BETA 2 MICROGLOBULINA",
+    "categoria": "PARTICULAR",
+    "preco": 66.68,
+    "busca": "B2S BETA 2 MICROGLOBULINA PARTICULAR"
+  },
+  {
+    "id": 251,
+    "codigo": "CARBG",
+    "nome": "CARIÓTIPO BANDA G",
+    "categoria": "PARTICULAR",
+    "preco": 650.13,
+    "busca": "CARBG CARIOTIPO BANDA G PARTICULAR"
+  },
+  {
+    "id": 252,
+    "codigo": "PLA",
+    "nome": "CONTAGEM DE PLAQUETAS",
+    "categoria": "PARTICULAR",
+    "preco": 8.34,
+    "busca": "PLA CONTAGEM DE PLAQUETAS PARTICULAR"
+  },
+  {
+    "id": 253,
+    "codigo": "FBB",
+    "nome": "FENOBARBITAL",
+    "categoria": "PARTICULAR",
+    "preco": 83.35,
+    "busca": "FBB FENOBARBITAL PARTICULAR"
+  },
+  {
+    "id": 254,
+    "codigo": "FALCO",
+    "nome": "FOSFATASE ALCALINA ÓSSEA",
+    "categoria": "PARTICULAR",
+    "preco": 250.05,
+    "busca": "FALCO FOSFATASE ALCALINA OSSEA PARTICULAR"
+  },
+  {
+    "id": 255,
+    "codigo": "GTA",
+    "nome": "GASTRINA",
+    "categoria": "PARTICULAR",
+    "preco": 66.68,
+    "busca": "GTA GASTRINA PARTICULAR"
+  },
+  {
+    "id": 256,
+    "codigo": "HPT",
+    "nome": "HAPTOGLOBINA",
+    "categoria": "PARTICULAR",
+    "preco": 41.68,
+    "busca": "HPT HAPTOGLOBINA PARTICULAR"
+  },
+  {
+    "id": 257,
+    "codigo": "HBEAG",
+    "nome": "ANTIGENO HBe (HBeAg)",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "HBEAG ANTIGENO HBE HBEAG PARTICULAR"
+  },
+  {
+    "id": 258,
+    "codigo": "F24",
+    "nome": "IgE ESPECÍFICO (F24) - Alimentos - Camarão",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "F24 IGE ESPECIFICO F24 ALIMENTOS CAMARAO PARTICULAR"
+  },
+  {
+    "id": 259,
+    "codigo": "F78",
+    "nome": "IgE ESP. CASEINA",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "F78 IGE ESP CASEINA PARTICULAR"
+  },
+  {
+    "id": 260,
+    "codigo": "F75",
+    "nome": "IgE ESP. GEMA DE OVO",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "F75 IGE ESP GEMA DE OVO PARTICULAR"
+  },
+  {
+    "id": 261,
+    "codigo": "FX2",
+    "nome": "IGE MÚLTIPLO (TRIAGEM DE FRUTOS DO",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "FX2 IGE MULTIPLO TRIAGEM DE FRUTOS DO PARTICULAR"
+  },
+  {
+    "id": 262,
+    "codigo": "LIA",
+    "nome": "LIPOPROTEINA A - Lp(a)",
+    "categoria": "PARTICULAR",
+    "preco": 75.02,
+    "busca": "LIA LIPOPROTEINA A LP A PARTICULAR"
+  },
+  {
+    "id": 263,
+    "codigo": "PCRUS",
+    "nome": "PROTEÍNA C REATIVA ULTRASENSIVEL",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "PCRUS PROTEINA C REATIVA ULTRASENSIVEL PARTICULAR"
+  },
+  {
+    "id": 264,
+    "codigo": "PLS",
+    "nome": "PROTEÍNA \"S\" LIVRE",
+    "categoria": "PARTICULAR",
+    "preco": 200.04,
+    "busca": "PLS PROTEINA S LIVRE PARTICULAR"
+  },
+  {
+    "id": 265,
+    "codigo": "RAC",
+    "nome": "RELACAO PROTEINA/CREATININA",
+    "categoria": "PARTICULAR",
+    "preco": 25.0,
+    "busca": "RAC RELACAO PROTEINA CREATININA PARTICULAR"
+  },
+  {
+    "id": 266,
+    "codigo": "SER",
+    "nome": "SEROTONINA",
+    "categoria": "PARTICULAR",
+    "preco": 108.36,
+    "busca": "SER SEROTONINA PARTICULAR"
+  },
+  {
+    "id": 267,
+    "codigo": "ACVAM",
+    "nome": "ÁCIDO VANIL MANDÉLICO",
+    "categoria": "PARTICULAR",
+    "preco": 206.71,
+    "busca": "ACVAM ACIDO VANIL MANDELICO PARTICULAR"
+  },
+  {
+    "id": 268,
+    "codigo": "A1AF",
+    "nome": "ALFA 1 ANTI-TRIPSINA FECAL",
+    "categoria": "PARTICULAR",
+    "preco": 166.7,
+    "busca": "A1AF ALFA 1 ANTI TRIPSINA FECAL PARTICULAR"
+  },
+  {
+    "id": 269,
+    "codigo": "ALFA1",
+    "nome": "ALFA 1 GLICOPROTEINA ACIDA",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "ALFA1 ALFA 1 GLICOPROTEINA ACIDA PARTICULAR"
+  },
+  {
+    "id": 270,
+    "codigo": "CNM",
+    "nome": "CANDIDA - Anticorpos IgM",
+    "categoria": "PARTICULAR",
+    "preco": 66.68,
+    "busca": "CNM CANDIDA ANTICORPOS IGM PARTICULAR"
+  },
+  {
+    "id": 271,
+    "codigo": "CARA",
+    "nome": "CARDIOLIPINA IgA",
+    "categoria": "PARTICULAR",
+    "preco": 66.68,
+    "busca": "CARA CARDIOLIPINA IGA PARTICULAR"
+  },
+  {
+    "id": 272,
+    "codigo": "CTR",
+    "nome": "ANTI-CENTROMERO",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "CTR ANTI CENTROMERO PARTICULAR"
+  },
+  {
+    "id": 273,
+    "codigo": "CHIKM",
+    "nome": "ANTICORPOS ANTI CHIKUNGUNYA IGM",
+    "categoria": "PARTICULAR",
+    "preco": 376.74,
+    "busca": "CHIKM ANTICORPOS ANTI CHIKUNGUNYA IGM PARTICULAR"
+  },
+  {
+    "id": 274,
+    "codigo": "ARRM",
+    "nome": "IGM ANTI RICKETTSIA RICKETTSII - F ( FEBRE MACULOSA )",
+    "categoria": "PARTICULAR",
+    "preco": 166.7,
+    "busca": "ARRM IGM ANTI RICKETTSIA RICKETTSII F FEBRE MACULOSA PARTICULAR"
+  },
+  {
+    "id": 275,
+    "codigo": "ARRG",
+    "nome": "IGG ANTI RICKETTSIA RICKETTSII - F ( FEBRE MACULOSA )",
+    "categoria": "PARTICULAR",
+    "preco": 166.7,
+    "busca": "ARRG IGG ANTI RICKETTSIA RICKETTSII F FEBRE MACULOSA PARTICULAR"
+  },
+  {
+    "id": 276,
+    "codigo": "AILHO",
+    "nome": "ANTICORPOS ANTI-ILHOTAS DE LANGERHA",
+    "categoria": "PARTICULAR",
+    "preco": 166.7,
+    "busca": "AILHO ANTICORPOS ANTI ILHOTAS DE LANGERHA PARTICULAR"
+  },
+  {
+    "id": 277,
+    "codigo": "AAINS",
+    "nome": "ANTICORPOS ANTI - INSULINA",
+    "categoria": "PARTICULAR",
+    "preco": 83.35,
+    "busca": "AAINS ANTICORPOS ANTI INSULINA PARTICULAR"
+  },
+  {
+    "id": 278,
+    "codigo": "BORRG",
+    "nome": "ANTICORPOS IGG ANTI BORRELIA BURGDO",
+    "categoria": "PARTICULAR",
+    "preco": 150.03,
+    "busca": "BORRG ANTICORPOS IGG ANTI BORRELIA BURGDO PARTICULAR"
+  },
+  {
+    "id": 279,
+    "codigo": "BORRM",
+    "nome": "ANTICORPOS IGM ANTI BORRELIA BURGDO",
+    "categoria": "PARTICULAR",
+    "preco": 150.03,
+    "busca": "BORRM ANTICORPOS IGM ANTI BORRELIA BURGDO PARTICULAR"
+  },
+  {
+    "id": 280,
+    "codigo": "GAD",
+    "nome": "ANTI-GAD",
+    "categoria": "PARTICULAR",
+    "preco": 333.4,
+    "busca": "GAD ANTI GAD PARTICULAR"
+  },
+  {
+    "id": 281,
+    "codigo": "CA724",
+    "nome": "CA 72-4",
+    "categoria": "PARTICULAR",
+    "preco": 100.02,
+    "busca": "CA724 CA 72 4 PARTICULAR"
+  },
+  {
+    "id": 282,
+    "codigo": "AHP",
+    "nome": "PESQUISA DE ANTIGENO HELICOBACTER P",
+    "categoria": "PARTICULAR",
+    "preco": 158.37,
+    "busca": "AHP PESQUISA DE ANTIGENO HELICOBACTER P PARTICULAR"
+  },
+  {
+    "id": 283,
+    "codigo": "AGLM",
+    "nome": "GLIADINA IgM ANTICORPOS IGM",
+    "categoria": "PARTICULAR",
+    "preco": 166.7,
+    "busca": "AGLM GLIADINA IGM ANTICORPOS IGM PARTICULAR"
+  },
+  {
+    "id": 284,
+    "codigo": "ATT",
+    "nome": "ANTICORPO ANTI-MITOCONDRIA",
+    "categoria": "PARTICULAR",
+    "preco": 75.02,
+    "busca": "ATT ANTICORPO ANTI MITOCONDRIA PARTICULAR"
+  },
+  {
+    "id": 285,
+    "codigo": "TRG",
+    "nome": "ANTI-TRANSGLUTAMINASE IgG",
+    "categoria": "PARTICULAR",
+    "preco": 150.03,
+    "busca": "TRG ANTI TRANSGLUTAMINASE IGG PARTICULAR"
+  },
+  {
+    "id": 286,
+    "codigo": "AQUAP",
+    "nome": "AQUAPORINA 4 ANTICORPOS IgG",
+    "categoria": "PARTICULAR",
+    "preco": 350.07,
+    "busca": "AQUAP AQUAPORINA 4 ANTICORPOS IGG PARTICULAR"
+  },
+  {
+    "id": 287,
+    "codigo": "RENAT",
+    "nome": "RENINA - ATIVIDADE",
+    "categoria": "PARTICULAR",
+    "preco": 166.7,
+    "busca": "RENAT RENINA ATIVIDADE PARTICULAR"
+  },
+  {
+    "id": 288,
+    "codigo": "CBZ",
+    "nome": "CARBAMAZEPINA",
+    "categoria": "PARTICULAR",
+    "preco": 91.69,
+    "busca": "CBZ CARBAMAZEPINA PARTICULAR"
+  },
+  {
+    "id": 289,
+    "codigo": "CAP",
+    "nome": "CATECOLAMINAS PLASMATICAS",
+    "categoria": "PARTICULAR",
+    "preco": 225.05,
+    "busca": "CAP CATECOLAMINAS PLASMATICAS PARTICULAR"
+  },
+  {
+    "id": 290,
+    "codigo": "CHUMS",
+    "nome": "CHUMBO",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "CHUMS CHUMBO PARTICULAR"
+  },
+  {
+    "id": 291,
+    "codigo": "CLDIF",
+    "nome": "CLOSTRIDIUM DIFFICILE - TOXINA A + B",
+    "categoria": "PARTICULAR",
+    "preco": 166.7,
+    "busca": "CLDIF CLOSTRIDIUM DIFFICILE TOXINA A B PARTICULAR"
+  },
+  {
+    "id": 292,
+    "codigo": "C1Q",
+    "nome": "COMPLEMENTO C1Q",
+    "categoria": "PARTICULAR",
+    "preco": 200.04,
+    "busca": "C1Q COMPLEMENTO C1Q PARTICULAR"
+  },
+  {
+    "id": 293,
+    "codigo": "CR2",
+    "nome": "CREATININA URINÁRIA (AMOSTRA ISOLADA)",
+    "categoria": "PARTICULAR",
+    "preco": 16.67,
+    "busca": "CR2 CREATININA URINARIA AMOSTRA ISOLADA PARTICULAR"
+  },
+  {
+    "id": 294,
+    "codigo": "CTX1",
+    "nome": "CTX - INTERLIGADORES C-TERMINAIS DO COLAGENO TIPO I",
+    "categoria": "PARTICULAR",
+    "preco": 200.04,
+    "busca": "CTX1 CTX INTERLIGADORES C TERMINAIS DO COLAGENO TIPO I PARTICULAR"
+  },
+  {
+    "id": 295,
+    "codigo": "ELASP",
+    "nome": "ELASTASE PANCREÁTICA",
+    "categoria": "PARTICULAR",
+    "preco": 300.06,
+    "busca": "ELASP ELASTASE PANCREATICA PARTICULAR"
+  },
+  {
+    "id": 296,
+    "codigo": "FAT2",
+    "nome": "FATOR II",
+    "categoria": "PARTICULAR",
+    "preco": 333.4,
+    "busca": "FAT2 FATOR II PARTICULAR"
+  },
+  {
+    "id": 297,
+    "codigo": "F9",
+    "nome": "FATOR IX",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "F9 FATOR IX PARTICULAR"
+  },
+  {
+    "id": 298,
+    "codigo": "F7",
+    "nome": "FATOR VII",
+    "categoria": "PARTICULAR",
+    "preco": 166.7,
+    "busca": "F7 FATOR VII PARTICULAR"
+  },
+  {
+    "id": 299,
+    "codigo": "FA8",
+    "nome": "FATOR VIII",
+    "categoria": "PARTICULAR",
+    "preco": 133.36,
+    "busca": "FA8 FATOR VIII PARTICULAR"
+  },
+  {
+    "id": 300,
+    "codigo": "FAP",
+    "nome": "FOSFATASE ACIDA PROSTATICA",
+    "categoria": "PARTICULAR",
+    "preco": 75.02,
+    "busca": "FAP FOSFATASE ACIDA PROSTATICA PARTICULAR"
+  },
+  {
+    "id": 301,
+    "codigo": "FAC",
+    "nome": "FOSFATASE ACIDA TOTAL",
+    "categoria": "PARTICULAR",
+    "preco": 25.0,
+    "busca": "FAC FOSFATASE ACIDA TOTAL PARTICULAR"
+  },
+  {
+    "id": 302,
+    "codigo": "FOS24",
+    "nome": "FÓSFORO URINÁRIO 24 HS",
+    "categoria": "PARTICULAR",
+    "preco": 66.68,
+    "busca": "FOS24 FOSFORO URINARIO 24 HS PARTICULAR"
+  },
+  {
+    "id": 303,
+    "codigo": "AGP",
+    "nome": "GORDURAS FECAIS",
+    "categoria": "PARTICULAR",
+    "preco": 46.68,
+    "busca": "AGP GORDURAS FECAIS PARTICULAR"
+  },
+  {
+    "id": 304,
+    "codigo": "HBP",
+    "nome": "HEPATITE B QUALITATIVO PCR",
+    "categoria": "PARTICULAR",
+    "preco": 208.38,
+    "busca": "HBP HEPATITE B QUALITATIVO PCR PARTICULAR"
+  },
+  {
+    "id": 305,
+    "codigo": "HEG",
+    "nome": "HERPES SIMPLES I e II - IGG",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "HEG HERPES SIMPLES I E II IGG PARTICULAR"
+  },
+  {
+    "id": 306,
+    "codigo": "HEM",
+    "nome": "HERPES SIMPLES I e II - IGM",
+    "categoria": "PARTICULAR",
+    "preco": 83.35,
+    "busca": "HEM HERPES SIMPLES I E II IGM PARTICULAR"
+  },
+  {
+    "id": 307,
+    "codigo": "HOB",
+    "nome": "HOMA-BETA",
+    "categoria": "PARTICULAR",
+    "preco": 70.01,
+    "busca": "HOB HOMA BETA PARTICULAR"
+  },
+  {
+    "id": 308,
+    "codigo": "F105",
+    "nome": "IGE ESP - ALIMENTOS - CHOCOLATE",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "F105 IGE ESP ALIMENTOS CHOCOLATE PARTICULAR"
+  },
+  {
+    "id": 309,
+    "codigo": "MX1",
+    "nome": "IgE PAINEL (MX1) - Fungos e leveduras",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "MX1 IGE PAINEL MX1 FUNGOS E LEVEDURAS PARTICULAR"
+  },
+  {
+    "id": 310,
+    "codigo": "HX1",
+    "nome": "IGE PAINEL (HX1) POEIRA",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "HX1 IGE PAINEL HX1 POEIRA PARTICULAR"
+  },
+  {
+    "id": 311,
+    "codigo": "F340",
+    "nome": "CORANTE - VERMELHO CARMIM",
+    "categoria": "PARTICULAR",
+    "preco": 100.02,
+    "busca": "F340 CORANTE VERMELHO CARMIM PARTICULAR"
+  },
+  {
+    "id": 312,
+    "codigo": "F92",
+    "nome": "IgE ESP. BANANA",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "F92 IGE ESP BANANA PARTICULAR"
+  },
+  {
+    "id": 313,
+    "codigo": "F35",
+    "nome": "IgE ESP. BATATA",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "F35 IGE ESP BATATA PARTICULAR"
+  },
+  {
+    "id": 314,
+    "codigo": "PE5",
+    "nome": "IGE ESP. P/ CASPA DE CAO (E5)",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "PE5 IGE ESP P CASPA DE CAO E5 PARTICULAR"
+  },
+  {
+    "id": 315,
+    "codigo": "I70",
+    "nome": "IGE ESP (I70) - INSETOS - FORMIGA",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "I70 IGE ESP I70 INSETOS FORMIGA PARTICULAR"
+  },
+  {
+    "id": 316,
+    "codigo": "I71",
+    "nome": "IGE ESP (I71) - INSETOS - MOSQUITO",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "I71 IGE ESP I71 INSETOS MOSQUITO PARTICULAR"
+  },
+  {
+    "id": 317,
+    "codigo": "F18",
+    "nome": "IGE ESP (F18)-CASTANHA DO PARÁ",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "F18 IGE ESP F18 CASTANHA DO PARA PARTICULAR"
+  },
+  {
+    "id": 318,
+    "codigo": "IGFBP",
+    "nome": "IGFBP-3 - PROTEÍNA LIGADORA IGF I -",
+    "categoria": "PARTICULAR",
+    "preco": 108.36,
+    "busca": "IGFBP IGFBP 3 PROTEINA LIGADORA IGF I PARTICULAR"
+  },
+  {
+    "id": 319,
+    "codigo": "C1E",
+    "nome": "INIBIDOR DE C1 - ESTERASE",
+    "categoria": "PARTICULAR",
+    "preco": 83.35,
+    "busca": "C1E INIBIDOR DE C1 ESTERASE PARTICULAR"
+  },
+  {
+    "id": 320,
+    "codigo": "MACRO",
+    "nome": "MACROPROLACTINA",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "MACRO MACROPROLACTINA PARTICULAR"
+  },
+  {
+    "id": 321,
+    "codigo": "PRPCR",
+    "nome": "PROTROMBINA - MUTAÇÃO G20210A",
+    "categoria": "PARTICULAR",
+    "preco": 483.43,
+    "busca": "PRPCR PROTROMBINA MUTACAO G20210A PARTICULAR"
+  },
+  {
+    "id": 322,
+    "codigo": "MTHFR",
+    "nome": "ESTUDO DAS MUTAÇÕES C677T E A1298C",
+    "categoria": "PARTICULAR",
+    "preco": 416.75,
+    "busca": "MTHFR ESTUDO DAS MUTACOES C677T E A1298C PARTICULAR"
+  },
+  {
+    "id": 323,
+    "codigo": "PHF",
+    "nome": "pH FECAL",
+    "categoria": "PARTICULAR",
+    "preco": 41.68,
+    "busca": "PHF PH FECAL PARTICULAR"
+  },
+  {
+    "id": 324,
+    "codigo": "PAI1",
+    "nome": "POLIMORFISMO (4G/5G - PAI1)",
+    "categoria": "PARTICULAR",
+    "preco": 183.37,
+    "busca": "PAI1 POLIMORFISMO 4G 5G PAI1 PARTICULAR"
+  },
+  {
+    "id": 325,
+    "codigo": "PCF",
+    "nome": "COPROLOGICO FUNCIONAL",
+    "categoria": "PARTICULAR",
+    "preco": 41.68,
+    "busca": "PCF COPROLOGICO FUNCIONAL PARTICULAR"
+  },
+  {
+    "id": 326,
+    "codigo": "SARAG",
+    "nome": "SARAMPO - ANTICORPOS IGG",
+    "categoria": "PARTICULAR",
+    "preco": 95.02,
+    "busca": "SARAG SARAMPO ANTICORPOS IGG PARTICULAR"
+  },
+  {
+    "id": 327,
+    "codigo": "SARAM",
+    "nome": "SARAMPO - ANTICORPOS IGM",
+    "categoria": "PARTICULAR",
+    "preco": 120.02,
+    "busca": "SARAM SARAMPO ANTICORPOS IGM PARTICULAR"
+  },
+  {
+    "id": 328,
+    "codigo": "SRED",
+    "nome": "PESQ. DE SUBSTÂNCIAS REDUTORAS",
+    "categoria": "PARTICULAR",
+    "preco": 41.68,
+    "busca": "SRED PESQ DE SUBSTANCIAS REDUTORAS PARTICULAR"
+  },
+  {
+    "id": 329,
+    "codigo": "PEPM",
+    "nome": "TESTE DO PEZINHO MASTER",
+    "categoria": "PARTICULAR",
+    "preco": 583.45,
+    "busca": "PEPM TESTE DO PEZINHO MASTER PARTICULAR"
+  },
+  {
+    "id": 330,
+    "codigo": "TOXAV",
+    "nome": "TOXOPLASMOSE - TESTE DE AVIDEZ IGG",
+    "categoria": "PARTICULAR",
+    "preco": 175.03,
+    "busca": "TOXAV TOXOPLASMOSE TESTE DE AVIDEZ IGG PARTICULAR"
+  },
+  {
+    "id": 331,
+    "codigo": "VARZG",
+    "nome": "VARICELA ZOSTER - ANTICORPOS IGG",
+    "categoria": "PARTICULAR",
+    "preco": 116.69,
+    "busca": "VARZG VARICELA ZOSTER ANTICORPOS IGG PARTICULAR"
+  },
+  {
+    "id": 332,
+    "codigo": "VARZM",
+    "nome": "VARICELA ZOSTER - ANTICORPOS IGM",
+    "categoria": "PARTICULAR",
+    "preco": 116.69,
+    "busca": "VARZM VARICELA ZOSTER ANTICORPOS IGM PARTICULAR"
+  },
+  {
+    "id": 333,
+    "codigo": "AMAND",
+    "nome": "ÁCIDO MANDÉLICO URINÁRIO PRÉ JORNADA",
+    "categoria": "PARTICULAR",
+    "preco": 52.51,
+    "busca": "AMAND ACIDO MANDELICO URINARIO PRE JORNADA PARTICULAR"
+  },
+  {
+    "id": 334,
+    "codigo": "NAB",
+    "nome": "ANTICORPOS NEUTRALIZANTES ANTI-SARS-CoV-2",
+    "categoria": "PARTICULAR",
+    "preco": 308.39,
+    "busca": "NAB ANTICORPOS NEUTRALIZANTES ANTI SARS COV 2 PARTICULAR"
+  },
+  {
+    "id": 335,
+    "codigo": "CEPA",
+    "nome": "ANTIBIOGRAMA",
+    "categoria": "PARTICULAR",
+    "preco": 133.36,
+    "busca": "CEPA ANTIBIOGRAMA PARTICULAR"
+  },
+  {
+    "id": 336,
+    "codigo": "LEPTO",
+    "nome": "LEPTOSPIROSE IGG/IGM",
+    "categoria": "PARTICULAR",
+    "preco": 200.04,
+    "busca": "LEPTO LEPTOSPIROSE IGG IGM PARTICULAR"
+  },
+  {
+    "id": 337,
+    "codigo": "BASAL",
+    "nome": "CURVA DE TOLERÂNCIA À GLICOSE - Basal",
+    "categoria": "PARTICULAR",
+    "preco": 33.34,
+    "busca": "BASAL CURVA DE TOLERANCIA A GLICOSE BASAL PARTICULAR"
+  },
+  {
+    "id": 338,
+    "codigo": "30M",
+    "nome": "CURVA DE TOLERÂNCIA A GLICOSE - 30min",
+    "categoria": "PARTICULAR",
+    "preco": 33.34,
+    "busca": "30M CURVA DE TOLERANCIA A GLICOSE 30MIN PARTICULAR"
+  },
+  {
+    "id": 339,
+    "codigo": "60M",
+    "nome": "CURVA DE TOLERÂNCIA À GLICOSE - 60min",
+    "categoria": "PARTICULAR",
+    "preco": 33.34,
+    "busca": "60M CURVA DE TOLERANCIA A GLICOSE 60MIN PARTICULAR"
+  },
+  {
+    "id": 340,
+    "codigo": "120M",
+    "nome": "CURVA DE TOLERÂNCIA À GLICOSE - 120min",
+    "categoria": "PARTICULAR",
+    "preco": 33.34,
+    "busca": "120M CURVA DE TOLERANCIA A GLICOSE 120MIN PARTICULAR"
+  },
+  {
+    "id": 341,
+    "codigo": "180M",
+    "nome": "CURVA DE TOLERÂNCIA À GLICOSE - 180min",
+    "categoria": "PARTICULAR",
+    "preco": 33.34,
+    "busca": "180M CURVA DE TOLERANCIA A GLICOSE 180MIN PARTICULAR"
+  },
+  {
+    "id": 342,
+    "codigo": "240M",
+    "nome": "CURVA DE TOLERÂNCIA À GLICOSE - 240min",
+    "categoria": "PARTICULAR",
+    "preco": 33.34,
+    "busca": "240M CURVA DE TOLERANCIA A GLICOSE 240MIN PARTICULAR"
+  },
+  {
+    "id": 343,
+    "codigo": "GGES",
+    "nome": "TESTE DE TOLERÂNCIA À GLICOSE PARA GESTANTE - Basal",
+    "categoria": "PARTICULAR",
+    "preco": 33.34,
+    "busca": "GGES TESTE DE TOLERANCIA A GLICOSE PARA GESTANTE BASAL PARTICULAR"
+  },
+  {
+    "id": 344,
+    "codigo": "G1H",
+    "nome": "TESTE DE TOLERÂNCIA À GLICOSE PARA GESTANTE - 1H",
+    "categoria": "PARTICULAR",
+    "preco": 33.34,
+    "busca": "G1H TESTE DE TOLERANCIA A GLICOSE PARA GESTANTE 1H PARTICULAR"
+  },
+  {
+    "id": 345,
+    "codigo": "G2H",
+    "nome": "TESTE DE TOLERÂNCIA À GLICOSE PARA GESTANTE - 2H",
+    "categoria": "PARTICULAR",
+    "preco": 33.34,
+    "busca": "G2H TESTE DE TOLERANCIA A GLICOSE PARA GESTANTE 2H PARTICULAR"
+  },
+  {
+    "id": 346,
+    "codigo": "LDH",
+    "nome": "DESIDROGENASE LÁCTICA",
+    "categoria": "PARTICULAR",
+    "preco": 30.01,
+    "busca": "LDH DESIDROGENASE LACTICA PARTICULAR"
+  },
+  {
+    "id": 347,
+    "codigo": "COBRE",
+    "nome": "COBRE",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "COBRE COBRE PARTICULAR"
+  },
+  {
+    "id": 348,
+    "codigo": "PAPA",
+    "nome": "PAPANICOLAOU - CITOPATOLÓGICO",
+    "categoria": "PARTICULAR",
+    "preco": 75.02,
+    "busca": "PAPA PAPANICOLAOU CITOPATOLOGICO PARTICULAR"
+  },
+  {
+    "id": 349,
+    "codigo": "AB2GL",
+    "nome": "ANTI-BETA2 GLICOPROTEÍNA IGG E IGM",
+    "categoria": "PARTICULAR",
+    "preco": 108.36,
+    "busca": "AB2GL ANTI BETA2 GLICOPROTEINA IGG E IGM PARTICULAR"
+  },
+  {
+    "id": 350,
+    "codigo": "ELEHG",
+    "nome": "ELETROFORESE DE HEMOGLOBINAS",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "ELEHG ELETROFORESE DE HEMOGLOBINAS PARTICULAR"
+  },
+  {
+    "id": 351,
+    "codigo": "IGE",
+    "nome": "IGE TOTAL",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "IGE IGE TOTAL PARTICULAR"
+  },
+  {
+    "id": 352,
+    "codigo": "CTF",
+    "nome": "CAPACIDADE TOTAL DE LIGAÇÃO DO FERR",
+    "categoria": "PARTICULAR",
+    "preco": 41.68,
+    "busca": "CTF CAPACIDADE TOTAL DE LIGACAO DO FERR PARTICULAR"
+  },
+  {
+    "id": 353,
+    "codigo": "DHS",
+    "nome": "SULFATO DE DEHIDROEPIANDROSTERONA",
+    "categoria": "PARTICULAR",
+    "preco": 91.69,
+    "busca": "DHS SULFATO DE DEHIDROEPIANDROSTERONA PARTICULAR"
+  },
+  {
+    "id": 354,
+    "codigo": "PSALT",
+    "nome": "PSA LIVRE/TOTAL",
+    "categoria": "PARTICULAR",
+    "preco": 75.02,
+    "busca": "PSALT PSA LIVRE TOTAL PARTICULAR"
+  },
+  {
+    "id": 355,
+    "codigo": "CORS2",
+    "nome": "CORTISOL SALIVAR - AMOSTRA TARDE",
+    "categoria": "PARTICULAR",
+    "preco": 100.02,
+    "busca": "CORS2 CORTISOL SALIVAR AMOSTRA TARDE PARTICULAR"
+  },
+  {
+    "id": 356,
+    "codigo": "INS12",
+    "nome": "INSULINA 120 MINUTOS",
+    "categoria": "PARTICULAR",
+    "preco": 25.0,
+    "busca": "INS12 INSULINA 120 MINUTOS PARTICULAR"
+  },
+  {
+    "id": 357,
+    "codigo": "INS30",
+    "nome": "INSULINA - 30 MINUTOS",
+    "categoria": "PARTICULAR",
+    "preco": 25.0,
+    "busca": "INS30 INSULINA 30 MINUTOS PARTICULAR"
+  },
+  {
+    "id": 358,
+    "codigo": "INS60",
+    "nome": "INSULINA 60 MINUTOS",
+    "categoria": "PARTICULAR",
+    "preco": 25.0,
+    "busca": "INS60 INSULINA 60 MINUTOS PARTICULAR"
+  },
+  {
+    "id": 359,
+    "codigo": "INS90",
+    "nome": "INSULINA 90 MINUTOS",
+    "categoria": "PARTICULAR",
+    "preco": 25.0,
+    "busca": "INS90 INSULINA 90 MINUTOS PARTICULAR"
+  },
+  {
+    "id": 360,
+    "codigo": "C312",
+    "nome": "IGE ESP (C312) PROTEINAS DO LEITE",
+    "categoria": "PARTICULAR",
+    "preco": 133.36,
+    "busca": "C312 IGE ESP C312 PROTEINAS DO LEITE PARTICULAR"
+  },
+  {
+    "id": 361,
+    "codigo": "HEMCM",
+    "nome": "HEMOCULTURA MANUAL",
+    "categoria": "PARTICULAR",
+    "preco": 133.36,
+    "busca": "HEMCM HEMOCULTURA MANUAL PARTICULAR"
+  },
+  {
+    "id": 362,
+    "codigo": "TROPQ",
+    "nome": "TROPONINA \"I\" QUANTITATIVA",
+    "categoria": "PARTICULAR",
+    "preco": 200.04,
+    "busca": "TROPQ TROPONINA I QUANTITATIVA PARTICULAR"
+  },
+  {
+    "id": 363,
+    "codigo": "VITK",
+    "nome": "VITAMINA K",
+    "categoria": "PARTICULAR",
+    "preco": 416.75,
+    "busca": "VITK VITAMINA K PARTICULAR"
+  },
+  {
+    "id": 364,
+    "codigo": "VITE",
+    "nome": "VITAMINA E",
+    "categoria": "PARTICULAR",
+    "preco": 108.36,
+    "busca": "VITE VITAMINA E PARTICULAR"
+  },
+  {
+    "id": 365,
+    "codigo": "VITB1",
+    "nome": "VITAMINA B1",
+    "categoria": "PARTICULAR",
+    "preco": 133.36,
+    "busca": "VITB1 VITAMINA B1 PARTICULAR"
+  },
+  {
+    "id": 366,
+    "codigo": "EPF2",
+    "nome": "PARASITOLÓGICO DE FEZES - 2º AMOSTRA",
+    "categoria": "PARTICULAR",
+    "preco": 20.0,
+    "busca": "EPF2 PARASITOLOGICO DE FEZES 2 AMOSTRA PARTICULAR"
+  },
+  {
+    "id": 367,
+    "codigo": "EPF3",
+    "nome": "PARASITOLÓGICO DE FEZES - 3ºAMOSTRA",
+    "categoria": "PARTICULAR",
+    "preco": 20.0,
+    "busca": "EPF3 PARASITOLOGICO DE FEZES 3 AMOSTRA PARTICULAR"
+  },
+  {
+    "id": 368,
+    "codigo": "LACTO",
+    "nome": "TESTE GENÉTICO DE INTOLERÂNCIA A LACTOSE",
+    "categoria": "PARTICULAR",
+    "preco": 216.71,
+    "busca": "LACTO TESTE GENETICO DE INTOLERANCIA A LACTOSE PARTICULAR"
+  },
+  {
+    "id": 369,
+    "codigo": "PNEUG",
+    "nome": "ANTICORPOS IGG ANTI PNEUMOCOCOS",
+    "categoria": "PARTICULAR",
+    "preco": 416.75,
+    "busca": "PNEUG ANTICORPOS IGG ANTI PNEUMOCOCOS PARTICULAR"
+  },
+  {
+    "id": 370,
+    "codigo": "17OHP",
+    "nome": "17 HIDROXIPROGESTERONA",
+    "categoria": "PARTICULAR",
+    "preco": 91.69,
+    "busca": "17OHP 17 HIDROXIPROGESTERONA PARTICULAR"
+  },
+  {
+    "id": 371,
+    "codigo": "B2GLA",
+    "nome": "ANTIC. IGA ANTI BETA2 GLICOPROTEÍNA",
+    "categoria": "PARTICULAR",
+    "preco": 200.04,
+    "busca": "B2GLA ANTIC IGA ANTI BETA2 GLICOPROTEINA PARTICULAR"
+  },
+  {
+    "id": 372,
+    "codigo": "NHDL",
+    "nome": "COLESTEROL NÃO HDL",
+    "categoria": "PARTICULAR",
+    "preco": 20.0,
+    "busca": "NHDL COLESTEROL NAO HDL PARTICULAR"
+  },
+  {
+    "id": 373,
+    "codigo": "PFUN",
+    "nome": "MICOLÓGICO DIRETO",
+    "categoria": "PARTICULAR",
+    "preco": 66.68,
+    "busca": "PFUN MICOLOGICO DIRETO PARTICULAR"
+  },
+  {
+    "id": 374,
+    "codigo": "XFRAP",
+    "nome": "XFRAP - x frágil - pesquisa por pcr",
+    "categoria": "PARTICULAR",
+    "preco": 966.86,
+    "busca": "XFRAP XFRAP X FRAGIL PESQUISA POR PCR PARTICULAR"
+  },
+  {
+    "id": 375,
+    "codigo": "ZICAG",
+    "nome": "ZIKA VÍRUS ANTICORPOS IGG",
+    "categoria": "PARTICULAR",
+    "preco": 300.06,
+    "busca": "ZICAG ZIKA VIRUS ANTICORPOS IGG PARTICULAR"
+  },
+  {
+    "id": 376,
+    "codigo": "ZICAM",
+    "nome": "ZIKA VIRUS ANTICORPOS IGM",
+    "categoria": "PARTICULAR",
+    "preco": 300.06,
+    "busca": "ZICAM ZIKA VIRUS ANTICORPOS IGM PARTICULAR"
+  },
+  {
+    "id": 377,
+    "codigo": "MEN",
+    "nome": "METANEFRINAS URINÁRIAS",
+    "categoria": "PARTICULAR",
+    "preco": 283.39,
+    "busca": "MEN METANEFRINAS URINARIAS PARTICULAR"
+  },
+  {
+    "id": 378,
+    "codigo": "METP",
+    "nome": "METANEFRINAS FRACIONADAS",
+    "categoria": "PARTICULAR",
+    "preco": 263.39,
+    "busca": "METP METANEFRINAS FRACIONADAS PARTICULAR"
+  },
+  {
+    "id": 379,
+    "codigo": "ACVAM",
+    "nome": "ÁCIDO VANIL MANDÉLICO",
+    "categoria": "PARTICULAR",
+    "preco": 206.71,
+    "busca": "ACVAM ACIDO VANIL MANDELICO PARTICULAR"
+  },
+  {
+    "id": 380,
+    "codigo": "CISQT",
+    "nome": "CISTINA - QUANTITATIVA",
+    "categoria": "PARTICULAR",
+    "preco": 321.73,
+    "busca": "CISQT CISTINA QUANTITATIVA PARTICULAR"
+  },
+  {
+    "id": 381,
+    "codigo": "PEPP",
+    "nome": "TESTE DO PEZINHO PERFIL AMPLIADO",
+    "categoria": "PARTICULAR",
+    "preco": 250.05,
+    "busca": "PEPP TESTE DO PEZINHO PERFIL AMPLIADO PARTICULAR"
+  },
+  {
+    "id": 382,
+    "codigo": "BRUCG",
+    "nome": "BRUCELOSE - ANTICORPOS IGG",
+    "categoria": "PARTICULAR",
+    "preco": 183.37,
+    "busca": "BRUCG BRUCELOSE ANTICORPOS IGG PARTICULAR"
+  },
+  {
+    "id": 383,
+    "codigo": "BRUCM",
+    "nome": "BRUCELOSE - ANTICORPOS IGM",
+    "categoria": "PARTICULAR",
+    "preco": 183.37,
+    "busca": "BRUCM BRUCELOSE ANTICORPOS IGM PARTICULAR"
+  },
+  {
+    "id": 384,
+    "codigo": "LISTE",
+    "nome": "LISTERIA MONOCYTOGENES ANTICORPOS",
+    "categoria": "PARTICULAR",
+    "preco": 83.35,
+    "busca": "LISTE LISTERIA MONOCYTOGENES ANTICORPOS PARTICULAR"
+  },
+  {
+    "id": 385,
+    "codigo": "COLE",
+    "nome": "COLETOR DE URINA 24H",
+    "categoria": "PARTICULAR",
+    "preco": 13.34,
+    "busca": "COLE COLETOR DE URINA 24H PARTICULAR"
+  },
+  {
+    "id": 386,
+    "codigo": "TOGGE",
+    "nome": "TOXOPLASMOSE IgG, ANTICORPOS (ELFA)",
+    "categoria": "PARTICULAR",
+    "preco": 103.35,
+    "busca": "TOGGE TOXOPLASMOSE IGG ANTICORPOS ELFA PARTICULAR"
+  },
+  {
+    "id": 387,
+    "codigo": "TOGME",
+    "nome": "TOXOPLASMOSE IgM, ANTICORPOS (ELFA)",
+    "categoria": "PARTICULAR",
+    "preco": 81.68,
+    "busca": "TOGME TOXOPLASMOSE IGM ANTICORPOS ELFA PARTICULAR"
+  },
+  {
+    "id": 388,
+    "codigo": "AGAD",
+    "nome": "ANTICORPOS ANTI-GAD",
+    "categoria": "PARTICULAR",
+    "preco": 333.4,
+    "busca": "AGAD ANTICORPOS ANTI GAD PARTICULAR"
+  },
+  {
+    "id": 389,
+    "codigo": "IGM",
+    "nome": "IMUNOGLUBULINAS IGM",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "IGM IMUNOGLUBULINAS IGM PARTICULAR"
+  },
+  {
+    "id": 390,
+    "codigo": "CIT24",
+    "nome": "CITRATO - URINA 24 HORAS",
+    "categoria": "PARTICULAR",
+    "preco": 75.02,
+    "busca": "CIT24 CITRATO URINA 24 HORAS PARTICULAR"
+  },
+  {
+    "id": 391,
+    "codigo": "OXALA",
+    "nome": "OXALATO (URINA 24 HS)",
+    "categoria": "PARTICULAR",
+    "preco": 41.68,
+    "busca": "OXALA OXALATO URINA 24 HS PARTICULAR"
+  },
+  {
+    "id": 392,
+    "codigo": "17HPG",
+    "nome": "17 HIDROXIPREGNENOLONA",
+    "categoria": "PARTICULAR",
+    "preco": 600.12,
+    "busca": "17HPG 17 HIDROXIPREGNENOLONA PARTICULAR"
+  },
+  {
+    "id": 393,
+    "codigo": "CHIKG",
+    "nome": "ANTICORPOS ANTI CHIKUNGUNYA IGG",
+    "categoria": "PARTICULAR",
+    "preco": 366.74,
+    "busca": "CHIKG ANTICORPOS ANTI CHIKUNGUNYA IGG PARTICULAR"
+  },
+  {
+    "id": 394,
+    "codigo": "TADLA",
+    "nome": "TESTE DE TOLERÂNCIA À LACTOSE BASAL",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "TADLA TESTE DE TOLERANCIA A LACTOSE BASAL PARTICULAR"
+  },
+  {
+    "id": 395,
+    "codigo": "HISTQ",
+    "nome": "IMUNOHISTOQUIMICO PAINEIS NEOPLASIC",
+    "categoria": "PARTICULAR",
+    "preco": 1096.89,
+    "busca": "HISTQ IMUNOHISTOQUIMICO PAINEIS NEOPLASIC PARTICULAR"
+  },
+  {
+    "id": 396,
+    "codigo": "PB19G",
+    "nome": "PARVOVÍRUS - ANTICORPOS IGG",
+    "categoria": "PARTICULAR",
+    "preco": 125.03,
+    "busca": "PB19G PARVOVIRUS ANTICORPOS IGG PARTICULAR"
+  },
+  {
+    "id": 397,
+    "codigo": "PB19M",
+    "nome": "PARVOVÍRUS - ANTICORPOS IGM",
+    "categoria": "PARTICULAR",
+    "preco": 125.03,
+    "busca": "PB19M PARVOVIRUS ANTICORPOS IGM PARTICULAR"
+  },
+  {
+    "id": 398,
+    "codigo": "AEPIG",
+    "nome": "ANTICORPOS IGG ANTI EPIDERME",
+    "categoria": "PARTICULAR",
+    "preco": 416.75,
+    "busca": "AEPIG ANTICORPOS IGG ANTI EPIDERME PARTICULAR"
+  },
+  {
+    "id": 399,
+    "codigo": "ANC",
+    "nome": "ANTICORPOS ANTI-CITOPLASMA DE NEUTRÓFILOS C E P",
+    "categoria": "PARTICULAR",
+    "preco": 116.69,
+    "busca": "ANC ANTICORPOS ANTI CITOPLASMA DE NEUTROFILOS C E P PARTICULAR"
+  },
+  {
+    "id": 400,
+    "codigo": "FCH",
+    "nome": "FALCI - FALCIZAÇÃO - PESQUISA",
+    "categoria": "PARTICULAR",
+    "preco": 33.34,
+    "busca": "FCH FALCI FALCIZACAO PESQUISA PARTICULAR"
+  },
+  {
+    "id": 401,
+    "codigo": "HX2",
+    "nome": "IGE PAINEL (HX2) - PÓ DE CASA",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "HX2 IGE PAINEL HX2 PO DE CASA PARTICULAR"
+  },
+  {
+    "id": 402,
+    "codigo": "GRA",
+    "nome": "BACTERIOSCÓPICO (GRAM)",
+    "categoria": "PARTICULAR",
+    "preco": 83.35,
+    "busca": "GRA BACTERIOSCOPICO GRAM PARTICULAR"
+  },
+  {
+    "id": 403,
+    "codigo": "FX3",
+    "nome": "IGE MULTIPLO Cereais: Trigo, aveia,",
+    "categoria": "PARTICULAR",
+    "preco": 63.35,
+    "busca": "FX3 IGE MULTIPLO CEREAIS TRIGO AVEIA PARTICULAR"
+  },
+  {
+    "id": 404,
+    "codigo": "F245",
+    "nome": "IGE ESP (F245) - ALIMENTOS OVO",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "F245 IGE ESP F245 ALIMENTOS OVO PARTICULAR"
+  },
+  {
+    "id": 405,
+    "codigo": "BACTU",
+    "nome": "BACTERIOSCOPICO DE URINA-JATO MEDIO",
+    "categoria": "PARTICULAR",
+    "preco": 83.35,
+    "busca": "BACTU BACTERIOSCOPICO DE URINA JATO MEDIO PARTICULAR"
+  },
+  {
+    "id": 406,
+    "codigo": "ETFG",
+    "nome": "ESTIMATIVA TAXA DE FILTRAÇÃO GLOMERULAR",
+    "categoria": "PARTICULAR",
+    "preco": 41.68,
+    "busca": "ETFG ESTIMATIVA TAXA DE FILTRACAO GLOMERULAR PARTICULAR"
+  },
+  {
+    "id": 407,
+    "codigo": "MIOGL",
+    "nome": "MIOGLOBINA",
+    "categoria": "PARTICULAR",
+    "preco": 133.36,
+    "busca": "MIOGL MIOGLOBINA PARTICULAR"
+  },
+  {
+    "id": 408,
+    "codigo": "CD4",
+    "nome": "LINFOCITOS CD4",
+    "categoria": "PARTICULAR",
+    "preco": 125.03,
+    "busca": "CD4 LINFOCITOS CD4 PARTICULAR"
+  },
+  {
+    "id": 409,
+    "codigo": "CD8",
+    "nome": "LINFOCITOS CD8",
+    "categoria": "PARTICULAR",
+    "preco": 125.03,
+    "busca": "CD8 LINFOCITOS CD8 PARTICULAR"
+  },
+  {
+    "id": 410,
+    "codigo": "CS",
+    "nome": "CULTURA EM GERAL",
+    "categoria": "PARTICULAR",
+    "preco": 133.36,
+    "busca": "CS CULTURA EM GERAL PARTICULAR"
+  },
+  {
+    "id": 411,
+    "codigo": "CATEC",
+    "nome": "CATECOLAMINAS URINÁRIAS",
+    "categoria": "PARTICULAR",
+    "preco": 225.05,
+    "busca": "CATEC CATECOLAMINAS URINARIAS PARTICULAR"
+  },
+  {
+    "id": 412,
+    "codigo": "PROIN",
+    "nome": "PRÓ-INSULINA INTACTA",
+    "categoria": "PARTICULAR",
+    "preco": 266.72,
+    "busca": "PROIN PRO INSULINA INTACTA PARTICULAR"
+  },
+  {
+    "id": 413,
+    "codigo": "ARINS",
+    "nome": "ANTICORPOS ANTI-RECEPTOR DE INSULIN",
+    "categoria": "PARTICULAR",
+    "preco": 2583.85,
+    "busca": "ARINS ANTICORPOS ANTI RECEPTOR DE INSULIN PARTICULAR"
+  },
+  {
+    "id": 414,
+    "codigo": "EX1",
+    "nome": "IGE PAINEL - ANIMAIS",
+    "categoria": "PARTICULAR",
+    "preco": 66.68,
+    "busca": "EX1 IGE PAINEL ANIMAIS PARTICULAR"
+  },
+  {
+    "id": 415,
+    "codigo": "IGEPG",
+    "nome": "IGE ESP. P/ CASPA DE GATO (E1)",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "IGEPG IGE ESP P CASPA DE GATO E1 PARTICULAR"
+  },
+  {
+    "id": 416,
+    "codigo": "PRZN",
+    "nome": "PROTOPORFIRINA ZINCO",
+    "categoria": "PARTICULAR",
+    "preco": 250.05,
+    "busca": "PRZN PROTOPORFIRINA ZINCO PARTICULAR"
+  },
+  {
+    "id": 417,
+    "codigo": "LIQAS",
+    "nome": "LÍQUIDO ASCÍTICO - ROTINA",
+    "categoria": "PARTICULAR",
+    "preco": 166.7,
+    "busca": "LIQAS LIQUIDO ASCITICO ROTINA PARTICULAR"
+  },
+  {
+    "id": 418,
+    "codigo": "VITB3",
+    "nome": "VITAMINA B3",
+    "categoria": "PARTICULAR",
+    "preco": 533.44,
+    "busca": "VITB3 VITAMINA B3 PARTICULAR"
+  },
+  {
+    "id": 419,
+    "codigo": "K82",
+    "nome": "IGE ESP - OCUPACIONAIS - LÁTEX",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "K82 IGE ESP OCUPACIONAIS LATEX PARTICULAR"
+  },
+  {
+    "id": 420,
+    "codigo": "I4",
+    "nome": "VESPA DO PAPEL",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "I4 VESPA DO PAPEL PARTICULAR"
+  },
+  {
+    "id": 421,
+    "codigo": "E2",
+    "nome": "IGE ESP - EPITELIOS- PELO DE CAO",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "E2 IGE ESP EPITELIOS PELO DE CAO PARTICULAR"
+  },
+  {
+    "id": 422,
+    "codigo": "API4",
+    "nome": "IGE ESP (I4) - INSETOS - MARIMBONDO",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "API4 IGE ESP I4 INSETOS MARIMBONDO PARTICULAR"
+  },
+  {
+    "id": 423,
+    "codigo": "PBNP",
+    "nome": "PRÓ BNP - N - TERMINAL",
+    "categoria": "PARTICULAR",
+    "preco": 200.04,
+    "busca": "PBNP PRO BNP N TERMINAL PARTICULAR"
+  },
+  {
+    "id": 424,
+    "codigo": "I1",
+    "nome": "IGE ESP (I1) - INSETOS - ABELHA",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "I1 IGE ESP I1 INSETOS ABELHA PARTICULAR"
+  },
+  {
+    "id": 425,
+    "codigo": "F210",
+    "nome": "IGE ESP - ALIMENTOS - ABACAXI",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "F210 IGE ESP ALIMENTOS ABACAXI PARTICULAR"
+  },
+  {
+    "id": 426,
+    "codigo": "LES",
+    "nome": "LE - PESQUISA DE AUTO - ANTICORPOS",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "LES LE PESQUISA DE AUTO ANTICORPOS PARTICULAR"
+  },
+  {
+    "id": 427,
+    "codigo": "APN",
+    "nome": "ANTICORPOS IGG ANTI SOROTIPOS DE PNEUMOCOCOS",
+    "categoria": "PARTICULAR",
+    "preco": 583.45,
+    "busca": "APN ANTICORPOS IGG ANTI SOROTIPOS DE PNEUMOCOCOS PARTICULAR"
+  },
+  {
+    "id": 428,
+    "codigo": "TBD",
+    "nome": "TESTOSTERONA BIODISPONIVEL",
+    "categoria": "PARTICULAR",
+    "preco": 100.02,
+    "busca": "TBD TESTOSTERONA BIODISPONIVEL PARTICULAR"
+  },
+  {
+    "id": 429,
+    "codigo": "HLADQ",
+    "nome": "HLA DQ2 E DQ8 - DOENÇA CELÍACA",
+    "categoria": "PARTICULAR",
+    "preco": 500.1,
+    "busca": "HLADQ HLA DQ2 E DQ8 DOENCA CELIACA PARTICULAR"
+  },
+  {
+    "id": 430,
+    "codigo": "LEISG",
+    "nome": "LEISHMANIOSE IGG",
+    "categoria": "PARTICULAR",
+    "preco": 66.68,
+    "busca": "LEISG LEISHMANIOSE IGG PARTICULAR"
+  },
+  {
+    "id": 431,
+    "codigo": "LEISM",
+    "nome": "LEISHMANIOSE IGM",
+    "categoria": "PARTICULAR",
+    "preco": 75.02,
+    "busca": "LEISM LEISHMANIOSE IGM PARTICULAR"
+  },
+  {
+    "id": 432,
+    "codigo": "CPCRU",
+    "nome": "CHLAMYDIA TRACHOMATIS (PCR)  URINA",
+    "categoria": "PARTICULAR",
+    "preco": 141.69,
+    "busca": "CPCRU CHLAMYDIA TRACHOMATIS PCR URINA PARTICULAR"
+  },
+  {
+    "id": 433,
+    "codigo": "ESTT",
+    "nome": "ESTRIOL TOTAL - E3",
+    "categoria": "PARTICULAR",
+    "preco": 166.7,
+    "busca": "ESTT ESTRIOL TOTAL E3 PARTICULAR"
+  },
+  {
+    "id": 434,
+    "codigo": "TCHVA",
+    "nome": "TRICHOMONAS VAGINALIS",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "TCHVA TRICHOMONAS VAGINALIS PARTICULAR"
+  },
+  {
+    "id": 435,
+    "codigo": "COR16",
+    "nome": "CORTISOL - 16 HORAS",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "COR16 CORTISOL 16 HORAS PARTICULAR"
+  },
+  {
+    "id": 436,
+    "codigo": "CULNV",
+    "nome": "CULTURA DE VIGILÂNCIA - PESQUISA DE MRSA",
+    "categoria": "PARTICULAR",
+    "preco": 100.02,
+    "busca": "CULNV CULTURA DE VIGILANCIA PESQUISA DE MRSA PARTICULAR"
+  },
+  {
+    "id": 437,
+    "codigo": "AFOSF",
+    "nome": "ANTICORPOS ANTI-FOSFATIDILSERINA",
+    "categoria": "PARTICULAR",
+    "preco": 300.06,
+    "busca": "AFOSF ANTICORPOS ANTI FOSFATIDILSERINA PARTICULAR"
+  },
+  {
+    "id": 438,
+    "codigo": "FOSFA",
+    "nome": "ANTICORPOS  IGA ANTI FOSFATIDILSERINA",
+    "categoria": "PARTICULAR",
+    "preco": 283.39,
+    "busca": "FOSFA ANTICORPOS IGA ANTI FOSFATIDILSERINA PARTICULAR"
+  },
+  {
+    "id": 439,
+    "codigo": "CULSB",
+    "nome": "PESQUISA DE ESTREPTOCOCOS GRUPO B",
+    "categoria": "PARTICULAR",
+    "preco": 125.03,
+    "busca": "CULSB PESQUISA DE ESTREPTOCOCOS GRUPO B PARTICULAR"
+  },
+  {
+    "id": 440,
+    "codigo": "F299",
+    "nome": "IGE ESP  ALIMENTOS - CASTANHA",
+    "categoria": "PARTICULAR",
+    "preco": 75.02,
+    "busca": "F299 IGE ESP ALIMENTOS CASTANHA PARTICULAR"
+  },
+  {
+    "id": 441,
+    "codigo": "BETA",
+    "nome": "BETA HCG (Qualitativo)",
+    "categoria": "PARTICULAR",
+    "preco": 33.34,
+    "busca": "BETA BETA HCG QUALITATIVO PARTICULAR"
+  },
+  {
+    "id": 442,
+    "codigo": "APF20",
+    "nome": "IGE ESP (F202) - CASTANHA DE CAJU",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "APF20 IGE ESP F202 CASTANHA DE CAJU PARTICULAR"
+  },
+  {
+    "id": 443,
+    "codigo": "F256",
+    "nome": "IGE ESP ALIMENTOS - NOZES",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "F256 IGE ESP ALIMENTOS NOZES PARTICULAR"
+  },
+  {
+    "id": 444,
+    "codigo": "INT6",
+    "nome": "INTERLEUCINA 6",
+    "categoria": "PARTICULAR",
+    "preco": 250.05,
+    "busca": "INT6 INTERLEUCINA 6 PARTICULAR"
+  },
+  {
+    "id": 445,
+    "codigo": "NS1R",
+    "nome": "DENGUE, NS1",
+    "categoria": "PARTICULAR",
+    "preco": 133.36,
+    "busca": "NS1R DENGUE NS1 PARTICULAR"
+  },
+  {
+    "id": 446,
+    "codigo": "PF59",
+    "nome": "IgE ESP. POLVO",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "PF59 IGE ESP POLVO PARTICULAR"
+  },
+  {
+    "id": 447,
+    "codigo": "APF23",
+    "nome": "IgE ESP. CARANGUEIJO",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "APF23 IGE ESP CARANGUEIJO PARTICULAR"
+  },
+  {
+    "id": 448,
+    "codigo": "C279",
+    "nome": "IgE ESP. CORANTE AMARELO",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "C279 IGE ESP CORANTE AMARELO PARTICULAR"
+  },
+  {
+    "id": 449,
+    "codigo": "F80",
+    "nome": "IgE ESP. LAGOSTA",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "F80 IGE ESP LAGOSTA PARTICULAR"
+  },
+  {
+    "id": 450,
+    "codigo": "DNATR",
+    "nome": "DNA SUPOSTO PAI+MÃE+FILHO",
+    "categoria": "PARTICULAR",
+    "preco": 666.8,
+    "busca": "DNATR DNA SUPOSTO PAI MAE FILHO PARTICULAR"
+  },
+  {
+    "id": 451,
+    "codigo": "LEISP",
+    "nome": "LEISHMANIA - PESQUISA",
+    "categoria": "PARTICULAR",
+    "preco": 41.68,
+    "busca": "LEISP LEISHMANIA PESQUISA PARTICULAR"
+  },
+  {
+    "id": 452,
+    "codigo": "GX2",
+    "nome": "POLÉN DE GRAMÍNEAS",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "GX2 POLEN DE GRAMINEAS PARTICULAR"
+  },
+  {
+    "id": 453,
+    "codigo": "CORTD",
+    "nome": "TESTE DE SUPRESSÃO DO CORTISOL PÓS DEXAMETASONA",
+    "categoria": "PARTICULAR",
+    "preco": 66.68,
+    "busca": "CORTD TESTE DE SUPRESSAO DO CORTISOL POS DEXAMETASONA PARTICULAR"
+  },
+  {
+    "id": 454,
+    "codigo": "FAMLG",
+    "nome": "FEBRE AMARELA IgG [FAML-G]",
+    "categoria": "PARTICULAR",
+    "preco": 400.08,
+    "busca": "FAMLG FEBRE AMARELA IGG FAML G PARTICULAR"
+  },
+  {
+    "id": 455,
+    "codigo": "FAMLM",
+    "nome": "FEBRE AMARELA IgM [FAML-M]",
+    "categoria": "PARTICULAR",
+    "preco": 400.08,
+    "busca": "FAMLM FEBRE AMARELA IGM FAML M PARTICULAR"
+  },
+  {
+    "id": 456,
+    "codigo": "VITB5",
+    "nome": "VITAMINA B5",
+    "categoria": "PARTICULAR",
+    "preco": 600.12,
+    "busca": "VITB5 VITAMINA B5 PARTICULAR"
+  },
+  {
+    "id": 457,
+    "codigo": "F25",
+    "nome": "IgE ESP. TOMATE",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "F25 IGE ESP TOMATE PARTICULAR"
+  },
+  {
+    "id": 458,
+    "codigo": "AURU",
+    "nome": "ÁCIDO ÚRICO URINÁRIO 24 HORAS",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "AURU ACIDO URICO URINARIO 24 HORAS PARTICULAR"
+  },
+  {
+    "id": 459,
+    "codigo": "POTU",
+    "nome": "POTÁSSIO URINÁRIO 24 HS",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "POTU POTASSIO URINARIO 24 HS PARTICULAR"
+  },
+  {
+    "id": 460,
+    "codigo": "UREUT",
+    "nome": "URÉIA URINÁRIA 24 HORAS",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "UREUT UREIA URINARIA 24 HORAS PARTICULAR"
+  },
+  {
+    "id": 461,
+    "codigo": "PREAL",
+    "nome": "PRÉ-ALBUMINA",
+    "categoria": "PARTICULAR",
+    "preco": 83.35,
+    "busca": "PREAL PRE ALBUMINA PARTICULAR"
+  },
+  {
+    "id": 462,
+    "codigo": "HBQT",
+    "nome": "HEPATITE B QUANTIFICADO PCR",
+    "categoria": "PARTICULAR",
+    "preco": 500.1,
+    "busca": "HBQT HEPATITE B QUANTIFICADO PCR PARTICULAR"
+  },
+  {
+    "id": 463,
+    "codigo": "CRC",
+    "nome": "CÁLCIO URINÁRIO - AMOSTRA ISOLADA",
+    "categoria": "PARTICULAR",
+    "preco": 33.34,
+    "busca": "CRC CALCIO URINARIO AMOSTRA ISOLADA PARTICULAR"
+  },
+  {
+    "id": 464,
+    "codigo": "AB",
+    "nome": "CULTURA - MATERIAIS DIVERSOS",
+    "categoria": "PARTICULAR",
+    "preco": 133.36,
+    "busca": "AB CULTURA MATERIAIS DIVERSOS PARTICULAR"
+  },
+  {
+    "id": 465,
+    "codigo": "CERUL",
+    "nome": "CERULOPLASMINA",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "CERUL CERULOPLASMINA PARTICULAR"
+  },
+  {
+    "id": 466,
+    "codigo": "CO",
+    "nome": "CORTISOL LIVRE URI 24H",
+    "categoria": "PARTICULAR",
+    "preco": 66.68,
+    "busca": "CO CORTISOL LIVRE URI 24H PARTICULAR"
+  },
+  {
+    "id": 467,
+    "codigo": "ADALI",
+    "nome": "ÁCIDO DELTA AMINOLEVULÍNICO INICIO DE JORNADA",
+    "categoria": "PARTICULAR",
+    "preco": 41.68,
+    "busca": "ADALI ACIDO DELTA AMINOLEVULINICO INICIO DE JORNADA PARTICULAR"
+  },
+  {
+    "id": 468,
+    "codigo": "MECI",
+    "nome": "METIL ETIL CETONA INÍCIO DE JORNADA",
+    "categoria": "PARTICULAR",
+    "preco": 41.68,
+    "busca": "MECI METIL ETIL CETONA INICIO DE JORNADA PARTICULAR"
+  },
+  {
+    "id": 469,
+    "codigo": "CETOI",
+    "nome": "ACETONA - INÍCIO DE JORNADA DE TRABALHO",
+    "categoria": "PARTICULAR",
+    "preco": 80.02,
+    "busca": "CETOI ACETONA INICIO DE JORNADA DE TRABALHO PARTICULAR"
+  },
+  {
+    "id": 470,
+    "codigo": "OXC",
+    "nome": "OXCARBAZEPINA",
+    "categoria": "PARTICULAR",
+    "preco": 133.36,
+    "busca": "OXC OXCARBAZEPINA PARTICULAR"
+  },
+  {
+    "id": 471,
+    "codigo": "ELPRU",
+    "nome": "ELETROFORESE DE PROTEINAS URINARIAS",
+    "categoria": "PARTICULAR",
+    "preco": 116.69,
+    "busca": "ELPRU ELETROFORESE DE PROTEINAS URINARIAS PARTICULAR"
+  },
+  {
+    "id": 472,
+    "codigo": "CTNG",
+    "nome": "CHLAMYDIA TRACHOMATIS E NEISSERIA GONORRHOEAE -DETECÇÃO",
+    "categoria": "PARTICULAR",
+    "preco": 250.05,
+    "busca": "CTNG CHLAMYDIA TRACHOMATIS E NEISSERIA GONORRHOEAE DETECCAO PARTICULAR"
+  },
+  {
+    "id": 474,
+    "codigo": "PPD",
+    "nome": "Interferon Gamma Release Assay",
+    "categoria": "PARTICULAR",
+    "preco": 633.46,
+    "busca": "PPD INTERFERON GAMMA RELEASE ASSAY PARTICULAR"
+  },
+  {
+    "id": 475,
+    "codigo": "MAG24",
+    "nome": "MAGNÉSIO URINÁRIO 24 HS",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "MAG24 MAGNESIO URINARIO 24 HS PARTICULAR"
+  },
+  {
+    "id": 476,
+    "codigo": "IGG1",
+    "nome": "SUBCLASSE DE IgG1",
+    "categoria": "PARTICULAR",
+    "preco": 100.02,
+    "busca": "IGG1 SUBCLASSE DE IGG1 PARTICULAR"
+  },
+  {
+    "id": 477,
+    "codigo": "IGG2",
+    "nome": "SUBCLASSE DE IgG2",
+    "categoria": "PARTICULAR",
+    "preco": 100.02,
+    "busca": "IGG2 SUBCLASSE DE IGG2 PARTICULAR"
+  },
+  {
+    "id": 478,
+    "codigo": "IGG3",
+    "nome": "SUBCLASSE DE IgG3",
+    "categoria": "PARTICULAR",
+    "preco": 100.02,
+    "busca": "IGG3 SUBCLASSE DE IGG3 PARTICULAR"
+  },
+  {
+    "id": 479,
+    "codigo": "IGG4",
+    "nome": "SUBCLASSE DE IgG4",
+    "categoria": "PARTICULAR",
+    "preco": 125.03,
+    "busca": "IGG4 SUBCLASSE DE IGG4 PARTICULAR"
+  },
+  {
+    "id": 480,
+    "codigo": "CD56",
+    "nome": "CÉLULAS NATURAL KILLER CD56",
+    "categoria": "PARTICULAR",
+    "preco": 250.05,
+    "busca": "CD56 CELULAS NATURAL KILLER CD56 PARTICULAR"
+  },
+  {
+    "id": 481,
+    "codigo": "CD19",
+    "nome": "FENOTIPAGEM PARA LINFÓCIT. B - CD19",
+    "categoria": "PARTICULAR",
+    "preco": 183.37,
+    "busca": "CD19 FENOTIPAGEM PARA LINFOCIT B CD19 PARTICULAR"
+  },
+  {
+    "id": 482,
+    "codigo": "CD3",
+    "nome": "LINFÓCITOS T CD3 +",
+    "categoria": "PARTICULAR",
+    "preco": 91.69,
+    "busca": "CD3 LINFOCITOS T CD3 PARTICULAR"
+  },
+  {
+    "id": 483,
+    "codigo": "SIG",
+    "nome": "SUBCLASSES IgG HUMANA",
+    "categoria": "PARTICULAR",
+    "preco": 400.08,
+    "busca": "SIG SUBCLASSES IGG HUMANA PARTICULAR"
+  },
+  {
+    "id": 484,
+    "codigo": "BCARO",
+    "nome": "BETA - CAROTENO",
+    "categoria": "PARTICULAR",
+    "preco": 200.04,
+    "busca": "BCARO BETA CAROTENO PARTICULAR"
+  },
+  {
+    "id": 485,
+    "codigo": "COPRO",
+    "nome": "COPROLOGICO FUNCIONAL",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "COPRO COPROLOGICO FUNCIONAL PARTICULAR"
+  },
+  {
+    "id": 486,
+    "codigo": "EFP24",
+    "nome": "ELETROFORESE DE PROTEINAS-URINA 24",
+    "categoria": "PARTICULAR",
+    "preco": 100.02,
+    "busca": "EFP24 ELETROFORESE DE PROTEINAS URINA 24 PARTICULAR"
+  },
+  {
+    "id": 487,
+    "codigo": "DAOP",
+    "nome": "TESTE DE ATIVIDADE DAO - DIAMINA OXIDASE",
+    "categoria": "PARTICULAR",
+    "preco": 766.82,
+    "busca": "DAOP TESTE DE ATIVIDADE DAO DIAMINA OXIDASE PARTICULAR"
+  },
+  {
+    "id": 488,
+    "codigo": "INSL",
+    "nome": "INSULINA LIVRE",
+    "categoria": "PARTICULAR",
+    "preco": 166.7,
+    "busca": "INSL INSULINA LIVRE PARTICULAR"
+  },
+  {
+    "id": 489,
+    "codigo": "ENVER",
+    "nome": "PESQUISA DE OXIURUS-FITA GOMADA",
+    "categoria": "PARTICULAR",
+    "preco": 30.01,
+    "busca": "ENVER PESQUISA DE OXIURUS FITA GOMADA PARTICULAR"
+  },
+  {
+    "id": 490,
+    "codigo": "QHBE",
+    "nome": "HEPATITE B - Anti - HBe",
+    "categoria": "PARTICULAR",
+    "preco": 83.35,
+    "busca": "QHBE HEPATITE B ANTI HBE PARTICULAR"
+  },
+  {
+    "id": 491,
+    "codigo": "F233",
+    "nome": "ALIMENTOS - OVO MUCÓIDE",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "F233 ALIMENTOS OVO MUCOIDE PARTICULAR"
+  },
+  {
+    "id": 492,
+    "codigo": "F27",
+    "nome": "IgE ESP. CARNE DE BOI",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "F27 IGE ESP CARNE DE BOI PARTICULAR"
+  },
+  {
+    "id": 493,
+    "codigo": "F83",
+    "nome": "IgE ESP. FRANGO",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "F83 IGE ESP FRANGO PARTICULAR"
+  },
+  {
+    "id": 494,
+    "codigo": "F232",
+    "nome": "IGE ESP. OVO ALBUMINA",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "F232 IGE ESP OVO ALBUMINA PARTICULAR"
+  },
+  {
+    "id": 495,
+    "codigo": "DIG",
+    "nome": "DIGOXINA",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "DIG DIGOXINA PARTICULAR"
+  },
+  {
+    "id": 496,
+    "codigo": "COXSM",
+    "nome": "IGM ANTI COXSACKIE B[1-6",
+    "categoria": "PARTICULAR",
+    "preco": 133.36,
+    "busca": "COXSM IGM ANTI COXSACKIE B 1 6 PARTICULAR"
+  },
+  {
+    "id": 497,
+    "codigo": "SL3",
+    "nome": "LINFOCITOS CD3",
+    "categoria": "PARTICULAR",
+    "preco": 125.03,
+    "busca": "SL3 LINFOCITOS CD3 PARTICULAR"
+  },
+  {
+    "id": 498,
+    "codigo": "COXAM",
+    "nome": "IGG E IGM ANTI COXSACKIE A9",
+    "categoria": "PARTICULAR",
+    "preco": 308.39,
+    "busca": "COXAM IGG E IGM ANTI COXSACKIE A9 PARTICULAR"
+  },
+  {
+    "id": 499,
+    "codigo": "COXSG",
+    "nome": "IGG ANTI COXSACKIE B[1-6]",
+    "categoria": "PARTICULAR",
+    "preco": 465.09,
+    "busca": "COXSG IGG ANTI COXSACKIE B 1 6 PARTICULAR"
+  },
+  {
+    "id": 500,
+    "codigo": "ALKM",
+    "nome": "ANTI-LKM1",
+    "categoria": "PARTICULAR",
+    "preco": 66.68,
+    "busca": "ALKM ANTI LKM1 PARTICULAR"
+  },
+  {
+    "id": 501,
+    "codigo": "MUL",
+    "nome": "ANTI-MUSCULO LISO",
+    "categoria": "PARTICULAR",
+    "preco": 83.35,
+    "busca": "MUL ANTI MUSCULO LISO PARTICULAR"
+  },
+  {
+    "id": 502,
+    "codigo": "CITOL",
+    "nome": "CITOLOGIA DE LÍQUIDOS E RASPADOS CUTÂNEOS",
+    "categoria": "PARTICULAR",
+    "preco": 233.38,
+    "busca": "CITOL CITOLOGIA DE LIQUIDOS E RASPADOS CUTANEOS PARTICULAR"
+  },
+  {
+    "id": 503,
+    "codigo": "ROTPL",
+    "nome": "LÍQUIDO PLEURAL - ROTINA",
+    "categoria": "PARTICULAR",
+    "preco": 166.7,
+    "busca": "ROTPL LIQUIDO PLEURAL ROTINA PARTICULAR"
+  },
+  {
+    "id": 504,
+    "codigo": "CULO",
+    "nome": "PESQUISA DE ESTREPTOCOCOS GRUPO A,C,G - SECREÇÃO DE ORO",
+    "categoria": "PARTICULAR",
+    "preco": 66.68,
+    "busca": "CULO PESQUISA DE ESTREPTOCOCOS GRUPO A C G SECRECAO DE ORO PARTICULAR"
+  },
+  {
+    "id": 505,
+    "codigo": "MOG",
+    "nome": "ANTICORPO ANTI MOG",
+    "categoria": "PARTICULAR",
+    "preco": 5001.0,
+    "busca": "MOG ANTICORPO ANTI MOG PARTICULAR"
+  },
+  {
+    "id": 506,
+    "codigo": "EPF4",
+    "nome": "PARASITOLÓGICO DE FEZES - 4ºAMOSTRA",
+    "categoria": "PARTICULAR",
+    "preco": 16.67,
+    "busca": "EPF4 PARASITOLOGICO DE FEZES 4 AMOSTRA PARTICULAR"
+  },
+  {
+    "id": 507,
+    "codigo": "DIMDB",
+    "nome": "DÍMERO D",
+    "categoria": "PARTICULAR",
+    "preco": 150.03,
+    "busca": "DIMDB DIMERO D PARTICULAR"
+  },
+  {
+    "id": 508,
+    "codigo": "NA",
+    "nome": "SÓDIO",
+    "categoria": "PARTICULAR",
+    "preco": 20.0,
+    "busca": "SODIO PARTICULAR"
+  },
+  {
+    "id": 509,
+    "codigo": "K",
+    "nome": "POTÁSSIO",
+    "categoria": "PARTICULAR",
+    "preco": 20.0,
+    "busca": "K POTASSIO PARTICULAR"
+  },
+  {
+    "id": 510,
+    "codigo": "TNF",
+    "nome": "FATOR DE NECROSE TUMORAL",
+    "categoria": "PARTICULAR",
+    "preco": 483.43,
+    "busca": "TNF FATOR DE NECROSE TUMORAL PARTICULAR"
+  },
+  {
+    "id": 511,
+    "codigo": "INT10",
+    "nome": "INTERLEUCINA 10",
+    "categoria": "PARTICULAR",
+    "preco": 250.05,
+    "busca": "INT10 INTERLEUCINA 10 PARTICULAR"
+  },
+  {
+    "id": 512,
+    "codigo": "F12",
+    "nome": "FATOR XII",
+    "categoria": "PARTICULAR",
+    "preco": 216.71,
+    "busca": "F12 FATOR XII PARTICULAR"
+  },
+  {
+    "id": 513,
+    "codigo": "FAT5C",
+    "nome": "FATOR V",
+    "categoria": "PARTICULAR",
+    "preco": 133.36,
+    "busca": "FAT5C FATOR V PARTICULAR"
+  },
+  {
+    "id": 514,
+    "codigo": "EPOIT",
+    "nome": "ERITROEPOETINA",
+    "categoria": "PARTICULAR",
+    "preco": 116.69,
+    "busca": "EPOIT ERITROEPOETINA PARTICULAR"
+  },
+  {
+    "id": 515,
+    "codigo": "IMUSS",
+    "nome": "IIMUNOFIXAÇÃO DE PROTEÍNAS SÉRICAS",
+    "categoria": "PARTICULAR",
+    "preco": 316.73,
+    "busca": "IMUSS IIMUNOFIXACAO DE PROTEINAS SERICAS PARTICULAR"
+  },
+  {
+    "id": 516,
+    "codigo": "URGB",
+    "nome": "HISTOPATOLÓGICO DE BIÓPSIAS GERAIS - URGENTE",
+    "categoria": "PARTICULAR",
+    "preco": 991.87,
+    "busca": "URGB HISTOPATOLOGICO DE BIOPSIAS GERAIS URGENTE PARTICULAR"
+  },
+  {
+    "id": 517,
+    "codigo": "LEP",
+    "nome": "LEPTOSPIROSE - SORO AGLUTINAÇÃO MICROSCÓPICA",
+    "categoria": "PARTICULAR",
+    "preco": 333.4,
+    "busca": "LEP LEPTOSPIROSE SORO AGLUTINACAO MICROSCOPICA PARTICULAR"
+  },
+  {
+    "id": 518,
+    "codigo": "ROT",
+    "nome": "ROTAVIRUS",
+    "categoria": "PARTICULAR",
+    "preco": 100.02,
+    "busca": "ROT ROTAVIRUS PARTICULAR"
+  },
+  {
+    "id": 519,
+    "codigo": "CULOU",
+    "nome": "CULTURA - SECREÇÃO DE OUVIDO",
+    "categoria": "PARTICULAR",
+    "preco": 133.36,
+    "busca": "CULOU CULTURA SECRECAO DE OUVIDO PARTICULAR"
+  },
+  {
+    "id": 520,
+    "codigo": "HPM",
+    "nome": "HELICOBACTER PYLORI IGM",
+    "categoria": "PARTICULAR",
+    "preco": 133.36,
+    "busca": "HPM HELICOBACTER PYLORI IGM PARTICULAR"
+  },
+  {
+    "id": 521,
+    "codigo": "HCGDB",
+    "nome": "HCG - GONADOTROFINA CORIÔNICA",
+    "categoria": "PARTICULAR",
+    "preco": 66.68,
+    "busca": "HCGDB HCG GONADOTROFINA CORIONICA PARTICULAR"
+  },
+  {
+    "id": 522,
+    "codigo": "APMX2",
+    "nome": "IGE MX2 FUNGOS - PAINEL",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "APMX2 IGE MX2 FUNGOS PAINEL PARTICULAR"
+  },
+  {
+    "id": 523,
+    "codigo": "HMV",
+    "nome": "ACIDO HOMOVANILICO",
+    "categoria": "PARTICULAR",
+    "preco": 133.36,
+    "busca": "HMV ACIDO HOMOVANILICO PARTICULAR"
+  },
+  {
+    "id": 524,
+    "codigo": "METTF",
+    "nome": "METANEFRINAS FRAÇÕES E TOTAIS (24HS",
+    "categoria": "PARTICULAR",
+    "preco": 250.05,
+    "busca": "METTF METANEFRINAS FRACOES E TOTAIS 24HS PARTICULAR"
+  },
+  {
+    "id": 525,
+    "codigo": "BACT",
+    "nome": "BACTERIOSCOPIO",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "BACT BACTERIOSCOPIO PARTICULAR"
+  },
+  {
+    "id": 526,
+    "codigo": "IMUS",
+    "nome": "IMUNOFIXACAO DE PROTEINAS SERICAS-Q",
+    "categoria": "PARTICULAR",
+    "preco": 250.05,
+    "busca": "IMUS IMUNOFIXACAO DE PROTEINAS SERICAS Q PARTICULAR"
+  },
+  {
+    "id": 527,
+    "codigo": "PTU",
+    "nome": "PROTEÍNA URINÁRIA(amostra isolada)",
+    "categoria": "PARTICULAR",
+    "preco": 33.34,
+    "busca": "PTU PROTEINA URINARIA AMOSTRA ISOLADA PARTICULAR"
+  },
+  {
+    "id": 528,
+    "codigo": "CISTC",
+    "nome": "CISTATINA C",
+    "categoria": "PARTICULAR",
+    "preco": 175.03,
+    "busca": "CISTC CISTATINA C PARTICULAR"
+  },
+  {
+    "id": 529,
+    "codigo": "CROMA",
+    "nome": "Cromogranina A",
+    "categoria": "PARTICULAR",
+    "preco": 566.78,
+    "busca": "CROMA CROMOGRANINA A PARTICULAR"
+  },
+  {
+    "id": 530,
+    "codigo": "AACHI",
+    "nome": "ANTICORPOS ANTI CHIKUNGUNYA IGG E IGM",
+    "categoria": "PARTICULAR",
+    "preco": 416.75,
+    "busca": "AACHI ANTICORPOS ANTI CHIKUNGUNYA IGG E IGM PARTICULAR"
+  },
+  {
+    "id": 531,
+    "codigo": "F208",
+    "nome": "IGE ESP (F208) - ALIMENTOS - LIMÃO SICILIANO",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "F208 IGE ESP F208 ALIMENTOS LIMAO SICILIANO PARTICULAR"
+  },
+  {
+    "id": 532,
+    "codigo": "F207",
+    "nome": "IGE ESP F207 - MARISCO",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "F207 IGE ESP F207 MARISCO PARTICULAR"
+  },
+  {
+    "id": 533,
+    "codigo": "IGE F",
+    "nome": "APF287 - Ige Esp (F287) - Alimentos - Feijão Vermelho",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "IGE F APF287 IGE ESP F287 ALIMENTOS FEIJAO VERMELHO PARTICULAR"
+  },
+  {
+    "id": 534,
+    "codigo": "MENCE",
+    "nome": "PAINEL PARA DETECÇÃO DE ENCEFALITES E MENINGITES",
+    "categoria": "PARTICULAR",
+    "preco": 2317.13,
+    "busca": "MENCE PAINEL PARA DETECCAO DE ENCEFALITES E MENINGITES PARTICULAR"
+  },
+  {
+    "id": 535,
+    "codigo": "CULOS",
+    "nome": "CULTURA E ANTIBIOGRAMA - OUTROS MAT",
+    "categoria": "PARTICULAR",
+    "preco": 133.36,
+    "busca": "CULOS CULTURA E ANTIBIOGRAMA OUTROS MAT PARTICULAR"
+  },
+  {
+    "id": 536,
+    "codigo": "OSMUI",
+    "nome": "OSMOLALIDADE URINÁRIA ISOLADA",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "OSMUI OSMOLALIDADE URINARIA ISOLADA PARTICULAR"
+  },
+  {
+    "id": 537,
+    "codigo": "OSMOL",
+    "nome": "OSMOLALIDADE SÉRICA",
+    "categoria": "PARTICULAR",
+    "preco": 41.68,
+    "busca": "OSMOL OSMOLALIDADE SERICA PARTICULAR"
+  },
+  {
+    "id": 538,
+    "codigo": "FGL",
+    "nome": "ACIDO FENILGLIOXILICO",
+    "categoria": "PARTICULAR",
+    "preco": 66.68,
+    "busca": "FGL ACIDO FENILGLIOXILICO PARTICULAR"
+  },
+  {
+    "id": 539,
+    "codigo": "HVD",
+    "nome": "HEPATITE D (ANTI-HDV)",
+    "categoria": "PARTICULAR",
+    "preco": 150.03,
+    "busca": "HVD HEPATITE D ANTI HDV PARTICULAR"
+  },
+  {
+    "id": 540,
+    "codigo": "ACTRI",
+    "nome": "ÁCIDO TRICLOROACÉTICO INÍCIO DE JORNADA",
+    "categoria": "PARTICULAR",
+    "preco": 41.68,
+    "busca": "ACTRI ACIDO TRICLOROACETICO INICIO DE JORNADA PARTICULAR"
+  },
+  {
+    "id": 541,
+    "codigo": "CHBI",
+    "nome": "CARBOXIHEMOGLOBINA - INÍCIO DE JORNADA DE TRABALHO",
+    "categoria": "PARTICULAR",
+    "preco": 33.34,
+    "busca": "CHBI CARBOXIHEMOGLOBINA INICIO DE JORNADA DE TRABALHO PARTICULAR"
+  },
+  {
+    "id": 542,
+    "codigo": "CHUSG",
+    "nome": "CHUMBO SANGUÍNEO",
+    "categoria": "PARTICULAR",
+    "preco": 41.68,
+    "busca": "CHUSG CHUMBO SANGUINEO PARTICULAR"
+  },
+  {
+    "id": 543,
+    "codigo": "CITON",
+    "nome": "CITOGRAMA NASAL",
+    "categoria": "PARTICULAR",
+    "preco": 83.35,
+    "busca": "CITON CITOGRAMA NASAL PARTICULAR"
+  },
+  {
+    "id": 544,
+    "codigo": "CROMI",
+    "nome": "CROMO URINÁRIO INÍCIO DE JORNADA DE",
+    "categoria": "PARTICULAR",
+    "preco": 41.68,
+    "busca": "CROMI CROMO URINARIO INICIO DE JORNADA DE PARTICULAR"
+  },
+  {
+    "id": 545,
+    "codigo": "FENUI",
+    "nome": "FENOL URINÁRIO INÍCIO DE JORNADA DE TRABALHO",
+    "categoria": "PARTICULAR",
+    "preco": 41.68,
+    "busca": "FENUI FENOL URINARIO INICIO DE JORNADA DE TRABALHO PARTICULAR"
+  },
+  {
+    "id": 546,
+    "codigo": "ETA",
+    "nome": "ETANOL",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "ETA ETANOL PARTICULAR"
+  },
+  {
+    "id": 547,
+    "codigo": "F47",
+    "nome": "IgE ESP. ALHO",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "F47 IGE ESP ALHO PARTICULAR"
+  },
+  {
+    "id": 548,
+    "codigo": "VDRL",
+    "nome": "V.D.R.L. QUANTITATIVO",
+    "categoria": "PARTICULAR",
+    "preco": 41.68,
+    "busca": "VDRL V D R L QUANTITATIVO PARTICULAR"
+  },
+  {
+    "id": 549,
+    "codigo": "AAFIN",
+    "nome": "ANTICORPOS ANTI - FATOR INTRINSECO",
+    "categoria": "PARTICULAR",
+    "preco": 200.04,
+    "busca": "AAFIN ANTICORPOS ANTI FATOR INTRINSECO PARTICULAR"
+  },
+  {
+    "id": 551,
+    "codigo": "CRESU",
+    "nome": "ORTO-CRESOL EM URINA-TOLUENO",
+    "categoria": "PARTICULAR",
+    "preco": 166.7,
+    "busca": "CRESU ORTO CRESOL EM URINA TOLUENO PARTICULAR"
+  },
+  {
+    "id": 552,
+    "codigo": "MGERI",
+    "nome": "MAGNÉSIO ERITROCITÁRIO",
+    "categoria": "PARTICULAR",
+    "preco": 200.04,
+    "busca": "MGERI MAGNESIO ERITROCITARIO PARTICULAR"
+  },
+  {
+    "id": 553,
+    "codigo": "G6PDS",
+    "nome": "GLICOSE-6-FOS.DESIDROGENASE",
+    "categoria": "PARTICULAR",
+    "preco": 75.02,
+    "busca": "G6PDS GLICOSE 6 FOS DESIDROGENASE PARTICULAR"
+  },
+  {
+    "id": 554,
+    "codigo": "MALO",
+    "nome": "ÁCIDO METILMALÔNICO SÉRICO",
+    "categoria": "PARTICULAR",
+    "preco": 500.1,
+    "busca": "MALO ACIDO METILMALONICO SERICO PARTICULAR"
+  },
+  {
+    "id": 555,
+    "codigo": "TOPIR",
+    "nome": "TOPIRAMATO",
+    "categoria": "PARTICULAR",
+    "preco": 1033.54,
+    "busca": "TOPIR TOPIRAMATO PARTICULAR"
+  },
+  {
+    "id": 557,
+    "codigo": "GRV",
+    "nome": "BACTERIOSCOPIA DE SECRECAO VAGINAL",
+    "categoria": "PARTICULAR",
+    "preco": 83.35,
+    "busca": "GRV BACTERIOSCOPIA DE SECRECAO VAGINAL PARTICULAR"
+  },
+  {
+    "id": 558,
+    "codigo": "CQ10",
+    "nome": "COENZIMA Q10",
+    "categoria": "PARTICULAR",
+    "preco": 666.8,
+    "busca": "CQ10 COENZIMA Q10 PARTICULAR"
+  },
+  {
+    "id": 559,
+    "codigo": "AMP-",
+    "nome": "AMP CÍCLICO - URINA 24 HORAS",
+    "categoria": "PARTICULAR",
+    "preco": 333.4,
+    "busca": "AMP AMP CICLICO URINA 24 HORAS PARTICULAR"
+  },
+  {
+    "id": 560,
+    "codigo": "D70",
+    "nome": "IGE ESP (D70) - ÁCAROS - ACARUS SIRO",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "D70 IGE ESP D70 ACAROS ACARUS SIRO PARTICULAR"
+  },
+  {
+    "id": 561,
+    "codigo": "FX1",
+    "nome": "IGE MÚLTIPLO Amendoim,avelã...",
+    "categoria": "PARTICULAR",
+    "preco": 75.02,
+    "busca": "FX1 IGE MULTIPLO AMENDOIM AVELA PARTICULAR"
+  },
+  {
+    "id": 562,
+    "codigo": "ARSES",
+    "nome": "ARSÊNIO SÉRICO",
+    "categoria": "PARTICULAR",
+    "preco": 150.03,
+    "busca": "ARSES ARSENIO SERICO PARTICULAR"
+  },
+  {
+    "id": 563,
+    "codigo": "EXOMA",
+    "nome": "SEQUENCIAMENTO COMPLETO DO EXOMA (DNA NUCLEAR E MITOCON",
+    "categoria": "PARTICULAR",
+    "preco": 7001.4,
+    "busca": "EXOMA SEQUENCIAMENTO COMPLETO DO EXOMA DNA NUCLEAR E MITOCON PARTICULAR"
+  },
+  {
+    "id": 564,
+    "codigo": "DUOM",
+    "nome": "TESTE DE MATERNIDADE DUO - FILHO(A) E MÃE",
+    "categoria": "PARTICULAR",
+    "preco": 1166.9,
+    "busca": "DUOM TESTE DE MATERNIDADE DUO FILHO A E MAE PARTICULAR"
+  },
+  {
+    "id": 565,
+    "codigo": "COV19",
+    "nome": "CORONAVÍRUS ANTICORPOS IGM",
+    "categoria": "PARTICULAR",
+    "preco": 166.7,
+    "busca": "COV19 CORONAVIRUS ANTICORPOS IGM PARTICULAR"
+  },
+  {
+    "id": 566,
+    "codigo": "COVI1",
+    "nome": "CORONAVÍRUS- SARS-COV-2 IGG QUANTITATIVO",
+    "categoria": "PARTICULAR",
+    "preco": 266.72,
+    "busca": "COVI1 CORONAVIRUS SARS COV 2 IGG QUANTITATIVO PARTICULAR"
+  },
+  {
+    "id": 567,
+    "codigo": "ROTLC",
+    "nome": "LÍQUOR - ROTINA",
+    "categoria": "PARTICULAR",
+    "preco": 83.35,
+    "busca": "ROTLC LIQUOR ROTINA PARTICULAR"
+  },
+  {
+    "id": 568,
+    "codigo": "AQP",
+    "nome": "ANTI-AQUAPORINA 4",
+    "categoria": "PARTICULAR",
+    "preco": 333.4,
+    "busca": "AQP ANTI AQUAPORINA 4 PARTICULAR"
+  },
+  {
+    "id": 569,
+    "codigo": "IODO",
+    "nome": "IODO SERICO",
+    "categoria": "PARTICULAR",
+    "preco": 200.04,
+    "busca": "IODO IODO SERICO PARTICULAR"
+  },
+  {
+    "id": 570,
+    "codigo": "FVOWI",
+    "nome": "FATOR DE VON WILLEBRAND",
+    "categoria": "PARTICULAR",
+    "preco": 500.1,
+    "busca": "FVOWI FATOR DE VON WILLEBRAND PARTICULAR"
+  },
+  {
+    "id": 571,
+    "codigo": "VITB2",
+    "nome": "VITAMINA B2",
+    "categoria": "PARTICULAR",
+    "preco": 316.73,
+    "busca": "VITB2 VITAMINA B2 PARTICULAR"
+  },
+  {
+    "id": 572,
+    "codigo": "INTG",
+    "nome": "INTERFERON GAMMA",
+    "categoria": "PARTICULAR",
+    "preco": 1083.55,
+    "busca": "INTG INTERFERON GAMMA PARTICULAR"
+  },
+  {
+    "id": 573,
+    "codigo": "MI2",
+    "nome": "MI-2 ANTICORPOS ANTI-SINTETASE",
+    "categoria": "PARTICULAR",
+    "preco": 1500.3,
+    "busca": "MI2 MI 2 ANTICORPOS ANTI SINTETASE PARTICULAR"
+  },
+  {
+    "id": 575,
+    "codigo": "FENIL",
+    "nome": "FENITOINA-DIFENILHIDANTOINA",
+    "categoria": "PARTICULAR",
+    "preco": 66.68,
+    "busca": "FENIL FENITOINA DIFENILHIDANTOINA PARTICULAR"
+  },
+  {
+    "id": 576,
+    "codigo": "CADIN",
+    "nome": "CÁDMIO URINA INÍCIO DE JORNADA DE T",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "CADIN CADMIO URINA INICIO DE JORNADA DE T PARTICULAR"
+  },
+  {
+    "id": 577,
+    "codigo": "MANUI",
+    "nome": "MANGANÊS URINÁRIO INÍCIO DE JORNADA",
+    "categoria": "PARTICULAR",
+    "preco": 41.68,
+    "busca": "MANUI MANGANES URINARIO INICIO DE JORNADA PARTICULAR"
+  },
+  {
+    "id": 578,
+    "codigo": "MERUI",
+    "nome": "MERCÚRIO URINA INÍCIO DE JORNADA DE",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "MERUI MERCURIO URINA INICIO DE JORNADA DE PARTICULAR"
+  },
+  {
+    "id": 579,
+    "codigo": "NIQUI",
+    "nome": "NÍQUEL URINÁRIO INÍCIO DE JORNADA D",
+    "categoria": "PARTICULAR",
+    "preco": 75.02,
+    "busca": "NIQUI NIQUEL URINARIO INICIO DE JORNADA D PARTICULAR"
+  },
+  {
+    "id": 580,
+    "codigo": "CHUSG",
+    "nome": "CHUMBO SANGUÍNEO",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "CHUSG CHUMBO SANGUINEO PARTICULAR"
+  },
+  {
+    "id": 581,
+    "codigo": "CHUUI",
+    "nome": "CHUMBO URINÁRIO INÍCIO DE JORNADA D",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "CHUUI CHUMBO URINARIO INICIO DE JORNADA D PARTICULAR"
+  },
+  {
+    "id": 582,
+    "codigo": "FLUOI",
+    "nome": "FLUORETOS INÍCIO DE JORNADA",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "FLUOI FLUORETOS INICIO DE JORNADA PARTICULAR"
+  },
+  {
+    "id": 583,
+    "codigo": "CHAHA",
+    "nome": "CHAGAS - HEMAGLUTINAÇÃO",
+    "categoria": "PARTICULAR",
+    "preco": 83.35,
+    "busca": "CHAHA CHAGAS HEMAGLUTINACAO PARTICULAR"
+  },
+  {
+    "id": 584,
+    "codigo": "MHB",
+    "nome": "METAHEMOGLOBINA",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "MHB METAHEMOGLOBINA PARTICULAR"
+  },
+  {
+    "id": 585,
+    "codigo": "METUI",
+    "nome": "METANOL URINÁRIO INÍCIO DE JORNADA DE TRABALHO",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "METUI METANOL URINARIO INICIO DE JORNADA DE TRABALHO PARTICULAR"
+  },
+  {
+    "id": 586,
+    "codigo": "WIDAL",
+    "nome": "WIDAL - REAÇÃO",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "WIDAL WIDAL REACAO PARTICULAR"
+  },
+  {
+    "id": 587,
+    "codigo": "TRITI",
+    "nome": "TRICLOROCOMPOSTOS TOTAIS INÍCIO DE JORNADA",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "TRITI TRICLOROCOMPOSTOS TOTAIS INICIO DE JORNADA PARTICULAR"
+  },
+  {
+    "id": 588,
+    "codigo": "NMFOI",
+    "nome": "N-METILFORMAMIDA INÍCIO DE JORNADA",
+    "categoria": "PARTICULAR",
+    "preco": 166.7,
+    "busca": "NMFOI N METILFORMAMIDA INICIO DE JORNADA PARTICULAR"
+  },
+  {
+    "id": 589,
+    "codigo": "MALAG",
+    "nome": "PLASMODIUM FALCIPARUM ANTICORPOS IGG",
+    "categoria": "PARTICULAR",
+    "preco": 158.37,
+    "busca": "MALAG PLASMODIUM FALCIPARUM ANTICORPOS IGG PARTICULAR"
+  },
+  {
+    "id": 590,
+    "codigo": "PROCT",
+    "nome": "PROCALCITONINA",
+    "categoria": "PARTICULAR",
+    "preco": 383.41,
+    "busca": "PROCT PROCALCITONINA PARTICULAR"
+  },
+  {
+    "id": 591,
+    "codigo": "IMU24",
+    "nome": "IMUNOFIXACAO DE PROTEÍNAS- URINA 24",
+    "categoria": "PARTICULAR",
+    "preco": 383.41,
+    "busca": "IMU24 IMUNOFIXACAO DE PROTEINAS URINA 24 PARTICULAR"
+  },
+  {
+    "id": 592,
+    "codigo": "DNA",
+    "nome": "ANTI-DNA (dupla helice)",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "DNA ANTI DNA DUPLA HELICE PARTICULAR"
+  },
+  {
+    "id": 594,
+    "codigo": "CULV",
+    "nome": "CULTURA E ANTIBIOGRAMA - SECREÇÃO VAGINAL",
+    "categoria": "PARTICULAR",
+    "preco": 133.36,
+    "busca": "CULV CULTURA E ANTIBIOGRAMA SECRECAO VAGINAL PARTICULAR"
+  },
+  {
+    "id": 595,
+    "codigo": "ECAHP",
+    "nome": "ENZIMA CONVERSORA DA ANGIOTENSINA",
+    "categoria": "PARTICULAR",
+    "preco": 250.05,
+    "busca": "ECAHP ENZIMA CONVERSORA DA ANGIOTENSINA PARTICULAR"
+  },
+  {
+    "id": 596,
+    "codigo": "LACTF",
+    "nome": "LACTOFERRINA - FEZES",
+    "categoria": "PARTICULAR",
+    "preco": 250.05,
+    "busca": "LACTF LACTOFERRINA FEZES PARTICULAR"
+  },
+  {
+    "id": 597,
+    "codigo": "BLAKA",
+    "nome": "Cadeia Kappa/Lambda Leve Livre (Freelite) - soro",
+    "categoria": "PARTICULAR",
+    "preco": 666.8,
+    "busca": "BLAKA CADEIA KAPPA LAMBDA LEVE LIVRE FREELITE SORO PARTICULAR"
+  },
+  {
+    "id": 598,
+    "codigo": "FTS",
+    "nome": "FRUTOSE",
+    "categoria": "PARTICULAR",
+    "preco": 250.05,
+    "busca": "FTS FRUTOSE PARTICULAR"
+  },
+  {
+    "id": 599,
+    "codigo": "PRETI",
+    "nome": "PAINEL DE RETINOPATIAS",
+    "categoria": "PARTICULAR",
+    "preco": 4167.5,
+    "busca": "PRETI PAINEL DE RETINOPATIAS PARTICULAR"
+  },
+  {
+    "id": 600,
+    "codigo": "CADMS",
+    "nome": "CÁDMIO SANGUÍNEO",
+    "categoria": "PARTICULAR",
+    "preco": 75.02,
+    "busca": "CADMS CADMIO SANGUINEO PARTICULAR"
+  },
+  {
+    "id": 601,
+    "codigo": "MERSG",
+    "nome": "MERCÚRIO SANGUÍNEO",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "MERSG MERCURIO SANGUINEO PARTICULAR"
+  },
+  {
+    "id": 602,
+    "codigo": "PEPAP",
+    "nome": "TESTE DO PEZINHO PERFIL BASICO",
+    "categoria": "PARTICULAR",
+    "preco": 166.7,
+    "busca": "PEPAP TESTE DO PEZINHO PERFIL BASICO PARTICULAR"
+  },
+  {
+    "id": 603,
+    "codigo": "PEPA",
+    "nome": "TESTE DO PEZINHO PERFIL ECONOMICO",
+    "categoria": "PARTICULAR",
+    "preco": 166.7,
+    "busca": "PEPA TESTE DO PEZINHO PERFIL ECONOMICO PARTICULAR"
+  },
+  {
+    "id": 604,
+    "codigo": "TOXMI",
+    "nome": "TOXOPLASMOSE - ANTICORPOS IGM (IFI)",
+    "categoria": "PARTICULAR",
+    "preco": 75.02,
+    "busca": "TOXMI TOXOPLASMOSE ANTICORPOS IGM IFI PARTICULAR"
+  },
+  {
+    "id": 605,
+    "codigo": "TOXGI",
+    "nome": "TOXOPLASMOSE - ANTICORPOS IGG (IFI)",
+    "categoria": "PARTICULAR",
+    "preco": 75.02,
+    "busca": "TOXGI TOXOPLASMOSE ANTICORPOS IGG IFI PARTICULAR"
+  },
+  {
+    "id": 606,
+    "codigo": "17CET",
+    "nome": "17 CETOESTERÓIDES TOTAIS",
+    "categoria": "PARTICULAR",
+    "preco": 66.68,
+    "busca": "17CET 17 CETOESTEROIDES TOTAIS PARTICULAR"
+  },
+  {
+    "id": 607,
+    "codigo": "HPVRT",
+    "nome": "PAPILOMAVÍRUS HUMANO (HPV) - SONDAS",
+    "categoria": "PARTICULAR",
+    "preco": 283.39,
+    "busca": "HPVRT PAPILOMAVIRUS HUMANO HPV SONDAS PARTICULAR"
+  },
+  {
+    "id": 608,
+    "codigo": "CICLO",
+    "nome": "CICLOSPORINA",
+    "categoria": "PARTICULAR",
+    "preco": 250.05,
+    "busca": "CICLO CICLOSPORINA PARTICULAR"
+  },
+  {
+    "id": 609,
+    "codigo": "APOAE",
+    "nome": "APOLIPOPROTEINA E",
+    "categoria": "PARTICULAR",
+    "preco": 333.4,
+    "busca": "APOAE APOLIPOPROTEINA E PARTICULAR"
+  },
+  {
+    "id": 610,
+    "codigo": "BAARP",
+    "nome": "BAAR - PESQUISA",
+    "categoria": "PARTICULAR",
+    "preco": 83.35,
+    "busca": "BAARP BAAR PESQUISA PARTICULAR"
+  },
+  {
+    "id": 611,
+    "codigo": "BA2",
+    "nome": "BAAR - PESQUISA 2º AMOSTRA",
+    "categoria": "PARTICULAR",
+    "preco": 83.35,
+    "busca": "BA2 BAAR PESQUISA 2 AMOSTRA PARTICULAR"
+  },
+  {
+    "id": 612,
+    "codigo": "BA2",
+    "nome": "BAAR - PESQUISA 2º AMOSTRA",
+    "categoria": "PARTICULAR",
+    "preco": 83.35,
+    "busca": "BA2 BAAR PESQUISA 2 AMOSTRA PARTICULAR"
+  },
+  {
+    "id": 613,
+    "codigo": "BA3",
+    "nome": "BAAR - PESQUISA 3º AMOSTRA",
+    "categoria": "PARTICULAR",
+    "preco": 83.35,
+    "busca": "BA3 BAAR PESQUISA 3 AMOSTRA PARTICULAR"
+  },
+  {
+    "id": 614,
+    "codigo": "INDIC",
+    "nome": "PESQUISA INDICAN -TESTE DE DISBIOSE",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "INDIC PESQUISA INDICAN TESTE DE DISBIOSE PARTICULAR"
+  },
+  {
+    "id": 615,
+    "codigo": "BCRAB",
+    "nome": "BCR/ABL - TRANSLOCACAO RTPCR QUANT",
+    "categoria": "PARTICULAR",
+    "preco": 1100.22,
+    "busca": "BCRAB BCR ABL TRANSLOCACAO RTPCR QUANT PARTICULAR"
+  },
+  {
+    "id": 616,
+    "codigo": "FILAR",
+    "nome": "ANTICORPOS ANTI FILARIA - FILARIOSE",
+    "categoria": "PARTICULAR",
+    "preco": 250.05,
+    "busca": "FILAR ANTICORPOS ANTI FILARIA FILARIOSE PARTICULAR"
+  },
+  {
+    "id": 617,
+    "codigo": "FOSU",
+    "nome": "FOSFORO URINARIO - AMOSTRA ISOLADA",
+    "categoria": "PARTICULAR",
+    "preco": 33.34,
+    "busca": "FOSU FOSFORO URINARIO AMOSTRA ISOLADA PARTICULAR"
+  },
+  {
+    "id": 618,
+    "codigo": "CISP",
+    "nome": "CISTINA - PESQUISA",
+    "categoria": "PARTICULAR",
+    "preco": 33.34,
+    "busca": "CISP CISTINA PESQUISA PARTICULAR"
+  },
+  {
+    "id": 619,
+    "codigo": "LDO",
+    "nome": "LDL OXIDADA - ANTICORPOS",
+    "categoria": "PARTICULAR",
+    "preco": 533.44,
+    "busca": "LDO LDL OXIDADA ANTICORPOS PARTICULAR"
+  },
+  {
+    "id": 620,
+    "codigo": "HV1",
+    "nome": "HIV - Western-Blot",
+    "categoria": "PARTICULAR",
+    "preco": 366.74,
+    "busca": "HV1 HIV WESTERN BLOT PARTICULAR"
+  },
+  {
+    "id": 621,
+    "codigo": "C1EA",
+    "nome": "INIBIDOR DE C1 - ESTERASE- ATIVIDAD",
+    "categoria": "PARTICULAR",
+    "preco": 166.7,
+    "busca": "C1EA INIBIDOR DE C1 ESTERASE ATIVIDAD PARTICULAR"
+  },
+  {
+    "id": 622,
+    "codigo": "C1",
+    "nome": "IGE ESP (C1) - DROGAS - PENICILINA G",
+    "categoria": "PARTICULAR",
+    "preco": 66.68,
+    "busca": "C1 IGE ESP C1 DROGAS PENICILINA G PARTICULAR"
+  },
+  {
+    "id": 623,
+    "codigo": "CURVA",
+    "nome": "CURVA DE INSULINA",
+    "categoria": "PARTICULAR",
+    "preco": 100.02,
+    "busca": "CURVA CURVA DE INSULINA PARTICULAR"
+  },
+  {
+    "id": 624,
+    "codigo": "ISOS",
+    "nome": "ISOSPORA - PESQUISA NAS FEZES",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "ISOS ISOSPORA PESQUISA NAS FEZES PARTICULAR"
+  },
+  {
+    "id": 625,
+    "codigo": "ADENF",
+    "nome": "ADENOVÍRUS - PESQUISA",
+    "categoria": "PARTICULAR",
+    "preco": 166.7,
+    "busca": "ADENF ADENOVIRUS PESQUISA PARTICULAR"
+  },
+  {
+    "id": 626,
+    "codigo": "PCACE",
+    "nome": "PERFIL COMPLETO ACIDOS GRAXOS EM SANGUE",
+    "categoria": "PARTICULAR",
+    "preco": 666.8,
+    "busca": "PCACE PERFIL COMPLETO ACIDOS GRAXOS EM SANGUE PARTICULAR"
+  },
+  {
+    "id": 627,
+    "codigo": "RHDGF",
+    "nome": "RHD FETAL",
+    "categoria": "PARTICULAR",
+    "preco": 1133.56,
+    "busca": "RHDGF RHD FETAL PARTICULAR"
+  },
+  {
+    "id": 628,
+    "codigo": "HICAP",
+    "nome": "HISTOPLASMA CAPSULATUM ANTICORPOS",
+    "categoria": "PARTICULAR",
+    "preco": 250.05,
+    "busca": "HICAP HISTOPLASMA CAPSULATUM ANTICORPOS PARTICULAR"
+  },
+  {
+    "id": 629,
+    "codigo": "BLAST",
+    "nome": "BLASTOMICOSE - ANTICORPOS - PARACOCCIDIOIDOMICOSE",
+    "categoria": "PARTICULAR",
+    "preco": 366.74,
+    "busca": "BLAST BLASTOMICOSE ANTICORPOS PARACOCCIDIOIDOMICOSE PARTICULAR"
+  },
+  {
+    "id": 630,
+    "codigo": "LIA",
+    "nome": "LIPOPROTEINA A - Lp(a)",
+    "categoria": "PARTICULAR",
+    "preco": 75.02,
+    "busca": "LIA LIPOPROTEINA A LP A PARTICULAR"
+  },
+  {
+    "id": 631,
+    "codigo": "ASPER",
+    "nome": "ASPERGILLUS - ANTICORPOS",
+    "categoria": "PARTICULAR",
+    "preco": 533.44,
+    "busca": "ASPER ASPERGILLUS ANTICORPOS PARTICULAR"
+  },
+  {
+    "id": 632,
+    "codigo": "CORS1",
+    "nome": "CORTISOL SALIVAR - AMOSTRA 11 HORAS",
+    "categoria": "PARTICULAR",
+    "preco": 100.02,
+    "busca": "CORS1 CORTISOL SALIVAR AMOSTRA 11 HORAS PARTICULAR"
+  },
+  {
+    "id": 633,
+    "codigo": "MANGA",
+    "nome": "MANGANÊS SÉRICO",
+    "categoria": "PARTICULAR",
+    "preco": 83.35,
+    "busca": "MANGA MANGANES SERICO PARTICULAR"
+  },
+  {
+    "id": 634,
+    "codigo": "MANSG",
+    "nome": "MANGANÊS SANGUÍNEO",
+    "categoria": "PARTICULAR",
+    "preco": 83.35,
+    "busca": "MANSG MANGANES SANGUINEO PARTICULAR"
+  },
+  {
+    "id": 635,
+    "codigo": "COQUE",
+    "nome": "DETECÇÃO DE BORDETELLA PERTUSSIS E PARAPERTUSSIS",
+    "categoria": "PARTICULAR",
+    "preco": 500.1,
+    "busca": "COQUE DETECCAO DE BORDETELLA PERTUSSIS E PARAPERTUSSIS PARTICULAR"
+  },
+  {
+    "id": 636,
+    "codigo": "CIS",
+    "nome": "CISTICERCOSE - ANTICORPOS IGG",
+    "categoria": "PARTICULAR",
+    "preco": 66.68,
+    "busca": "CIS CISTICERCOSE ANTICORPOS IGG PARTICULAR"
+  },
+  {
+    "id": 637,
+    "codigo": "SEXUA",
+    "nome": "CHECK UP SAÚDE SEXUAL",
+    "categoria": "PARTICULAR",
+    "preco": 0.0,
+    "busca": "SEXUA CHECK UP SAUDE SEXUAL PARTICULAR"
+  },
+  {
+    "id": 638,
+    "codigo": "MICRO",
+    "nome": "SEQUENCIAMENTO DO MICROBIOMA",
+    "categoria": "PARTICULAR",
+    "preco": 1650.33,
+    "busca": "MICRO SEQUENCIAMENTO DO MICROBIOMA PARTICULAR"
+  },
+  {
+    "id": 639,
+    "codigo": "APF37",
+    "nome": "IGE ESP (F37) - ALIMENTOS - MEXILHÃO AZUL",
+    "categoria": "PARTICULAR",
+    "preco": 66.68,
+    "busca": "APF37 IGE ESP F37 ALIMENTOS MEXILHAO AZUL PARTICULAR"
+  },
+  {
+    "id": 640,
+    "codigo": "CULE",
+    "nome": "CULTURA - ESCARRO",
+    "categoria": "PARTICULAR",
+    "preco": 166.7,
+    "busca": "CULE CULTURA ESCARRO PARTICULAR"
+  },
+  {
+    "id": 641,
+    "codigo": "BORD",
+    "nome": "SOROLOGIA BORDETELLA PERTUSSIS E PARAPERTUSSIS",
+    "categoria": "PARTICULAR",
+    "preco": 411.75,
+    "busca": "BORD SOROLOGIA BORDETELLA PERTUSSIS E PARAPERTUSSIS PARTICULAR"
+  },
+  {
+    "id": 642,
+    "codigo": "H17",
+    "nome": "17-HIDROXICORTICOSTEROIDES TOTAIS",
+    "categoria": "PARTICULAR",
+    "preco": 200.04,
+    "busca": "H17 17 HIDROXICORTICOSTEROIDES TOTAIS PARTICULAR"
+  },
+  {
+    "id": 643,
+    "codigo": "TOXOA",
+    "nome": "Toxoplasmose IgA ELISA",
+    "categoria": "PARTICULAR",
+    "preco": 125.03,
+    "busca": "TOXOA TOXOPLASMOSE IGA ELISA PARTICULAR"
+  },
+  {
+    "id": 645,
+    "codigo": "CATEF",
+    "nome": "CATECOLAMINAS URINARIAS FRACIONADAS",
+    "categoria": "PARTICULAR",
+    "preco": 416.75,
+    "busca": "CATEF CATECOLAMINAS URINARIAS FRACIONADAS PARTICULAR"
+  },
+  {
+    "id": 646,
+    "codigo": "CRA",
+    "nome": "CREATININA EM AMOSTRA ISOLADA",
+    "categoria": "PARTICULAR",
+    "preco": 11.67,
+    "busca": "CRA CREATININA EM AMOSTRA ISOLADA PARTICULAR"
+  },
+  {
+    "id": 647,
+    "codigo": "FUN",
+    "nome": "FUNGOS - PESQUISA",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "FUN FUNGOS PESQUISA PARTICULAR"
+  },
+  {
+    "id": 648,
+    "codigo": "ZINER",
+    "nome": "ZINCO ERITROCITÁRIO",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "ZINER ZINCO ERITROCITARIO PARTICULAR"
+  },
+  {
+    "id": 649,
+    "codigo": "PTCA",
+    "nome": "PROTEINA \"C\" ANTIGENICA",
+    "categoria": "PARTICULAR",
+    "preco": 366.74,
+    "busca": "PTCA PROTEINA C ANTIGENICA PARTICULAR"
+  },
+  {
+    "id": 650,
+    "codigo": "HTZOA",
+    "nome": "HEMATOZOÁRIOS - (MALARIA)",
+    "categoria": "PARTICULAR",
+    "preco": 25.84,
+    "busca": "HTZOA HEMATOZOARIOS MALARIA PARTICULAR"
+  },
+  {
+    "id": 651,
+    "codigo": "ASCA",
+    "nome": "Anti Saccharomyces cerevisiae (IgA e IgG)",
+    "categoria": "PARTICULAR",
+    "preco": 150.03,
+    "busca": "ASCA ANTI SACCHAROMYCES CEREVISIAE IGA E IGG PARTICULAR"
+  },
+  {
+    "id": 652,
+    "codigo": "PF221",
+    "nome": "IGE ESP - ALIMENTOS - CAFE",
+    "categoria": "PARTICULAR",
+    "preco": 66.68,
+    "busca": "PF221 IGE ESP ALIMENTOS CAFE PARTICULAR"
+  },
+  {
+    "id": 653,
+    "codigo": "FOERI",
+    "nome": "FOLATO ERITROCITÁRIO",
+    "categoria": "PARTICULAR",
+    "preco": 126.69,
+    "busca": "FOERI FOLATO ERITROCITARIO PARTICULAR"
+  },
+  {
+    "id": 654,
+    "codigo": "IX1",
+    "nome": "IGE PAINEL (IX1) - INALANTES",
+    "categoria": "PARTICULAR",
+    "preco": 66.68,
+    "busca": "IX1 IGE PAINEL IX1 INALANTES PARTICULAR"
+  },
+  {
+    "id": 655,
+    "codigo": "IX6",
+    "nome": "IGE PAINEL (IX6) - INALANTES",
+    "categoria": "PARTICULAR",
+    "preco": 66.68,
+    "busca": "IX6 IGE PAINEL IX6 INALANTES PARTICULAR"
+  },
+  {
+    "id": 656,
+    "codigo": "O201",
+    "nome": "IGE ESP (O201) - TABACO",
+    "categoria": "PARTICULAR",
+    "preco": 66.68,
+    "busca": "O201 IGE ESP O201 TABACO PARTICULAR"
+  },
+  {
+    "id": 657,
+    "codigo": "EX71",
+    "nome": "IGE PAINEL (EX71) - PENAS DE ANIMAIS (GANSO - GALINHA -",
+    "categoria": "PARTICULAR",
+    "preco": 83.35,
+    "busca": "EX71 IGE PAINEL EX71 PENAS DE ANIMAIS GANSO GALINHA PARTICULAR"
+  },
+  {
+    "id": 658,
+    "codigo": "I6",
+    "nome": "IGE ESP - INSETOS - BARATA",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "I6 IGE ESP INSETOS BARATA PARTICULAR"
+  },
+  {
+    "id": 659,
+    "codigo": "E3",
+    "nome": "IGE ESP (E3) -  CASPA DE CAVALO",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "E3 IGE ESP E3 CASPA DE CAVALO PARTICULAR"
+  },
+  {
+    "id": 660,
+    "codigo": "IMUUR",
+    "nome": "IMUNOFIXAÇÃO URINA RECENTE",
+    "categoria": "PARTICULAR",
+    "preco": 416.75,
+    "busca": "IMUUR IMUNOFIXACAO URINA RECENTE PARTICULAR"
+  },
+  {
+    "id": 661,
+    "codigo": "OROPC",
+    "nome": "DETECÇÃO PCR OROPOUCHE, TESTE MOLECULAR",
+    "categoria": "PARTICULAR",
+    "preco": 833.5,
+    "busca": "OROPC DETECCAO PCR OROPOUCHE TESTE MOLECULAR PARTICULAR"
+  },
+  {
+    "id": 662,
+    "codigo": "OROGM",
+    "nome": "OROPOUCHE PESQUISA DE ANTICORPOS IGG E IGM",
+    "categoria": "PARTICULAR",
+    "preco": 1416.95,
+    "busca": "OROGM OROPOUCHE PESQUISA DE ANTICORPOS IGG E IGM PARTICULAR"
+  },
+  {
+    "id": 663,
+    "codigo": "HFE",
+    "nome": "HEMOCROMATOSE C282Y, H63D E S65C",
+    "categoria": "PARTICULAR",
+    "preco": 333.4,
+    "busca": "HFE HEMOCROMATOSE C282Y H63D E S65C PARTICULAR"
+  },
+  {
+    "id": 664,
+    "codigo": "HCG",
+    "nome": "BETA HCG (Quantitativo)",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "HCG BETA HCG QUANTITATIVO PARTICULAR"
+  },
+  {
+    "id": 665,
+    "codigo": "RECP6",
+    "nome": "ESPÓLIOS COM 2 PARENTES DO SUPOSTO PAI",
+    "categoria": "PARTICULAR",
+    "preco": 3667.4,
+    "busca": "RECP6 ESPOLIOS COM 2 PARENTES DO SUPOSTO PAI PARTICULAR"
+  },
+  {
+    "id": 666,
+    "codigo": "MINER",
+    "nome": "MINERALOGRAMA",
+    "categoria": "PARTICULAR",
+    "preco": 2000.4,
+    "busca": "MINER MINERALOGRAMA PARTICULAR"
+  },
+  {
+    "id": 667,
+    "codigo": "TRIAT",
+    "nome": "TRIAGEM TOXICOLOGICA",
+    "categoria": "PARTICULAR",
+    "preco": 200.04,
+    "busca": "TRIAT TRIAGEM TOXICOLOGICA PARTICULAR"
+  },
+  {
+    "id": 668,
+    "codigo": "BORG",
+    "nome": "COQUELUCHE-BORDETELLA - ANTICORPOS IGG",
+    "categoria": "PARTICULAR",
+    "preco": 100.02,
+    "busca": "BORG COQUELUCHE BORDETELLA ANTICORPOS IGG PARTICULAR"
+  },
+  {
+    "id": 669,
+    "codigo": "BORM",
+    "nome": "COQUELUCHE- BORDETELLA - ANTICORPOS IGM",
+    "categoria": "PARTICULAR",
+    "preco": 100.02,
+    "busca": "BORM COQUELUCHE BORDETELLA ANTICORPOS IGM PARTICULAR"
+  },
+  {
+    "id": 670,
+    "codigo": "F3",
+    "nome": "IgE ESPECÍFICO (F3) - Alimentos-Peixe(bacalhau)",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "F3 IGE ESPECIFICO F3 ALIMENTOS PEIXE BACALHAU PARTICULAR"
+  },
+  {
+    "id": 671,
+    "codigo": "ADH",
+    "nome": "VASOPRESSINA (ADH)",
+    "categoria": "PARTICULAR",
+    "preco": 416.75,
+    "busca": "ADH VASOPRESSINA ADH PARTICULAR"
+  },
+  {
+    "id": 672,
+    "codigo": "IMULI",
+    "nome": "IMUNOFENOTIPAGEM DE SUBPOPULAÇÕES LINFOCITÁRIAS",
+    "categoria": "PARTICULAR",
+    "preco": 416.75,
+    "busca": "IMULI IMUNOFENOTIPAGEM DE SUBPOPULACOES LINFOCITARIAS PARTICULAR"
+  },
+  {
+    "id": 673,
+    "codigo": "PECG",
+    "nome": "BIOPSIA (PEÇA GRANDE)",
+    "categoria": "PARTICULAR",
+    "preco": 250.05,
+    "busca": "PECG BIOPSIA PECA GRANDE PARTICULAR"
+  },
+  {
+    "id": 674,
+    "codigo": "SEXAL",
+    "nome": "SEXAGEM FETAL",
+    "categoria": "PARTICULAR",
+    "preco": 216.69,
+    "busca": "SEXAL SEXAGEM FETAL PARTICULAR"
+  },
+  {
+    "id": 675,
+    "codigo": "BACT1",
+    "nome": "BACTERIOSCOPICO DE URINA-1º JATO",
+    "categoria": "PARTICULAR",
+    "preco": 83.35,
+    "busca": "BACT1 BACTERIOSCOPICO DE URINA 1 JATO PARTICULAR"
+  },
+  {
+    "id": 676,
+    "codigo": "GLT",
+    "nome": "GLOBULINA LIGADORA DE TIROXINA",
+    "categoria": "PARTICULAR",
+    "preco": 200.04,
+    "busca": "GLT GLOBULINA LIGADORA DE TIROXINA PARTICULAR"
+  },
+  {
+    "id": 677,
+    "codigo": "CTF",
+    "nome": "CAPACIDADE TOTAL DE LIGAÇÃO DO FERR",
+    "categoria": "PARTICULAR",
+    "preco": 41.68,
+    "busca": "CTF CAPACIDADE TOTAL DE LIGACAO DO FERR PARTICULAR"
+  },
+  {
+    "id": 678,
+    "codigo": "CLFF",
+    "nome": "CAPACIDADE LATENTE FIX. Fe",
+    "categoria": "PARTICULAR",
+    "preco": 41.68,
+    "busca": "CLFF CAPACIDADE LATENTE FIX FE PARTICULAR"
+  },
+  {
+    "id": 679,
+    "codigo": "FVONC",
+    "nome": "COFATOR RISTOCETINA - FATOR V. WILLEBRAND",
+    "categoria": "PARTICULAR",
+    "preco": 500.1,
+    "busca": "FVONC COFATOR RISTOCETINA FATOR V WILLEBRAND PARTICULAR"
+  },
+  {
+    "id": 680,
+    "codigo": "HANSM",
+    "nome": "Hanseníase- Ac. Anti-Mycobacterium leprae IgM",
+    "categoria": "PARTICULAR",
+    "preco": 133.36,
+    "busca": "HANSM HANSENIASE AC ANTI MYCOBACTERIUM LEPRAE IGM PARTICULAR"
+  },
+  {
+    "id": 681,
+    "codigo": "HPG",
+    "nome": "HELICOBACTER PYLORI IGG",
+    "categoria": "PARTICULAR",
+    "preco": 133.36,
+    "busca": "HPG HELICOBACTER PYLORI IGG PARTICULAR"
+  },
+  {
+    "id": 682,
+    "codigo": "HPA",
+    "nome": "HELICOBACTER PYLORI IGA",
+    "categoria": "PARTICULAR",
+    "preco": 133.36,
+    "busca": "HPA HELICOBACTER PYLORI IGA PARTICULAR"
+  },
+  {
+    "id": 683,
+    "codigo": "AMON2",
+    "nome": "AMÔNIA - URINA 24 HORAS",
+    "categoria": "PARTICULAR",
+    "preco": 166.7,
+    "busca": "AMON2 AMONIA URINA 24 HORAS PARTICULAR"
+  },
+  {
+    "id": 684,
+    "codigo": "AHI21",
+    "nome": "ANTICORPOS ANTI 21 - HIDROXILASE ALFA",
+    "categoria": "PARTICULAR",
+    "preco": 1398.61,
+    "busca": "AHI21 ANTICORPOS ANTI 21 HIDROXILASE ALFA PARTICULAR"
+  },
+  {
+    "id": 685,
+    "codigo": "GIAEL",
+    "nome": "GIARDIA - Pesquisa",
+    "categoria": "PARTICULAR",
+    "preco": 150.03,
+    "busca": "GIAEL GIARDIA PESQUISA PARTICULAR"
+  },
+  {
+    "id": 686,
+    "codigo": "SOU",
+    "nome": "SÓDIO URINÁRIO",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "SOU SODIO URINARIO PARTICULAR"
+  },
+  {
+    "id": 687,
+    "codigo": "ADNAB",
+    "nome": "ANTICORPOS ANTI ESTREPTOCOCCUS [DNAASE B]",
+    "categoria": "PARTICULAR",
+    "preco": 100.02,
+    "busca": "ADNAB ANTICORPOS ANTI ESTREPTOCOCCUS DNAASE B PARTICULAR"
+  },
+  {
+    "id": 688,
+    "codigo": "COB24",
+    "nome": "COBRE URINARIO 24 HORAS",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "COB24 COBRE URINARIO 24 HORAS PARTICULAR"
+  },
+  {
+    "id": 689,
+    "codigo": "LOWE",
+    "nome": "ESTUDO MOLECULAR DO GENE OCRL",
+    "categoria": "PARTICULAR",
+    "preco": 4167.5,
+    "busca": "LOWE ESTUDO MOLECULAR DO GENE OCRL PARTICULAR"
+  },
+  {
+    "id": 690,
+    "codigo": "PCPLU",
+    "nome": "PAINEL CUSTOMIZADO PLUS",
+    "categoria": "PARTICULAR",
+    "preco": 6001.2,
+    "busca": "PCPLU PAINEL CUSTOMIZADO PLUS PARTICULAR"
+  },
+  {
+    "id": 691,
+    "codigo": "COBRI",
+    "nome": "COBRE URINÁRIO INÍCIO DE JORNADA DE",
+    "categoria": "PARTICULAR",
+    "preco": 33.34,
+    "busca": "COBRI COBRE URINARIO INICIO DE JORNADA DE PARTICULAR"
+  },
+  {
+    "id": 692,
+    "codigo": "ANFE",
+    "nome": "ANFETAMINA",
+    "categoria": "PARTICULAR",
+    "preco": 100.02,
+    "busca": "ANFE ANFETAMINA PARTICULAR"
+  },
+  {
+    "id": 693,
+    "codigo": "VITAH",
+    "nome": "VITAMINA H /BIOTINA/ VITAMINA B7",
+    "categoria": "PARTICULAR",
+    "preco": 366.74,
+    "busca": "VITAH VITAMINA H BIOTINA VITAMINA B7 PARTICULAR"
+  },
+  {
+    "id": 694,
+    "codigo": "HCIST",
+    "nome": "HOMOCISTEINA URINARIA",
+    "categoria": "PARTICULAR",
+    "preco": 350.07,
+    "busca": "HCIST HOMOCISTEINA URINARIA PARTICULAR"
+  },
+  {
+    "id": 695,
+    "codigo": "AFOR",
+    "nome": "ACIDO FORMICO",
+    "categoria": "PARTICULAR",
+    "preco": 158.37,
+    "busca": "AFOR ACIDO FORMICO PARTICULAR"
+  },
+  {
+    "id": 696,
+    "codigo": "HPVAB",
+    "nome": "GENOTIPAGEM HPV BAIXO E ALTO RISCO",
+    "categoria": "PARTICULAR",
+    "preco": 966.86,
+    "busca": "HPVAB GENOTIPAGEM HPV BAIXO E ALTO RISCO PARTICULAR"
+  },
+  {
+    "id": 697,
+    "codigo": "TRIO",
+    "nome": "Painel Respiratório Viral (Covid+Influenza+VSR)",
+    "categoria": "PARTICULAR",
+    "preco": 150.03,
+    "busca": "TRIO PAINEL RESPIRATORIO VIRAL COVID INFLUENZA VSR PARTICULAR"
+  },
+  {
+    "id": 698,
+    "codigo": "STREP",
+    "nome": "Antígeno de Estreptococos",
+    "categoria": "PARTICULAR",
+    "preco": 100.02,
+    "busca": "STREP ANTIGENO DE ESTREPTOCOCOS PARTICULAR"
+  },
+  {
+    "id": 699,
+    "codigo": "PPLUS",
+    "nome": "TESTE DO PEZINHO PLUS",
+    "categoria": "PARTICULAR",
+    "preco": 333.4,
+    "busca": "PPLUS TESTE DO PEZINHO PLUS PARTICULAR"
+  },
+  {
+    "id": 700,
+    "codigo": "C5",
+    "nome": "C5 - ige esp (c5) - drogas - ampicilina",
+    "categoria": "PARTICULAR",
+    "preco": 66.68,
+    "busca": "C5 C5 IGE ESP C5 DROGAS AMPICILINA PARTICULAR"
+  },
+  {
+    "id": 701,
+    "codigo": "PROLD",
+    "nome": "PROLACTINA APÓS DILUIÇÃO",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "PROLD PROLACTINA APOS DILUICAO PARTICULAR"
+  },
+  {
+    "id": 702,
+    "codigo": "CRU24",
+    "nome": "CREATININA - URINA 24 HORAS",
+    "categoria": "PARTICULAR",
+    "preco": 66.68,
+    "busca": "CRU24 CREATININA URINA 24 HORAS PARTICULAR"
+  },
+  {
+    "id": 703,
+    "codigo": "INS18",
+    "nome": "INSULINA 180 MINUTOS",
+    "categoria": "PARTICULAR",
+    "preco": 25.0,
+    "busca": "INS18 INSULINA 180 MINUTOS PARTICULAR"
+  },
+  {
+    "id": 704,
+    "codigo": "ESPOR",
+    "nome": "SOROLOGIA PARA ESPOROTRICOSE",
+    "categoria": "PARTICULAR",
+    "preco": 3167.3,
+    "busca": "ESPOR SOROLOGIA PARA ESPOROTRICOSE PARTICULAR"
+  },
+  {
+    "id": 705,
+    "codigo": "HE4",
+    "nome": "ANTÍGENO HE-4 - MARCADOR TUMORAL DE OVÁRIO",
+    "categoria": "PARTICULAR",
+    "preco": 400.08,
+    "busca": "HE4 ANTIGENO HE 4 MARCADOR TUMORAL DE OVARIO PARTICULAR"
+  },
+  {
+    "id": 706,
+    "codigo": "ECHAT",
+    "nome": "ANTICORPOS ANTI ECHINOCOCCUS GRANULOSUS",
+    "categoria": "PARTICULAR",
+    "preco": 658.47,
+    "busca": "ECHAT ANTICORPOS ANTI ECHINOCOCCUS GRANULOSUS PARTICULAR"
+  },
+  {
+    "id": 707,
+    "codigo": "DIGCO",
+    "nome": "COPROLÓGICO FUNCIONAL-DOSAGEM DE ÁCIDO ORGÂNICO QUANTIT",
+    "categoria": "PARTICULAR",
+    "preco": 583.45,
+    "busca": "DIGCO COPROLOGICO FUNCIONAL DOSAGEM DE ACIDO ORGANICO QUANTIT PARTICULAR"
+  },
+  {
+    "id": 708,
+    "codigo": "EPF5",
+    "nome": "PARASITOLÓGICO DE FEZES - 5ºAMOSTRA",
+    "categoria": "PARTICULAR",
+    "preco": 20.0,
+    "busca": "EPF5 PARASITOLOGICO DE FEZES 5 AMOSTRA PARTICULAR"
+  },
+  {
+    "id": 709,
+    "codigo": "EPF6",
+    "nome": "PARASITOLÓGICO DE FEZES - 6ºAMOSTRA",
+    "categoria": "PARTICULAR",
+    "preco": 20.0,
+    "busca": "EPF6 PARASITOLOGICO DE FEZES 6 AMOSTRA PARTICULAR"
+  },
+  {
+    "id": 710,
+    "codigo": "BLAK",
+    "nome": "Cadeia Kappa/Lambda Leve Livre (Freelite)-Urina",
+    "categoria": "PARTICULAR",
+    "preco": 133.36,
+    "busca": "BLAK CADEIA KAPPA LAMBDA LEVE LIVRE FREELITE URINA PARTICULAR"
+  },
+  {
+    "id": 711,
+    "codigo": "AMA2",
+    "nome": "Anticorpos Anti-Mitocondria M2 (AMA-M2)",
+    "categoria": "PARTICULAR",
+    "preco": 333.4,
+    "busca": "AMA2 ANTICORPOS ANTI MITOCONDRIA M2 AMA M2 PARTICULAR"
+  },
+  {
+    "id": 712,
+    "codigo": "CAXUM",
+    "nome": "CAXUMBA - ANTICORPOS IGM",
+    "categoria": "PARTICULAR",
+    "preco": 80.02,
+    "busca": "CAXUM CAXUMBA ANTICORPOS IGM PARTICULAR"
+  },
+  {
+    "id": 713,
+    "codigo": "CAXUG",
+    "nome": "CAXUMBA - ANTICORPOS IGG",
+    "categoria": "PARTICULAR",
+    "preco": 61.68,
+    "busca": "CAXUG CAXUMBA ANTICORPOS IGG PARTICULAR"
+  },
+  {
+    "id": 714,
+    "codigo": "AZITR",
+    "nome": "IGE ESPECÍFICA AZITROMICINA (C3N)",
+    "categoria": "PARTICULAR",
+    "preco": 383.41,
+    "busca": "AZITR IGE ESPECIFICA AZITROMICINA C3N PARTICULAR"
+  },
+  {
+    "id": 715,
+    "codigo": "F6",
+    "nome": "IgE ESP. CEVADA",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "F6 IGE ESP CEVADA PARTICULAR"
+  },
+  {
+    "id": 716,
+    "codigo": "FVPCR",
+    "nome": "Análise Mutações R506Q , H1299R, Y1702C - Fator V de Le",
+    "categoria": "PARTICULAR",
+    "preco": 250.05,
+    "busca": "FVPCR ANALISE MUTACOES R506Q H1299R Y1702C FATOR V DE LE PARTICULAR"
+  },
+  {
+    "id": 717,
+    "codigo": "CITRA",
+    "nome": "ACIDO CITRICO 24 HORAS",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "CITRA ACIDO CITRICO 24 HORAS PARTICULAR"
+  },
+  {
+    "id": 718,
+    "codigo": "CRIO",
+    "nome": "CRIOGOBULINAS - PESQUISA",
+    "categoria": "PARTICULAR",
+    "preco": 63.35,
+    "busca": "CRIO CRIOGOBULINAS PESQUISA PARTICULAR"
+  },
+  {
+    "id": 719,
+    "codigo": "CROSQ",
+    "nome": "CROMATOGRAFIA DE AMINOÁCIDOS, QUANTIFICAÇÃO DE AMINOÁCI",
+    "categoria": "PARTICULAR",
+    "preco": 1750.35,
+    "busca": "CROSQ CROMATOGRAFIA DE AMINOACIDOS QUANTIFICACAO DE AMINOACI PARTICULAR"
+  },
+  {
+    "id": 720,
+    "codigo": "I206",
+    "nome": "IGE ESP (I206)  BARATA VERMELHA",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "I206 IGE ESP I206 BARATA VERMELHA PARTICULAR"
+  },
+  {
+    "id": 721,
+    "codigo": "WX1",
+    "nome": "IGE PAINEL (WX1) - PAINEL DE ERVAS",
+    "categoria": "PARTICULAR",
+    "preco": 166.7,
+    "busca": "WX1 IGE PAINEL WX1 PAINEL DE ERVAS PARTICULAR"
+  },
+  {
+    "id": 722,
+    "codigo": "PERNI",
+    "nome": "IGE ESP. PERNILONGO",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "PERNI IGE ESP PERNILONGO PARTICULAR"
+  },
+  {
+    "id": 723,
+    "codigo": "PROGR",
+    "nome": "Dosagem de Tacrolimus",
+    "categoria": "PARTICULAR",
+    "preco": 305.06,
+    "busca": "PROGR DOSAGEM DE TACROLIMUS PARTICULAR"
+  },
+  {
+    "id": 724,
+    "codigo": "AMALO",
+    "nome": "ÁCIDO METILMALÔNICO",
+    "categoria": "PARTICULAR",
+    "preco": 33.34,
+    "busca": "AMALO ACIDO METILMALONICO PARTICULAR"
+  },
+  {
+    "id": 725,
+    "codigo": "M2",
+    "nome": "IGE FUNGOS CLADOSPORIUM HERBARUM (HORMODENDRUM), VERRUG",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "M2 IGE FUNGOS CLADOSPORIUM HERBARUM HORMODENDRUM VERRUG PARTICULAR"
+  },
+  {
+    "id": 726,
+    "codigo": "M1",
+    "nome": "IGE ESP (M1) - FUNGOS - PENICILLIUM NOTATUM",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "M1 IGE ESP M1 FUNGOS PENICILLIUM NOTATUM PARTICULAR"
+  },
+  {
+    "id": 727,
+    "codigo": "M6",
+    "nome": "IGE ESP (M6) - FUNGOS - ALTERNARIA ALTERNATA",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "M6 IGE ESP M6 FUNGOS ALTERNARIA ALTERNATA PARTICULAR"
+  },
+  {
+    "id": 728,
+    "codigo": "5HIAC",
+    "nome": "ACIDO 5 HIDROXI INDOL ACETICO",
+    "categoria": "PARTICULAR",
+    "preco": 466.76,
+    "busca": "5HIAC ACIDO 5 HIDROXI INDOL ACETICO PARTICULAR"
+  },
+  {
+    "id": 729,
+    "codigo": "LEUCF",
+    "nome": "PESQUISA DE LEUCÓCITOS FECAIS",
+    "categoria": "PARTICULAR",
+    "preco": 33.34,
+    "busca": "LEUCF PESQUISA DE LEUCOCITOS FECAIS PARTICULAR"
+  },
+  {
+    "id": 730,
+    "codigo": "CLORE",
+    "nome": "IGE ESPECÍFICA CLORHEXIDINA",
+    "categoria": "PARTICULAR",
+    "preco": 150.03,
+    "busca": "CLORE IGE ESPECIFICA CLORHEXIDINA PARTICULAR"
+  },
+  {
+    "id": 731,
+    "codigo": "AGLDA",
+    "nome": "GLIADINA DEAMINADA IGA(DGP) ANTICORPOS",
+    "categoria": "PARTICULAR",
+    "preco": 250.05,
+    "busca": "AGLDA GLIADINA DEAMINADA IGA DGP ANTICORPOS PARTICULAR"
+  },
+  {
+    "id": 732,
+    "codigo": "AGLDG",
+    "nome": "GLIADINA DEAMINADA IGG (DGP) ANTICORPOS",
+    "categoria": "PARTICULAR",
+    "preco": 250.05,
+    "busca": "AGLDG GLIADINA DEAMINADA IGG DGP ANTICORPOS PARTICULAR"
+  },
+  {
+    "id": 733,
+    "codigo": "BARQG",
+    "nome": "BARQG - anticorpos igg anti bartonella quintana",
+    "categoria": "PARTICULAR",
+    "preco": 250.05,
+    "busca": "BARQG BARQG ANTICORPOS IGG ANTI BARTONELLA QUINTANA PARTICULAR"
+  },
+  {
+    "id": 734,
+    "codigo": "BARQM",
+    "nome": "BARQM - anticorpos igm anti bartonella quintana",
+    "categoria": "PARTICULAR",
+    "preco": 250.05,
+    "busca": "BARQM BARQM ANTICORPOS IGM ANTI BARTONELLA QUINTANA PARTICULAR"
+  },
+  {
+    "id": 735,
+    "codigo": "BARHM",
+    "nome": "BARHM - anticorpos igm bartonella (rochalimaea) hensel",
+    "categoria": "PARTICULAR",
+    "preco": 333.4,
+    "busca": "BARHM BARHM ANTICORPOS IGM BARTONELLA ROCHALIMAEA HENSEL PARTICULAR"
+  },
+  {
+    "id": 736,
+    "codigo": "BARHG",
+    "nome": "BARHG - anticorpos igg bartonella (rochalimaea) hensela",
+    "categoria": "PARTICULAR",
+    "preco": 333.4,
+    "busca": "BARHG BARHG ANTICORPOS IGG BARTONELLA ROCHALIMAEA HENSELA PARTICULAR"
+  },
+  {
+    "id": 737,
+    "codigo": "RTRAN",
+    "nome": "RECEPTOR SOLÚVEL DA TRANSFERRINA",
+    "categoria": "PARTICULAR",
+    "preco": 166.7,
+    "busca": "RTRAN RECEPTOR SOLUVEL DA TRANSFERRINA PARTICULAR"
+  },
+  {
+    "id": 738,
+    "codigo": "CULU",
+    "nome": "CULTURA E ANTIBIOGRAMA - SECREÇÃO URETRAL",
+    "categoria": "PARTICULAR",
+    "preco": 200.04,
+    "busca": "CULU CULTURA E ANTIBIOGRAMA SECRECAO URETRAL PARTICULAR"
+  },
+  {
+    "id": 739,
+    "codigo": "LISOZ",
+    "nome": "LISOZIMA",
+    "categoria": "PARTICULAR",
+    "preco": 633.46,
+    "busca": "LISOZ LISOZIMA PARTICULAR"
+  },
+  {
+    "id": 740,
+    "codigo": "HLB51",
+    "nome": "DETECÇÃO DE HLA-B51",
+    "categoria": "PARTICULAR",
+    "preco": 533.44,
+    "busca": "HLB51 DETECCAO DE HLA B51 PARTICULAR"
+  },
+  {
+    "id": 741,
+    "codigo": "PCREX",
+    "nome": "Proteína C Reativa",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "PCREX PROTEINA C REATIVA PARTICULAR"
+  },
+  {
+    "id": 742,
+    "codigo": "GLIEX",
+    "nome": "GLICOSE",
+    "categoria": "PARTICULAR",
+    "preco": 16.67,
+    "busca": "GLIEX GLICOSE PARTICULAR"
+  },
+  {
+    "id": 743,
+    "codigo": "MCAP",
+    "nome": "ACIDO S-FENIL MERCAPTURICO",
+    "categoria": "PARTICULAR",
+    "preco": 833.5,
+    "busca": "MCAP ACIDO S FENIL MERCAPTURICO PARTICULAR"
+  },
+  {
+    "id": 744,
+    "codigo": "APS",
+    "nome": "PROTEINA \"S\" ANTIGENICA",
+    "categoria": "PARTICULAR",
+    "preco": 360.07,
+    "busca": "APS PROTEINA S ANTIGENICA PARTICULAR"
+  },
+  {
+    "id": 745,
+    "codigo": "VARIC",
+    "nome": "VARICELA ZOSTER IgG e IgM",
+    "categoria": "PARTICULAR",
+    "preco": 200.04,
+    "busca": "VARIC VARICELA ZOSTER IGG E IGM PARTICULAR"
+  },
+  {
+    "id": 746,
+    "codigo": "COVIG",
+    "nome": "CORONAVÍRUS 2019 - SARS-COV-2 IGG QUANTITATIVO",
+    "categoria": "PARTICULAR",
+    "preco": 58.34,
+    "busca": "COVIG CORONAVIRUS 2019 SARS COV 2 IGG QUANTITATIVO PARTICULAR"
+  },
+  {
+    "id": 747,
+    "codigo": "DPBK",
+    "nome": "DETECÇÃO DE BK/JC POLIOMAVIRUS",
+    "categoria": "PARTICULAR",
+    "preco": 533.44,
+    "busca": "DPBK DETECCAO DE BK JC POLIOMAVIRUS PARTICULAR"
+  },
+  {
+    "id": 748,
+    "codigo": "TESTD",
+    "nome": "TESTOSTERONA COM DILUIÇÃO",
+    "categoria": "PARTICULAR",
+    "preco": 150.03,
+    "busca": "TESTD TESTOSTERONA COM DILUICAO PARTICULAR"
+  },
+  {
+    "id": 749,
+    "codigo": "XTEST",
+    "nome": "TESTOSTERONA LIVRE-DILUIÇAO",
+    "categoria": "PARTICULAR",
+    "preco": 150.03,
+    "busca": "XTEST TESTOSTERONA LIVRE DILUICAO PARTICULAR"
+  },
+  {
+    "id": 750,
+    "codigo": "EFR",
+    "nome": "EXAME A FRESCO",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "EFR EXAME A FRESCO PARTICULAR"
+  },
+  {
+    "id": 751,
+    "codigo": "CORTT",
+    "nome": "CORTISOL 16HORAS",
+    "categoria": "PARTICULAR",
+    "preco": 50.01,
+    "busca": "CORTT CORTISOL 16HORAS PARTICULAR"
+  },
+  {
+    "id": 752,
+    "codigo": "TRANI",
+    "nome": "TRANSCOBALAMINA II- VITAMINA B12 ATIVA",
+    "categoria": "PARTICULAR",
+    "preco": 1000.2,
+    "busca": "TRANI TRANSCOBALAMINA II VITAMINA B12 ATIVA PARTICULAR"
+  }
+]

@@ -1,6 +1,27 @@
+import { readFileSync } from "fs";
+import path from "path";
 import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
+
+interface ExameJson {
+  codigo: string;
+  nome: string;
+  preco: number;
+  busca?: string;
+}
+
+// Apelidos extras (como o cliente costuma chamar) para os exames mais comuns, por codigo.
+const APELIDOS_EXTRAS: Record<string, string[]> = {
+  HG: ["hemograma", "exame de sangue geral"],
+  EAS: ["urina", "exame de urina", "eas", "urina tipo 1"],
+  GLI: ["glicemia", "glicose", "acucar no sangue"],
+  COL: ["colesterol"],
+  TSH: ["tireoide"],
+  EPF: ["fezes", "exame de fezes", "parasitologico"],
+  VITD: ["vitamina d"],
+  HGS: ["hemoglobina glicada", "glicada"],
+};
 
 async function main() {
   await prisma.businessHours.deleteMany();
@@ -16,63 +37,30 @@ async function main() {
     ],
   });
 
-  const exams = [
-    {
-      name: "Hemograma completo",
-      aliases: ["hemograma", "exame de sangue geral"],
-      price: 35.0,
-      preparation: "Nao e necessario jejum.",
-      fastingHours: 0,
-      sampleType: "Sangue",
-      turnaroundDays: 1,
-    },
-    {
-      name: "Glicemia em jejum",
-      aliases: ["glicemia", "acucar no sangue", "glicose"],
-      price: 20.0,
-      preparation: "Jejum de 8 horas.",
-      fastingHours: 8,
-      sampleType: "Sangue",
-      turnaroundDays: 1,
-    },
-    {
-      name: "Colesterol total e fracoes",
-      aliases: ["colesterol", "perfil lipidico"],
-      price: 40.0,
-      preparation: "Jejum de 12 horas.",
-      fastingHours: 12,
-      sampleType: "Sangue",
-      turnaroundDays: 1,
-    },
-    {
-      name: "TSH",
-      aliases: ["tireoide", "hormonio tireoidiano"],
-      price: 45.0,
-      preparation: "Nao e necessario jejum.",
-      fastingHours: 0,
-      sampleType: "Sangue",
-      turnaroundDays: 2,
-    },
-    {
-      name: "Exame de urina tipo 1",
-      aliases: ["urina", "eas"],
-      price: 25.0,
-      preparation: "Coletar a primeira urina da manha, em frasco esteril.",
-      fastingHours: 0,
-      sampleType: "Urina",
-      turnaroundDays: 1,
-    },
-  ];
+  const raw = readFileSync(path.join(__dirname, "data", "exames.json"), "utf8").replace(/^﻿/, "");
+  const exames: ExameJson[] = JSON.parse(raw);
 
-  for (const exam of exams) {
+  const usados = new Set<string>();
+  let criados = 0;
+
+  for (const e of exames) {
+    let name = e.nome.trim();
+    // O nome do exame e unico no banco: repetidos recebem o codigo no final.
+    if (usados.has(name.toLowerCase())) name = `${name} (${e.codigo})`;
+    usados.add(name.toLowerCase());
+
+    const aliases = [e.codigo, ...(APELIDOS_EXTRAS[e.codigo] ?? [])];
+    const data = { aliases, price: e.preco };
+
     await prisma.exam.upsert({
-      where: { name: exam.name },
-      update: exam,
-      create: exam,
+      where: { name },
+      update: data,
+      create: { name, ...data },
     });
+    criados++;
   }
 
-  console.log("Seed concluido.");
+  console.log(`Seed concluido: ${criados} exames carregados.`);
 }
 
 main()

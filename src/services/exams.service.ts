@@ -1,13 +1,25 @@
 import { prisma } from "../db/prisma";
 
+// Minusculas e sem acentos, para "acido urico" encontrar "ÁCIDO ÚRICO".
+function normalize(text: string): string {
+  return text
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "")
+    .toLowerCase()
+    .trim();
+}
+
 export async function searchExams(query: string) {
-  const normalized = query.trim().toLowerCase();
+  const normalized = normalize(query);
+  if (!normalized) return [];
   const exams = await prisma.exam.findMany({ where: { active: true } });
 
-  return exams.filter((exam) => {
-    if (exam.name.toLowerCase().includes(normalized)) return true;
-    return exam.aliases.some((alias) => alias.toLowerCase().includes(normalized));
+  const matches = exams.filter((exam) => {
+    if (normalize(exam.name).includes(normalized)) return true;
+    return exam.aliases.some((alias) => normalize(alias).includes(normalized));
   });
+  // Limita o retorno para nao inundar a IA quando a busca e muito generica.
+  return matches.slice(0, 15);
 }
 
 export async function getExamByExactName(name: string) {
