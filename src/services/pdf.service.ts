@@ -1,5 +1,19 @@
+import { readFileSync, existsSync } from "fs";
+import path from "path";
 import { jsPDF } from "jspdf";
 import { env } from "../config/env";
+
+// Logo do laboratorio (PNG). Caminho configuravel por LOGO_PATH; padrao: assets/logo.png.
+// Se o arquivo nao existir, o PDF usa as iniciais do laboratorio no lugar.
+function loadLogo(): { dataUrl: string | null; ratio: number } {
+  const file = process.env.LOGO_PATH ?? path.join(__dirname, "..", "..", "assets", "logo.png");
+  if (!existsSync(file)) return { dataUrl: null, ratio: 1 };
+  const buf = readFileSync(file);
+  const width = buf.readUInt32BE(16);
+  const height = buf.readUInt32BE(20);
+  return { dataUrl: "data:image/png;base64," + buf.toString("base64"), ratio: height ? width / height : 1 };
+}
+const { dataUrl: LOGO_DATA_URL, ratio: LOGO_RATIO } = loadLogo();
 
 interface BudgetPdfItem {
   nome: string;
@@ -115,15 +129,31 @@ export function generateBudgetPdf({ paciente, itens, data }: BudgetPdfInput): Bu
     logoPad = compacto ? 4 : 5;
   doc.setFillColor(255, 255, 255);
   doc.roundedRect(margin + logoPad, yTopo + logoPad, logoSize, logoSize, logoSize * 0.18, logoSize * 0.18, "F");
-  doc.setFont("helvetica", "bold");
-  doc.setFontSize(compacto ? 12 : 16);
-  doc.setTextColor(0, 89, 84);
-  doc.text(
-    env.lab.name.slice(0, 3).toUpperCase(),
-    margin + logoPad + logoSize / 2,
-    yTopo + logoPad + logoSize / 2 + 3,
-    { align: "center" }
-  );
+  if (LOGO_DATA_URL) {
+    // Encaixa o logo na caixa branca mantendo a proporcao original.
+    const inner = logoSize - 4;
+    const ratio = LOGO_RATIO;
+    const w = ratio >= 1 ? inner : inner * ratio;
+    const h = ratio >= 1 ? inner / ratio : inner;
+    doc.addImage(
+      LOGO_DATA_URL,
+      "PNG",
+      margin + logoPad + 2 + (inner - w) / 2,
+      yTopo + logoPad + 2 + (inner - h) / 2,
+      w,
+      h
+    );
+  } else {
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(compacto ? 12 : 16);
+    doc.setTextColor(0, 89, 84);
+    doc.text(
+      env.lab.name.slice(0, 3).toUpperCase(),
+      margin + logoPad + logoSize / 2,
+      yTopo + logoPad + logoSize / 2 + 3,
+      { align: "center" }
+    );
+  }
 
   const textX = margin + logoPad + logoSize + 8;
   doc.setFont("helvetica", "bold");

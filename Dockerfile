@@ -15,6 +15,7 @@ COPY prisma ./prisma
 RUN npm install --omit=dev
 RUN npx prisma generate
 COPY --from=build /app/dist ./dist
+COPY assets ./assets
 COPY docker-entrypoint.sh ./docker-entrypoint.sh
 RUN chmod +x ./docker-entrypoint.sh
 EXPOSE 3000
